@@ -1,0 +1,159 @@
+/******************
+ * GENERAL MARKUP *
+ ******************/
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #eceae5;
+    background: -moz-linear-gradient(top, #eceae5 0%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eceae5), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top, #eceae5 0%,#ffffff 100%);
+    background: -o-linear-gradient(top, #eceae5 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top, #eceae5 0%,#ffffff 100%);
+    background: linear-gradient(to bottom, #eceae5 0%,#ffffff 100%);
+    color: #000;
+    font: 13px/1.231 arial, helvetica, sans-serif;
+    height: 100%;
+    min-height: 100%;
+}
+
+.gt-force-right {
+    float: right;
+}
+
+.gt-force-left {
+    float: left;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*********
+ * ICONS *
+ *********/
+
+.gt-home-icon,
+.gt-inbox-icon,
+.gt-library-icon,
+.gt-cogwheel-icon,
+.gt-magnifier-icon,
+.gt-task-icon {
+    height: 25px;
+    width: 35px;
+}
+
+.gt-home-icon {
+    background: url("../images/home_icon.png") no-repeat center center transparent;
+}
+
+.gt-inbox-icon {
+    background: url("../images/inbox_icon.png") no-repeat center center transparent;
+}
+
+.gt-library-icon {
+    background: url("../images/library_icon.png") no-repeat center center transparent;
+}
+
+.gt-cogwheel-icon {
+    background: url("../images/cogwheel_icon.png") no-repeat center center transparent;
+}
+
+.gt-magnifier-icon {
+    background: url("../images/magnifier_icon.png") no-repeat center center transparent;
+}
+
+.gt-task-icon {
+    background: url("../images/task_icon.png") no-repeat center center transparent;
+}
+
+/*********************
+ * STRUCTURAL LAYOUT *
+ *********************/
+#gt-page-container {
+    margin: 0 auto;
+    min-width: 960px;
+    width:90%;
+    margin: 0 5%;
+}
+
+#gt-topnavigation-container {
+    background-color: #EFEEEB;
+    clear: both;
+    margin-bottom: 30px;
+    min-width: 960px;
+    height: 50px;
+    width: 100%;
+}
+
+#gt-content-container {
+    background-color: #FFF;
+    padding: 7px 12px;
+}
+
+#gt-lhnav-container {
+    background-color: #FFF;
+    border-right: 1px solid #D6DADD;
+    display: inline;
+    float: left;
+    margin-right: 12px;
+    min-width: 190px;
+}
+
+
+/******************
+ * TOP NAVIGATION *
+ ******************/
+
+#gt-topnavigation-container #gt-topnavigation-right {
+    float: right;
+    height: 50px;
+}
+
+#gt-topnavigation-container #gt-topnavigation-center {
+    background: url("../images/sakaioae_logo.png") no-repeat scroll center center transparent;
+    height: 50px;
+    margin: 0 auto;
+    width: 108px;
+}
+
+#gt-topnavigation-container #gt-topnavigation-left {
+    float: left;
+    height: 50px;
+}
+
+#gt-topnavigation-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+#gt-topnavigation-container ul li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    margin: 12px 12px 0;
+}
+
+#gt-topnavigation-container #gt-topnavigation-right #topnavigation_search_input {
+    width: 200px;
+}
+
+#gt-topnavigation-container #gt-topnavigation-right #topnavigation_search_form {
+    margin-right: 24px;
+}
+
+#gt-topnavigation-container #gt-topnavigation-right #topnavigation-explore-link {
+    color: #666;
+    margin: 18px 24px 0 0 !important;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#gt-topnavigation-container #gt-topnavigation-right > * {
+    margin-top: 14px;
+}
