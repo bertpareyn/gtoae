@@ -15,7 +15,7 @@ body, html {
 
 html {
     color: #000;
-    font: 13px/1.231 arial, helvetica, sans-serif;
+    font: 12px/1.231 arial, helvetica, sans-serif;
     height: 100%;
     min-height: 100%;
 }
@@ -32,6 +32,14 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+h2 {
+    color: #999;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+}
+
 
 /*********
  * ICONS *
@@ -83,7 +91,6 @@ ul {
 }
 
 #gt-topnavigation-container {
-    background-color: #EFEEEB;
     clear: both;
     margin-bottom: 30px;
     min-width: 960px;
@@ -205,4 +212,18 @@ ul {
 #gt-lhnav-container ul li .lhnav-collapsable > * {
     display: inline-block;
     margin-top: 5px;
+}
+
+
+/************
+ * ELEMENTS *
+ ************/
+
+label {
+    color: #777;
+}
+
+input[type="checkbox"]:checked + label {
+    color: #444;
+    font-weight: bold;
 }
