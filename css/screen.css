@@ -71,6 +71,7 @@ ul {
     background: url("../images/task_icon.png") no-repeat center center transparent;
 }
 
+
 /*********************
  * STRUCTURAL LAYOUT *
  *********************/
@@ -92,18 +93,26 @@ ul {
 
 #gt-content-container {
     background-color: #FFF;
-    padding: 7px 12px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    padding: 12px;
 }
 
 #gt-lhnav-container {
-    background-color: #FFF;
-    border-right: 1px solid #D6DADD;
-    display: inline;
     float: left;
-    margin-right: 12px;
-    min-width: 190px;
+    width: 60px;
 }
 
+.gt-content-column {
+    float: left;
+    margin: 12px;
+    width: 20%;
+}
+
+.gt-content-column#gt-center-column {
+    float: left;
+    width: 50%;
+}
 
 /******************
  * TOP NAVIGATION *
@@ -156,4 +165,38 @@ ul {
 
 #gt-topnavigation-container #gt-topnavigation-right > * {
     margin-top: 14px;
+}
+
+
+/************************
+ * LEFT HAND NAVIGATION *
+ ************************/
+
+#gt-lhnav-container > div {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#gt-lhnav-container #profile-image{
+    border-radius: 6px;
+    height: 40px;
+    margin-left: 15px;
+    width: 40px;
+}
+
+#gt-lhnav-container ul {
+    margin: 12px;
+}
+
+#gt-lhnav-container ul li,
+#gt-lhnav-side-container ul li {
+    clear: both;
+    height: 25px;
+    list-style: none;
+    margin: 7px 2px 7px 0
+}
+
+#gt-lhnav-container ul li .lhnav-collapsable > * {
+    display: inline-block;
+    margin-top: 5px;
 }
