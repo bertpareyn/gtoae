@@ -164,9 +164,19 @@ input[type="text"] {
     width: auto;
 }
 
+#gt-title-clip {
+    min-width: 721px;
+    width: 65%;
+}
+
 #gt-title-clip form {
     display: inline-block;
     margin-right: 4px;
+    width: 75%;
+}
+
+#gt-title-clip form input {
+    width: 98%;
 }
 
 #gt-title-clip #gt-title-clip-left {
