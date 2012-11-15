@@ -5,17 +5,13 @@ body, html {
     margin: 0;
     padding: 0;
     background: #eceae5;
-    background: -moz-linear-gradient(top, #eceae5 0%, #f0f0f0 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eceae5), color-stop(100%,#f0f0f0));
-    background: -webkit-linear-gradient(top, #eceae5 0%,#f0f0f0 100%);
-    background: -o-linear-gradient(top, #eceae5 0%,#f0f0f0 100%);
-    background: -ms-linear-gradient(top, #eceae5 0%,#f0f0f0 100%);
-    background: linear-gradient(to bottom, #eceae5 0%,#f0f0f0 100%);
+    background-image:url("../images/oae-bg-pattern.png");
+	background-repeat:x;
 }
 
 html {
-    color: #000;
-    font: 12px/1.231 arial, helvetica, sans-serif;
+    color: #333;
+    font: 12px/1.231'Open Sans', sans-serif; arial, helvetica, sans-serif;
     height: 100%;
     min-height: 100%;
 }
@@ -79,31 +75,58 @@ input[type="text"] {
 .gt-task-icon {
     height: 25px;
     width: 25px;
+	margin-right:12px;
 }
 
-.gt-home-icon {
+.gt-home-icon, .gt-home-icon:visited {
     background: url("../images/main-header-icon-home.png") no-repeat center center transparent;
 }
-
-.gt-inbox-icon {
+.gt-home-icon:hover {
+    background: url("../images/main-header-icon-home-hover.png") no-repeat center center transparent;
+}
+.gt-home-icon:active {
+    background: url("../images/main-header-icon-home-click.png") no-repeat center center transparent;
+}
+.gt-inbox-icon, .gt-inbox-icon:visited {
     background: url("../images/main-header-icon-messages.png") no-repeat center center transparent;
 }
-
-.gt-library-icon {
+.gt-inbox-icon:hover {
+    background: url("../images/main-header-icon-messages-hover.png") no-repeat center center transparent;
+}
+.gt-inbox-icon:active {
+    background: url("../images/main-header-icon-messages-click.png") no-repeat center center transparent;
+}
+.gt-library-icon, .gt-home-library:visited {
     background: url("../images/main-header-icon-collections.png") no-repeat center center transparent;
 }
-
-.gt-cogwheel-icon {
+.gt-library-icon:hover {
+    background: url("../images/main-header-icon-collections-hover.png") no-repeat center center transparent;
+}
+.gt-library-icon:active {
+    background: url("../images/main-header-icon-collections-click.png") no-repeat center center transparent;
+}
+.gt-cogwheel-icon, .gt-home-cogwheel:visited {
     background: url("../images/main-header-icon-settings.png") no-repeat center center transparent;
 }
-
-.gt-magnifier-icon {
+.gt-cogwheel-icon:hover {
+    background: url("../images/main-header-icon-settings-hover.png") no-repeat center center transparent;
+}
+.gt-cogwheel-icon:active {
+    background: url("../images/main-header-icon-settings-click.png") no-repeat center center transparent;
+}
+.gt-magnifier-icon, .gt-home-magnifier:visited {
     background: url("../images/icon_search.png") no-repeat center center transparent;
 }
-
-.gt-task-icon {
+.gt-task-icon, .gt-home-task:visited {
     background: url("../images/main-header-icon-tasks.png") no-repeat center center transparent;
 }
+.gt-task-icon:hover {
+    background: url("../images/main-header-icon-tasks-hover.png") no-repeat center center transparent;
+}
+.gt-task-icon:active {
+    background: url("../images/main-header-icon-tasks-click.png") no-repeat center center transparent;
+}
+
 
 
 /*********************
@@ -284,7 +307,12 @@ a.questions {
 }
 
 #gt-topnavigation-container #gt-topnavigation-right #topnavigation_search_input {
-    width: 200px;
+    width: 190px;
+	background-color: #fff;
+	background-image: url("../images/icon-search.png");
+	background-position: 200px 4px;
+	background-repeat: no-repeat;
+	padding-right: 25px;
 }
 
 #gt-topnavigation-container #gt-topnavigation-right #topnavigation_search_form {
@@ -292,15 +320,27 @@ a.questions {
 }
 
 #gt-topnavigation-container #gt-topnavigation-right #topnavigation-explore-link {
-    color: #666;
-    margin: 18px 24px 0 0 !important;
-    font-style: italic;
-    font-weight: bold;
+    color: #999;
+    margin: 18px 34px 0 0 !important;
+	font-size: 13px;
+    font-weight: 600;
     text-decoration: none;
+	text-shadow: 0px 1px 0px #fff;
+}
+#gt-topnavigation-container #gt-topnavigation-right #topnavigation-explore-link:hover {
+    color: #333;
+}
+#gt-topnavigation-container #gt-topnavigation-right #topnavigation-explore-link:active {
+    color: #fff;
+	text-shadow: 0px 1px 0px #999;
 }
 
 #gt-topnavigation-container #gt-topnavigation-right > * {
     margin-top: 14px;
+}
+
+#gt-topnavigation-container #gt-topnavigation-right a #topnavigation_settings {
+	margin-top: 14px;	
 }
 
 
