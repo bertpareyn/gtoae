@@ -66,6 +66,16 @@ input[type="text"] {
     height: 23px;
 }
 
+::-webkit-input-placeholder  {
+    color: #999;
+    font-style: italic;
+    font-size: 12px;
+}
+input:-moz-placeholder {
+    color: #999;
+    font-style: italic;
+    font-size: 12px;
+}
 
 /*********
  * ICONS *
@@ -152,48 +162,47 @@ input[type="text"] {
     width: 58%;
 }
 
-#gt-title-clip,
-#gt-action-clip-primary {
-    background-image: url("../images/clip-title-panel.png");
+#search-box.gt-title-clip {
     float: left;
+    min-width: 721px;
+    width: 65%;
+}
+
+.gt-title-clip,
+.gt-action-clip-primary {
+    background-image: url("../images/clip-title-panel.png");
     height: 45px;
     width: 100%;
     line-height: 45px;
     margin-top: -18px;
     position: absolute;
-    width: auto;
 }
 
-#gt-title-clip {
-    min-width: 721px;
-    width: 65%;
-}
-
-#gt-title-clip form {
+.gt-title-clip form {
     display: inline-block;
     margin-right: 4px;
     width: 75%;
 }
 
-#gt-title-clip form input {
+.gt-title-clip form input {
     width: 98%;
 }
 
-#gt-title-clip #gt-title-clip-left {
+.gt-title-clip .gt-title-clip-left {
     background-image: url("../images/clip-title-panel-left-alt.png");
     float: left;
     height: 45px;
     width: 12px;
 }
 
-#gt-title-clip #gt-title-clip-right {
+.gt-title-clip .gt-title-clip-right {
     background-image: url("../images/clip-title-panel-right-alt.png");
     float: right;
     height: 45px;
     width: 12px;
 }
 
-#gt-title-clip h1 {
+.gt-title-clip h1 {
     color: #FFFFFF;
     float: left;
     font-size: 16px;
@@ -210,7 +219,7 @@ a.questions {
     margin-right: 180px;
 }
 
-#gt-action-clip-primary {
+.gt-action-clip-primary {
     background-image: url("../images/clip-button-primary-bg-tile.png");
     float: right;
     height: 44px;
@@ -218,7 +227,7 @@ a.questions {
     width: 175px;
 }
 
-#action-clip-left {
+.action-clip-left {
     background-image: url("../images/clip-button-primary-left-alt.png");
     background-repeat: no-repeat;
     float: left;
@@ -226,7 +235,7 @@ a.questions {
     width: 11px;
 }
 
-#action-clip-right {
+.action-clip-right {
     background-image: url("../images/clip-button-primary-right-alt.png");
     background-repeat: no-repeat;
     float: right;
@@ -234,7 +243,7 @@ a.questions {
     width: 6px;
 }
 
-#action-icon {
+.action-icon {
     background-image: url("../images/clip-button-icon-ask-question.png");
     background-position: 10px 10px;
     background-repeat: no-repeat;
@@ -351,4 +360,77 @@ label {
 input[type="checkbox"]:checked + label {
     color: #444;
     font-weight: bold;
+}
+
+
+/*******************
+ * POP-UP WINDOW *
+ *******************/
+
+.gt-popup {
+    margin-top: 126px;
+    display: block;
+    background-color: #333;
+    border-radius: 3px;
+    padding: 15px;
+    box-shadow: 0 0 5px #222;
+    max-width: 270px;
+    min-width: 200px;
+}
+
+.gt-popup .secondary-arrow-up {
+    background: url('../images/popup-secondary-arrow-up.png') no-repeat center center transparent;
+    height: 11px;
+    margin-top: -26px;
+    position: relative;
+}
+
+.gt-popup-close {
+    background: url("../images/popup-icon-close.png") no-repeat center center transparent;
+    cursor: pointer;
+    float: right;
+    height: 10px;
+    width: 10px;
+}
+
+.gt-popup-close:hover {
+    background: url('../images/icon-close-hover.png') no-repeat center center transparent;
+    height: 10px;
+    width: 10px;
+}
+
+.addto-white-icon {
+    background: url("../images/popup-primary-icon-add.png") no-repeat scroll left center transparent;
+    float: left;
+    height: 15px;
+    padding: 7px 4px;
+    width: 15px;
+}
+
+.share-white-icon {
+    background: url("../images/popup-primary-icon-share.png") no-repeat scroll left center transparent;
+    float: left;
+    height: 29px;
+    width: 25px;
+}
+
+.gt-popup h1 {
+    color: #FFF;
+    clear: both;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    padding: 0;
+    text-shadow: 0 1px 0 #000;
+}
+
+.alternate {
+    background-color: #444;
+}
+
+.alternate.input-container {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 7px;
 }
