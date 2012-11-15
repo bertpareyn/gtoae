@@ -320,7 +320,7 @@ a.questions {
 }
 
 #gt-topnavigation-container #gt-topnavigation-right #topnavigation-explore-link {
-    color: #999;
+    color: #666;
     margin: 18px 34px 0 0 !important;
 	font-size: 13px;
     font-weight: 600;
@@ -328,7 +328,7 @@ a.questions {
 	text-shadow: 0px 1px 0px #fff;
 }
 #gt-topnavigation-container #gt-topnavigation-right #topnavigation-explore-link:hover {
-    color: #333;
+    color: #222;
 }
 #gt-topnavigation-container #gt-topnavigation-right #topnavigation-explore-link:active {
     color: #fff;
@@ -378,6 +378,100 @@ a.questions {
     display: inline-block;
     margin-top: 5px;
 }
+
+
+/************
+ * LISTS *
+ ************/
+ 
+#gt-search-result-gridview {
+	float: left;
+	width: 160px;
+	margin: 20px 20px 0 0;
+}
+#gt-gridview-content-item {
+	height: 159px;
+	border: 1px solid #ccc;
+	border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    background-color: #eae9e5;
+}
+
+#gt-gridview-content-item #grid-view-preview {
+	border-right: 1px solid #bbbab7;
+}
+
+#gt-gridview-content-title {
+	float: left;
+	width: 136px;
+	padding: 5px 5px 10px 5px;
+	margin-top: 90px;
+	background-color: #000;
+	filter:alpha(opacity=85); /* IE's opacity*/
+    opacity: 0.85;
+	z-index: 100;
+	position:absolute;
+}
+
+#gt-gridview-content-title a {
+	font-weight: 500;
+	color: #fff;
+	text-decoration:none;	
+	text-shadow: 0px 1px 0px #000;
+}
+
+#gt-gridview-content-title:hover {
+	text-decoration: underline;	
+	color: #fff;
+}
+
+#gt-gridview-content-title span {
+	display: block;
+	margin-top: 12px;
+	font-weight: 300;
+	font-size: 11px;
+	font-style: italic;
+	text-shadow: 0px 1px 0px #000;
+}
+
+#gt-gridview-content-title #list-share-add-white {
+	float: right;
+	background: url("../images/icon-add+share-white.png") no-repeat center center transparent;
+}
+
+#gridview-content-details {
+	float: right;
+	width: 11px;
+	height: 159px;
+	background: url("../images/list-item-grid-view-details-shadow.png") no-repeat left center transparent;
+	background-position: -1px 0px;
+}
+
+#gridview-content-details #gridview-grabber {
+	background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
+	background-position: 2px 65px; 
+	height: 159px;
+}
+
+#gt-search-result-gridview #research-results-1 {
+	margin: 10px 0 0 0;
+	padding: 0;	
+}
+#gt-search-result-gridview #collected {
+	float: right;
+	min-width: 120px;
+	padding: 0 20px 0 0;
+	text-align:right;
+	margin: 10px 0 0 0;
+	background: url("../images/collected-icon-folder.png") no-repeat center center transparent;
+	background-position: right top; 
+	font-weight: 600;
+	color: #666;
+	font-size: 11px;
+	font-style: italic;
+}
+
 
 
 /************
