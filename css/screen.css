@@ -56,6 +56,16 @@ ul a {
     margin-bottom: 5px;
 }
 
+input[type="text"] {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 0 5px;
+    font-size: 13px;
+    height: 23px;
+}
+
 
 /*********
  * ICONS *
@@ -99,6 +109,7 @@ ul a {
 /*********************
  * STRUCTURAL LAYOUT *
  *********************/
+
 #gt-page-container {
     margin: 0 auto;
     min-width: 1000px;
@@ -132,7 +143,7 @@ ul a {
 
 .gt-content-column {
     float: left;
-    margin: 12px;
+    margin: 35px 12px 12px;
     width: 17%;
 }
 
@@ -140,6 +151,94 @@ ul a {
     float: left;
     width: 58%;
 }
+
+#gt-title-clip,
+#gt-action-clip-primary {
+    background-image: url("../images/clip-title-panel.png");
+    float: left;
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    margin-top: -18px;
+    position: absolute;
+    width: auto;
+}
+
+#gt-title-clip form {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+#gt-title-clip #gt-title-clip-left {
+    background-image: url("../images/clip-title-panel-left-alt.png");
+    float: left;
+    height: 45px;
+    width: 12px;
+}
+
+#gt-title-clip #gt-title-clip-right {
+    background-image: url("../images/clip-title-panel-right-alt.png");
+    float: right;
+    height: 45px;
+    width: 12px;
+}
+
+#gt-title-clip h1 {
+    color: #FFFFFF;
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+    height: 33px;
+    line-height: 18px;
+    margin: 0;
+    padding: 12px 10px 0;
+    text-shadow: 0 1px 0 #000000;
+}
+
+a.questions {
+    float: right;
+    margin-right: 180px;
+}
+
+#gt-action-clip-primary {
+    background-image: url("../images/clip-button-primary-bg-tile.png");
+    float: right;
+    height: 44px;
+    margin-right: 20px;
+    width: 175px;
+}
+
+#action-clip-left {
+    background-image: url("../images/clip-button-primary-left-alt.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 44px;
+    width: 11px;
+}
+
+#action-clip-right {
+    background-image: url("../images/clip-button-primary-right-alt.png");
+    background-repeat: no-repeat;
+    float: right;
+    height: 44px;
+    width: 6px;
+}
+
+#action-icon {
+    background-image: url("../images/clip-button-icon-ask-question.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    color: #333333;
+    float: left;
+    font-size: 13px;
+    font-weight: 600;
+    height: 31px;
+    line-height: 18px;
+    margin: 0;
+    padding: 13px 10px 0 50px;
+    text-shadow: 0 1px 0 #F4CE69;
+}
+
 
 /******************
  * TOP NAVIGATION *
@@ -151,10 +250,10 @@ ul a {
 }
 
 #gt-topnavigation-container #gt-topnavigation-center {
-    background: url("../images/sakaioae_logo.png") no-repeat scroll center center transparent;
+    background: url("../images/main-header-gt-oae-logo.png") no-repeat scroll center center transparent;
     height: 50px;
     margin: 0 auto;
-    width: 108px;
+    width: 236px;
 }
 
 #gt-topnavigation-container #gt-topnavigation-left {
