@@ -46,6 +46,16 @@ h2 {
     margin-left: 4px;
 }
 
+h6 {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 15px;
+    margin: 0 0 10px;
+    padding: 0;
+    text-shadow: 0 1px 0 #000;
+}
+
 ul a {
     color: #444;
     display: block;
@@ -669,6 +679,59 @@ a.questions {
     text-shadow: 0 0 1px #999;
 }
 
+.gt-popup #question {
+    padding: 20px 0 0;
+}
 
+.gt-popup #question #text-box {
+    background-color: #FFFFFF;
+    background-image: url("../images/forms/text-field-dragger.png");
+    background-position: 180px 95px;
+    background-repeat: no-repeat;
+    border-radius: 3px 3px 3px 3px;
+    height: 115px;
+    margin: 5px 0 20px;
+    padding: 1px;
+}
 
+.gt-popup #question #text-box textarea {
+    -moz-appearance: textfield-multiline;
+    -moz-binding: url("chrome://global/content/platformHTMLBindings.xml#textAreas");
+    -moz-user-select: text;
+    background-color: transparent;
+    color: -moz-fieldtext;
+    cursor: text;
+    letter-spacing: normal;
+    text-align: start;
+    text-indent: 0;
+    text-rendering: optimizelegibility;
+    text-shadow: none;
+    text-transform: none;
+    vertical-align: text-bottom;
+    word-spacing: normal;
+    word-wrap: break-word;
+    width: 194px;
+    height: 110px;
+    margin-bottom: 20px;
+    border: none;
+    font: 12px/1.231'Open Sans', sans-serif; arial, helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #333;
+    line-height: 14px; 
+    text-shadow: 0px 1px 0px #fff;
+    resize: none;   
+}
+
+.btn-cancel {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    display: inline-block;
+    font: 300 13px/15px 'Open Sans',sans-serif;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: left;
+    text-shadow: 0 1px 0 #000000;
+}
 
