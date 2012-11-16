@@ -4,9 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>Georgia Tech + Open Academic Environment</title>
+        <link rel="stylesheet" type="text/css" href="lib/jquery.autosuggest/autoSuggest.css">
         <link rel="stylesheet" type="text/css" href="css/screen.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,greek-ext' rel='stylesheet' type='text/css'>
         <script src="lib/jquery-1.8.2.js"></script>
+        <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
@@ -418,17 +420,8 @@
             <div class="gt-popup-close"></div>
             <div id="question">
                 <h6>To</h6>
-                <div id="text-box">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img alt="John Librarian" src="images/scenario3-images/5-water-testing-activity-dashboard/live-suggest-search/live-search-results-preview-person1.png"/>
-                                <div id="close"></div>John Librarian<span> &ndash; An expert in research</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <textarea placeholder="Enter other names, courses, research projects to ask..." style="height:28px;"></textarea>
-                </div>
+                <textarea id="autosuggest_example" style="height:28px;"></textarea>
+
                 <h6>Question</h6>
                 <div id="text-box">    
                     <textarea placeholder="Your question"></textarea>

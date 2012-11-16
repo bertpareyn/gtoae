@@ -694,7 +694,7 @@ a.questions {
     padding: 1px;
 }
 
-.gt-popup #question #text-box textarea {
+.gt-popup #question textarea {
     -moz-appearance: textfield-multiline;
     -moz-binding: url("chrome://global/content/platformHTMLBindings.xml#textAreas");
     -moz-user-select: text;
@@ -735,3 +735,8 @@ a.questions {
     text-shadow: 0 1px 0 #000000;
 }
 
+.autosuggest_name {
+    display: inline-block;
+    line-height: 29px;
+    padding-left: 7px;
+}
