@@ -1,5 +1,14 @@
 (function() {
 
+    var initSearchField = function() {
+        $('#topnavigation_search_input').focus(function() {
+            $('#topnavigation_search_results_container').show();
+        });
+        $('#topnavigation_search_input').blur(function() {
+            $('#topnavigation_search_results_container').hide();
+        });
+    };
+
     var initAutoSuggestExample = function() {
         var data = {items: [
             {
@@ -29,5 +38,10 @@
         });
     };
 
-    $(document).ready(initAutoSuggestExample);
+    var init = function() {
+        initAutoSuggestExample();
+        initSearchField();
+    };
+
+    $(document).ready(init);
 })();
