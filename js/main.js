@@ -4,8 +4,18 @@
         var data = {items: [
             {
                 value: "mjagger23",
-                name: "Mick Jagger",
+                name: "Stanley Roberts",
+                img: 'images/dummy_users/profile-pic-stanley.png'
+            },
+            {
+                value: "jlibrarion53",
+                name: "John Librarian",
                 img: 'images/dummy_users/profile-pic-don.png'
+            },
+            {
+                value: "janderson23",
+                name: "Joyce Anderson",
+                img: 'images/dummy_users/profile-pic-joyce.png'
             }
         ]};
         $('#autosuggest_example').autoSuggest(data.items, {
