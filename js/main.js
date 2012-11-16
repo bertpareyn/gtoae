@@ -19,7 +19,7 @@
             {
                 value: "jlibrarion53",
                 name: "John Librarian",
-                img: 'images/dummy_users/profile-pic-don.png'
+                img: 'images/dummy_users/profile-pic-john.png'
             },
             {
                 value: "janderson23",
