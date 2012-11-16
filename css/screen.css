@@ -519,7 +519,8 @@ a.questions {
 	width: 160px;
 	margin: 20px 20px 0 0;
 }
-#gt-gridview-content-item {
+
+#gt-gridview-content-item, #gt-gridview-content-item-open {
 	height: 159px;
 	border: 1px solid #ccc;
 	border-radius: 3px 3px 3px 3px;
@@ -584,6 +585,16 @@ a.questions {
 	height: 159px;
 }
 
+#gridview-content-details #gridview-grabber:hover {
+    background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
+    background-position: 2px 65px; 
+    height: 159px;
+    filter:alpha(opacity=50); /* IE's opacity*/
+    opacity: 0.50;
+    background-color: #fff;
+}
+
+
 #gt-search-result-gridview #research-results-1 {
 	margin: 10px 0 0 0;
 	padding: 0;	
@@ -602,6 +613,64 @@ a.questions {
 	font-style: italic;
 }
 
+#gt-gridview-content-item-open #gridview-content-details-closed {
+    float: left;
+    height: 159px;
+    width: 20px;
+    background: url("../images/list-item-grid-view-details-shadow.png") no-repeat left center transparent;
+    background-position: 10px 0px;
+}
+
+#gt-gridview-content-item-open #gridview-grabber-closed {
+    background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
+    background-position: 2px 65px; 
+    height: 159px;
+    border-right: 1px solid #bbbab7;
+    width: 10px;
+    background-color: #fff;
+}
+
+#gt-gridview-content-item-open #gridview-grabber-closed:hover {
+    filter:alpha(opacity=50); /* IE's opacity*/
+    opacity: 0.50;
+    background-color: #fff;
+}
+
+#gt-gridview-content-item-open ul {
+    padding: 10px 10px 0 0;
+}
+
+#gt-gridview-content-item-open li {
+    margin-top: 20px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    color: #666;
+}
+
+#gt-gridview-content-item-open li span {
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    padding-left: 2px;
+    display: block;
+}
+
+#gt-gridview-content-item-open #updated-by-who img {
+    display: inline;
+    padding: 5px 5px 0 0;
+    float: left;
+}
+
+#gt-gridview-content-item-open li a{
+    display: inline;
+    text-decoration: none;
+}
+
+#gt-gridview-content-item-open li a:hover {
+    text-decoration: underline;
+}
 
 /************
  * ELEMENTS *
