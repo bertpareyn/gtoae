@@ -95,18 +95,50 @@ label {
 }
 
 .gt-button {
-    border: medium none;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
     color: #666;
+    text-shadow: 0px 1px 0px #fff;
     cursor: pointer;
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
     height: 27px;
-    margin-right: 5px;
-    padding: 1px 12px 0;
+    margin: 0 5px 0 5px;
+    padding: 0 12px 0 12px;
     text-align: center;
+    background: -moz-linear-gradient(top,  #efefef 0%, #cfcdcd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#cfcdcd));
+    background: -webkit-linear-gradient(top,  #efefef 0%,#cfcdcd 100%);
+    background: -o-linear-gradient(top,  #efefef 0%,#cfcdcd 100%);
+    background: -ms-linear-gradient(top,  #efefef 0%,#cfcdcd 100%);
+    background: linear-gradient(to bottom,  #efefef 0%,#cfcdcd 100%);
+    -moz-box-shadow: inset 0 0 2px #e4e4e4;
+    -webkit-box-shadow: inset 0 0 2px #e4e4e4;
+    box-shadow: inset 0 0 3px #999;
+}
+.gt-button:hover {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #333;
+    text-shadow: 0px 1px 0px #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    height: 27px;
+    margin: 0 5px 0 5px;
+    padding: 0 12px 0 12px;
+    text-align: center;
+    background: -moz-linear-gradient(top,  #cfcdcd 0%, #efefef 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#cfcdcd));
+    background: -webkit-linear-gradient(top,  #cfcdcd 0%,#efefef 100%);
+    background: -o-linear-gradient(top,  #cfcdcd 0%,#efefef 100%);
+    background: -ms-linear-gradient(top,  #cfcdcd 0%,#efefef 100%);
+    background: linear-gradient(to bottom,  #cfcdcd 0%,#efefef 100%);
+    -moz-box-shadow: inset 0 0 2px #fff;
+    -webkit-box-shadow: inset 0 0 2px #fff;
+    box-shadow: inset 0 0 3px #999;
 }
 
 .gt-button.gt-overlay-button {
@@ -255,7 +287,6 @@ label {
 .gt-action-clip-primary {
     background-image: url("../images/clip-title-panel.png");
     height: 45px;
-    width: 100%;
     line-height: 45px;
     margin-top: -18px;
     position: absolute;
@@ -295,6 +326,48 @@ label {
     margin: 0;
     padding: 12px 10px 0;
     text-shadow: 0 1px 0 #000000;
+}
+
+#user-box.gt-title-clip {
+    float: left;
+    min-width: 100px;
+}
+
+#user-box.gt-title-clip img {
+    float: left;
+    margin: 6px 0 0 0;
+}
+
+#user-box.gt-title-clip img:hover {
+    cursor: pointer;
+    filter:alpha(opacity=50); /* IE's opacity*/
+    opacity: 0.50;
+}
+
+#user-box a h1 {
+    color: #dbdbdb;
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+    height: 33px;
+    line-height: 18px;
+    padding: 12px 25px 0 10px;
+    margin-right: 5px;
+    text-shadow: 0 1px 0 #000000;
+    text-decoration: none;
+    float: left;
+    background: url("../images/header-clip-down-arrow.png") no-repeat center right transparent;
+
+}
+#user-box a h1:hover {
+    color: #fff;
+    float: left;
+    background: url("../images/header-clip-down-arrow-hover.png") no-repeat center right transparent;
+}
+#user-box a h1:active {
+    color: #666;
+    float: left;
+    background: url("../images/header-clip-down-arrow-clicked.png") no-repeat center right transparent;
 }
 
 a.questions {
@@ -499,13 +572,13 @@ a.questions {
     opacity: 0.50;
 }
 
-#gt-lhnav-container #lhnav-level-1 ul #mini-left-nav  {
+#gt-content-container ul #mini-left-nav  {
     height: 25px;
     width: 25px;
     margin-right:12px;
 }
 
-#gt-lhnav-container #lhnav-level-1 ul #mini-left-nav li a #collections {
+#gt-lhnav-container ul #mini-left-nav li a #collections {
     background: url("../images/main-header-icon-collections.png") no-repeat center center transparent;
 }
 
@@ -781,6 +854,53 @@ a.questions {
 
 #gt-gridview-content-item-open li a:hover {
     text-decoration: underline;
+}
+
+#gridview-listed-item.new-item #container, #gridview-listed-item.no-profile-pic #container {
+    border: none;
+    -moz-box-shadow: inset 0 0 5px #999;
+    -webkit-box-shadow: inset 0 0 5px #999;
+    box-shadow: inset 0 0 5px #999;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    background-color: #fff;
+    filter:alpha(opacity=100); /* IE's opacity*/
+    opacity: 100;
+    width: 158px;
+} 
+
+#gridview-listed-item.new-item #container #gridview-project {
+    background: url("../images/grid-view-icon-project-disabled.png") no-repeat center 35px transparent;
+    height: 158px;
+    width: 158px;
+}
+
+#gridview-listed-item.new-item #container #new-item-btn {
+    bottom: 0;
+    position: absolute;
+    border: 0 none;
+    vertical-align: baseline;
+    margin: 0 0 15% 15%;
+    width: 70%;
+}
+
+#gridview-listed-item #no-profile-image-project {
+    background: url("../images/grid-view-icon-project-disabled.png") no-repeat center 35px transparent;
+    height: 158px;
+    width: 148px;
+}
+
+#gridview-listed-item #no-profile-image-project:hover {
+    background: url("../images/grid-view-icon-project-hover.png") no-repeat center 35px transparent;
+    height: 158px;
+    width: 148px;
+}
+
+#gridview-listed-item #no-profile-image-project:active {
+    background: url("../images/grid-view-icon-project-clicked.png") no-repeat center 35px transparent;
+    height: 158px;
+    width: 148px;
 }
 
 /************
