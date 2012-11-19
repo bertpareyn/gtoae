@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Georgia Tech + Open Academic Environment</title>
+        <link rel="stylesheet" type="text/css" href="lib/jquery.autosuggest/autoSuggest.css">
+        <link rel="stylesheet" type="text/css" href="css/screen.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,greek-ext' rel='stylesheet' type='text/css'>
+        <script src="lib/jquery-1.8.2.js"></script>
+        <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div id="gt-page-container">
+            <div id="gt-topnavigation-container">
+                <div id="gt-topnavigation-left">
+                    <ul>
+                        <li>
+                            <a href="javascript:;" title="Dashboard" id="topnavigation_home">
+                                <div class="gt-home-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Messages" id="topnavigation_inbox">
+                                <div class="gt-inbox-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Tasks" id="topnavigation_task">
+                                <div class="gt-task-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Collections" id="topnavigation_library">
+                                <div class="gt-library-icon"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="gt-topnavigation-right">
+                    <a href="javascript:;" title="Account settings" id="topnavigation_settings" class="gt-force-right">
+                    	<div class="gt-cogwheel-icon"></div>
+                    </a>
+                    <form id="topnavigation_search_form" class="gt-force-right">
+                        <input type="text" id="topnavigation_search_input" class="gt-force-right"/>
+                    </form>
+
+                    <div id="topnavigation_search_results_container" style="display: none;">
+                        <div id="topnavigation_search_results_top">
+                            <div class="gt-force-right">
+                                <img src="images/switch-off.png" class="gt-force-right" id="research_assistance_switch"/>
+                                <div class="gt-force-left">Research assistance</div>
+                            </div>
+                            <img src="images/gt-search-icon.png" class="gt-force-left"/>
+                        </div>
+
+                        <div id="topnavigation_search_results_results">
+                            <h2>Documents, files and links</h2>
+                            <ul>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item1.png" class="gt-force-left"/>
+                                    <div>Detection of pathogenic ... body fluids</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item2.png" class="gt-force-left"/>
+                                    <div>Development of a DNA ... water</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item3.png" class="gt-force-left"/>
+                                    <div>Waterborne Pathogens: Bacteria</div>
+                                </li>
+                            </ul>
+
+                            <h2>Collections</h2>
+                            <ul>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item1.png" class="gt-force-left"/>
+                                    <div>Research on water testing</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item4.png" class="gt-force-left"/>
+                                    <div>Labs that test water ... analysis</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item5.png" class="gt-force-left"/>
+                                    <div>Luminescent Bacteria</div>
+                                </li>
+                            </ul>
+
+                            <h2>People</h2>
+                            <ul>
+                                <li>
+                                    <img src="images/dummy_users/profile-pic-john.png" class="gt-force-left"/>
+                                    <div>John Librarian</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_users/profile-pic-mark.png" class="gt-force-left"/>
+                                    <div>Don Herbert</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_users/profile-pic-stanley.png" class="gt-force-left"/>
+                                    <div>Don Reach</div>
+                                </li>
+                            </ul>
+
+                            <h2>Projects</h2>
+                            <ul>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item2.png" class="gt-force-left"/>
+                                    <div>Water Testing</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_content/grid-view-profile-pic-cell-reproduction.png" class="gt-force-left"/>
+                                    <div>Unique Bioterror Screening</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item5.png" class="gt-force-left"/>
+                                    <div>1000 Genomes</div>
+                                </li>
+                            </ul>
+
+                            <h2>Courses</h2>
+                            <ul>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item2.png" class="gt-force-left"/>
+                                    <div>BIOL 4620 Aquatic Chemical Ecology</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_content/grid-view-profile-pic-cell-reproduction.png" class="gt-force-left"/>
+                                    <div>BIOL 3451 Cell and Molecular Biology</div>
+                                </li>
+                                <li>
+                                    <img src="images/dummy_content/activity-item5-collection-item5.png" class="gt-force-left"/>
+                                    <div>CHEM 4512 Biochemistry II</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="topnavigation_search_results_bottom">
+                            <button type="button" class="gt-button gt-overlay-button gt-force-right">See all</button>
+                            <div class="gt-force-left">16 of 134 search results</div>
+                        </div>
+                    </div>
+
+                    <a href="javascript:;" id="topnavigation-explore-link" class="gt-force-right">Explore</a>
+                </div>
+                <div id="gt-topnavigation-center"></div>
+            </div>
+
+                </div>
+                <div id="gt-topnavigation-center"></div>
+            </div>
+             
+             <div id="gt-content-container">
+
+                <div id="user-box" class="gt-title-clip">
+                    <div class="gt-title-clip-right"></div>
+                    <div class="gt-title-clip-left"></div>
+                    <a href="#" title="Sarah's dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
+                    <a href="#" title="More of my stuff"><h1>Sarah First</h1><div id="my-dropdown"></div></a>
+                </div>
+
+                <a title="Ask a question" class="questions" href="javascript:;">
+                    <div class="gt-action-clip-primary">
+                        <div class="action-clip-right"></div>
+                        <div class="action-clip-left"></div>
+                        <div class="action-icon">Ask a question</div>
+                    </div>
+                </a>
+
+                <div class="gt-content-column" id="gt-center-column">
+
+                    <div id="gridview-listed-item" class="new-item">
+                        <div id="container">
+                            <button class="gt-button" id="new-item-btn" label="New Project">New project</button>
+                            <div id="gridview-project"></div>
+                        </div>
+                    </div>
+
+                    <div id="gridview-listed-item">
+                            <div id="container">
+                                <div id="container-inner">
+                                    <div id="title">
+                                        <a href="#" title="Research lab group 1">Research lab group 1</a>
+                                        <div id="type-add-share">Research project</div>
+                                    </div>
+                                </div>
+                                <a href="#" title="Research lab group 1"> 
+                                    <div id="no-profile-image-project"></div>
+                                </a>
+                                </div>
+                                <a href="#" title="Slide open for more details">
+                                    <div id="gridview-content-details">
+                                        <div id="gridview-grabber"></div>
+                                    </div>
+                                </a>
+                            <div>
+                                <input type="checkbox" id="research-results-1"/>
+                            </div>
+                        </div>
+
+
+                </div>
+
+             </div>
+        </div>
+
+        
+
+    </body>
+</html>
