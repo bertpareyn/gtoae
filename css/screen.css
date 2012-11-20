@@ -919,7 +919,7 @@ a.questions {
 
 .gt-popup {
     margin-top: 126px;
-    display: block;
+    display: none;
     background-color: #333;
     border-radius: 3px;
     padding: 15px;
@@ -1083,6 +1083,12 @@ a.questions {
     line-height: 14px; 
     text-shadow: 0px 1px 0px #fff;
     resize: none;   
+}
+
+.gt-popup.question {
+    position: absolute;
+    top: 10px;
+    right: 30px;
 }
 
 .btn-cancel {
