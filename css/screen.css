@@ -945,6 +945,8 @@ a.questions {
     padding: 15px;
     box-shadow: 0 0 5px #222;
     width: 230px;
+    position: absolute;
+    z-index: 100;
 }
 
 .gt-popup .gt-pop-up-list {
@@ -957,6 +959,26 @@ a.questions {
     line-height: 34px;
     margin-bottom: 3px;
     padding: 0 6px 0 0;
+}
+
+.gt-popup .gt-pop-up-list.highlighted {
+    background-color: #c0dff0 !important;
+}
+
+.gt-popup #share_new_collection {
+    color: #efefef;
+}
+
+.gt-popup #share_new_collection_input {
+    width: 175px;
+}
+
+#share_new_collection_create {
+    height: 20px;
+    margin-top: -27px;
+    padding: 2px;
+    position: relative;
+    z-index: 1000;
 }
 
 .gt-popup .secondary-arrow-up {
@@ -1024,6 +1046,12 @@ a.questions {
     width: 34px;
 }
 
+.gt-popup .gt-pop-up-list.highlighted .collection-icon {
+    background: url("../images/context-icon-collections-hover.png") no-repeat scroll center center transparent;
+    height: 34px;
+    width: 34px;
+}
+
 .gt-popup h1 {
     clear: both;
     color: #fff;
@@ -1072,6 +1100,17 @@ a.questions {
     box-shadow: 1px 0 1px #AAAAAA;
     -moz-box-shadow: 1px 0 1px #AAAAAA;
     -webkit-box-shadow: 1px 0 1px #AAAAAA;
+}
+
+.gt-popup .gt-pop-up-list.highlighted .gt-counts-container {
+    background: #060606;
+    background: -moz-linear-gradient(top, #060606 0%, #606060 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#060606), color-stop(100%,#606060));
+    background: -webkit-linear-gradient(top, #060606 0%,#606060 100%);
+    background: -o-linear-gradient(top, #060606 0%,#606060 100%);
+    background: -ms-linear-gradient(top, #060606 0%,#606060 100%);
+    background: linear-gradient(to bottom, #060606 0%,#606060 100%);
+    color: #fff;
 }
 
 .gt-popup #question {

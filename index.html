@@ -309,7 +309,7 @@
                         </div>
                         <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
                         <input type="checkbox"/>
-                        <div class="action_button fixed_width">
+                        <div class="action_button share fixed_width">
                             <div class="share-black-icon gt-force-left"></div>
                             <span>Share + add</span>
                         </div>
@@ -476,12 +476,12 @@
              </div>
         </div>
 
-        <div class="gt-popup" style="float:left; margin-left: 40px;">
+        <div class="gt-popup share" style="float:left; margin-left: 40px;">
             <div class="secondary-arrow-up"></div>
-            <div class="gt-popup-close"></div>
+            <div class="gt-popup-close share"></div>
             <h1><div class="share-white-icon"></div>Share with</h1>
             <div class="alternate input-container">
-                <input type="text" placeholder="Type who to share this with"/>
+                <input type="text" placeholder="Type who to share this with" id="share_autosuggest"/>
             </div>
             <h1><div class="addto-white-icon"></div>Add to</h1>
             <div class="alternate gt-pop-up-list">
@@ -491,7 +491,16 @@
             </div>
             <div class="gt-pop-up-list">
                 <div class="gt-force-left new-collection-icon"></div>
-                <div>New collection</div>
+                <div>
+                    <a href="javascript:;" id="share_new_collection">New collection</a>
+                    <input type="text" id="share_new_collection_input" style="display:none;"/>
+                    <button type="button" class="gt-button gt-black-button gt-force-right" id="share_new_collection_create" style="display: none;">Create</button>
+                </div>
+            </div>
+            <div class="gt-pop-up-list alternate white highlighted" style="display: none;" id="water_testing_listitem">
+                <div class="gt-force-right gt-counts-container">0</div>
+                <div class="gt-force-left collection-icon"></div>
+                <div>Research on water testing</div>
             </div>
             <div class="gt-pop-up-list alternate white">
                 <div class="gt-force-right gt-counts-container">6</div>

@@ -45,6 +45,16 @@
                 return new_elem;
             }
         });
+
+        $('#share_autosuggest').autoSuggest(data.items, {
+            selectedItemProp: "name",
+            searchObjProps: "name",
+            formatList: function(data, elem){
+                var my_image = data.image;
+                var new_elem = elem.html('<img src="' + data.img + '" class="gt-force-left" /><div class="autosuggest_name">' + data.name + '</div>');
+                return new_elem;
+            }
+        });
     };
 
     var initQuestionsPopup = function() {
@@ -55,6 +65,33 @@
 
         $('.questions-close').on('click', function() {
             $('.gt-popup.question').hide();
+        });
+    };
+
+    var initSharePopup = function() {
+        // Bind buttons
+        $('.action_button.share').on('click', function() {
+            $('.gt-popup.share').toggle();
+            $('.gt-popup.share').css('top', $('.action_button.share').position().top - 95);
+            $('.gt-popup.share').css('left', $('.action_button.share').position().left - 100);
+        });
+
+        $('#share_new_collection').on('click', function() {
+            $(this).hide();
+            $('#share_new_collection_input').show();
+            $('#share_new_collection_create').show();
+            $('#share_new_collection_input').focus();
+        });
+
+        $('#share_new_collection_create').on('click', function() {
+            $('#share_new_collection').show();
+            $('#share_new_collection_input').hide();
+            $('#share_new_collection_create').hide();
+            $('#water_testing_listitem').show();
+        });
+
+        $('.gt-popup-close.share').on('click', function() {
+            $('.gt-popup.share').hide();
         });
     };
 
@@ -79,6 +116,7 @@
         initAutoSuggestExample();
         initSearchField();
         initQuestionsPopup();
+        initSharePopup();
         initCenterPanel();
     };
 
