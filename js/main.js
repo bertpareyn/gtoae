@@ -38,9 +38,21 @@
         });
     };
 
+    var initQuestionsPopup = function() {
+        // Bind buttons
+        $('.questions').on('click', function() {
+            $('.gt-popup.question').toggle();
+        });
+
+        $('.questions-close').on('click', function() {
+            $('.gt-popup.question').hide();
+        });
+    };
+
     var init = function() {
         initAutoSuggestExample();
         initSearchField();
+        initQuestionsPopup();
     };
 
     $(document).ready(init);
