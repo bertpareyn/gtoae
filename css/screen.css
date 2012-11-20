@@ -1314,6 +1314,13 @@ a.questions {
     margin-left: 30px;
 }
 
+.center_panel.absolute_panel {
+    position: absolute;
+    top: 128px;
+    width: 495px;
+    z-index: 101;
+}
+
 .center_panel .action_button.fixed_width {
     width: 120px;
 }

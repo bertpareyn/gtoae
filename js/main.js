@@ -58,10 +58,28 @@
         });
     };
 
+    var initCenterPanel = function() {
+        $(document).scroll(function() {
+            var $panel = $('.center_panel');
+            var panelWidth = $panel.width();
+            if ($(this).scrollTop() >= 128) {
+                $('#gt-search-results').css('margin-top', '110px');
+                $panel.css('width', panelWidth);
+                $panel.css('top', $(this).scrollTop());
+                $panel.addClass('absolute_panel');
+            } else {
+                $('#gt-search-results').css('margin-top', '0');
+                $panel.removeClass('absolute_panel');
+                panelWidth = $panel.width();
+            }
+        });
+    };
+
     var init = function() {
         initAutoSuggestExample();
         initSearchField();
         initQuestionsPopup();
+        initCenterPanel();
     };
 
     $(document).ready(init);
