@@ -46,6 +46,13 @@ h2 {
     margin-left: 4px;
 }
 
+h2.panel_header {
+    font-size: 15px;
+    font-style: normal;
+    text-shadow: 1px 1px #FFFFFF;
+    margin-top: 6px;
+}
+
 h6 {
     color: #fff;
     font-size: 13px;
@@ -976,6 +983,16 @@ a.questions {
     width: 25px;
 }
 
+.share-black-icon {
+    background: url("../images/icon-add+share-list-options.png") no-repeat scroll left center transparent;
+    height: 29px;
+    width: 25px;
+}
+
+.share-black-icon:hover {
+    background: url("../images/icon-add+share-list-options-hover.png") no-repeat scroll left center transparent;
+}
+
 .archive-icon {
     background: url("../images/context-icon-archive.png") no-repeat scroll left center transparent;
     height: 34px;
@@ -1021,7 +1038,7 @@ a.questions {
     padding: 7px;
 }
 
-.gt-popup .gt-counts-container {
+.gt-counts-container {
     background: #fefefe;
     background: -moz-linear-gradient(top, #fefefe 0%, #e9e8e2 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#e9e8e2));
@@ -1039,6 +1056,9 @@ a.questions {
     margin-top: 7px;
     padding: 2px 4px;
     text-shadow: 0 0 1px #999;
+    box-shadow: 1px 0 1px #AAAAAA;
+    -moz-box-shadow: 1px 0 1px #AAAAAA;
+    -webkit-box-shadow: 1px 0 1px #AAAAAA;
 }
 
 .gt-popup #question {
@@ -1267,5 +1287,51 @@ a.questions {
 }
 
 
+/******************/
+/** CENTER PANEL **/ 
+/******************/
 
+.center_panel {
+    background-color: #EAE9E5;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 1px 1px 0 #888888;
+    margin-bottom: 20px;
+    padding: 12px 12px 5px;
+    width: 94%;
+}
 
+.center_panel #grabber_bar {
+    display: block;
+    height: 8px;
+    margin: 0 auto;
+    width: 45px;
+    cursor: pointer;
+}
+
+.center_panel .action_button {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.center_panel .action_button.fixed_width {
+    width: 120px;
+}
+
+.center_panel .action_button span {
+    color: #555555;
+    display: block;
+    font-size: 13px;
+    padding-top: 7px;
+}
+
+input.refine_search {
+    display: block;
+    margin-bottom: 13px;
+    width: 190px;
+}
+
+#panel_sort_by {
+    line-height: 9px;
+    margin-right: 17px;
+}
