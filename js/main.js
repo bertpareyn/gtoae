@@ -47,6 +47,19 @@
         $('.questions-close').on('click', function() {
             $('.gt-popup.question').hide();
         });
+
+        $('#question-send').on('click', function() {
+            $('.gt-popup.question').hide();
+            $('.gt-popup.success').show();
+            setTimeout(function() {
+                $('.gt-popup.success').fadeOut(300);
+            }, 5000);
+        });
+
+        $('.success-close').on('click', function() {
+            $('.gt-popup.success').hide();
+        });
+
     };
 
     var init = function() {
