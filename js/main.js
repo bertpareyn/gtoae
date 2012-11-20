@@ -1,14 +1,22 @@
 (function() {
 
+    /**
+     * Adds the triggers that show/hide search related fields
+     */
     var initSearchField = function() {
         $('#topnavigation_search_input').focus(function() {
             $('#topnavigation_search_results_container').show();
         });
-        $('#topnavigation_search_input').blur(function() {
-            $('#topnavigation_search_results_container').hide();
+
+        $('.research_assistance_switch').click(function() {
+            $('.research_assistance_switch').toggle();
+            $('#topnavigation_search_results_results > div').toggle();
         });
     };
 
+    /**
+     * Initializes a basic autosuggest example with 3 people
+     */
     var initAutoSuggestExample = function() {
         var data = {items: [
             {
@@ -27,6 +35,7 @@
                 img: 'images/dummy_users/profile-pic-joyce.png'
             }
         ]};
+
         $('#autosuggest_example').autoSuggest(data.items, {
             selectedItemProp: "name",
             searchObjProps: "name",

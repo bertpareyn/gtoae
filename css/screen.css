@@ -543,7 +543,7 @@ a.questions {
     padding: 8px 12px 12px;
 }
 
-#research_assistance_switch {
+.research_assistance_switch {
     cursor: pointer;
     margin-left: 7px;
 }
