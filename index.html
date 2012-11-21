@@ -195,19 +195,17 @@
             </div>
 
              <div id="gt-lhnav-container">
-                <div id="lhnav-level-1">
-                    <a href="#" title="Sarah's Dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
-                    <ul id="mini-left-nav">
-                        <li><a href="#" title="Sarah's Collections"><div id="collections"></div></a></li>
-                        <li><a href="#" title="Sarah's Tasks"><div id="tasks"></div></a></li>
-                        <li><a href="#" title="Sarah's Courses"><div id="courses"></div></a></li>
-                        <li><a href="#" title="Sarah's Groups"><div id="groups"></div></a></li>
-                        <li><a href="#" title="Sarah's Network"><div id="network"></div></a></li>
-                        <li><a href="#" title="Sarah's Archive"><div id="archive"></div></a></li>
-                        <li><a href="#" title="Sarah's Projects"><div id="projects"></div></a></li>
-                        <li><a href="#" title="Sarah's Discussions"><div id="discussions"></div></a></li>
-                    </ul>
-                </div>
+                <a href="#" title="Sarah's Dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
+                <ul id="mini-left-nav">
+                    <li><a href="#" title="Sarah's Collections"><div id="collections"></div></a></li>
+                    <li><a href="#" title="Sarah's Tasks"><div id="tasks"></div></a></li>
+                    <li><a href="#" title="Sarah's Courses"><div id="courses"></div></a></li>
+                    <li><a href="#" title="Sarah's Groups"><div id="groups"></div></a></li>
+                    <li><a href="#" title="Sarah's Network"><div id="network"></div></a></li>
+                    <li><a href="#" title="Sarah's Archive"><div id="archive"></div></a></li>
+                    <li><a href="#" title="Sarah's Projects"><div id="projects"></div></a></li>
+                    <li><a href="#" title="Sarah's Discussions"><div id="discussions"></div></a></li>
+                </ul>
              </div>
 
              <div id="gt-content-container">
@@ -324,7 +322,7 @@
                                     <span class="gt-force-right" id="panel_sort_by">Sort by</span>
                                 </div>
                                 <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
-                                <input type="checkbox"/>
+                                <div id="select-all"><input type="checkbox"/></div>
                                 <div class="action_button share fixed_width">
                                     <div class="share-black-icon gt-force-left"></div>
                                     <span>Share + add</span>
@@ -597,11 +595,61 @@
                 <button type="submit" id="question-send" class="gt-button gt-overlay-button gt-force-right">Send</button>
             </div>
         </div>
+        <!-- Guide screen 1 -->
+        <div class="guide gt-popover">
+            <div class="tertiary-arrow-right"></div>
+            <div class="gt-popup-close guide-close"></div>
+            <h6>Terms</h6>
+            <p>Try adding alternative terminology to your search for more options. A dictionary or thesaurus can help too.</p>
+        </div>
+
+        <div class="guide gt-popover">
+            <div class="tertiary-arrow-up"></div>
+            <div class="gt-popup-close guide-close"></div>
+            <h6>Phrasing  </h6>
+            <p>Try using phrases or words used by experts doing research in this area</p>
+        </div> 
+        <!-- Guide screen 2 -->
+        <div class="guide gt-popover">
+            <div class="tertiary-arrow-right"></div>
+            <div class="gt-popup-close guide-close"></div>
+            <h6>Criteria</h6>
+            <p>Try improving your research by looking for specific types of resources or materials</p>
+        </div>
+
+        <div class="guide gt-popover">
+            <div class="tertiary-arrow-left"></div>
+            <div class="gt-popup-close guide-close"></div>
+            <h6>Sources</h6>
+            <p>Sort your results categorized by where they have been found</p>
+        </div>
+        <!-- Guide screen 3 -->
+        <div class="guide gt-popover">
+            <div class="tertiary-arrow-left"></div>
+            <div class="gt-popup-close guide-close"></div>
+            <h6>Expert help</h6>
+            <p>Automatically, the librarian best matched to your search query is added to your question</p>
+        </div>
+        <!-- Guide screen 4 -->
+        <div class="guide gt-popover">
+            <div class="tertiary-arrow-left"></div>
+            <div class="gt-popup-close guide-close"></div>
+            <h6>Requirements</h6>
+            <p>View tutorials to help you complete your project</p>
+        </div>
+        <!-- Not sure how to hook this styling up to Stuart's stuff and I don't wanna break it -->
+        <div class="guide gt-popover">
+            <div class="tertiary-arrow-left"></div>
+            <div class="gt-popup-close guide-close"></div>
+            <h6>Success</h6>
+            <p>Your question has been posted.</p>
+        </div>
 
         <div class="success gt-popup">
             <div class="gt-popup-close success-close"></div>
             <h6>Success</h6>
             <p>Your question has been posted.</p>
         </div>
+
     </body>
 </html>
