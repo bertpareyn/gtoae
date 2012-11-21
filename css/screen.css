@@ -1,6 +1,7 @@
 /******************
  * GENERAL MARKUP *
  ******************/
+
 body, html {
     margin: 0;
     padding: 0;
@@ -47,7 +48,6 @@ h2 {
 }
 
 h2.panel_header {
-    font-size: 15px;
     font-style: normal;
     text-shadow: 1px 1px #FFFFFF;
     margin-top: 6px;
@@ -288,7 +288,7 @@ label {
 
 .gt-content-column {
     float: left;
-    margin: 35px 12px 12px;
+    margin: 36px 12px 12px;
     width: 17%;
 }
 
@@ -572,6 +572,7 @@ a.questions {
  * LEFT HAND NAVIGATION *
  ************************/
 
+
 #gt-lhnav-container > div {
     overflow: hidden;
     white-space: nowrap;
@@ -592,18 +593,141 @@ a.questions {
     opacity: 0.50;
 }
 
+#gt-lhnav-container #profile-image:active {
+    cursor: pointer;
+    filter:alpha(opacity=100); /* IE's opacity*/
+    opacity: 100;
+}
+
 #gt-content-container ul #mini-left-nav  {
     height: 25px;
     width: 25px;
     margin-right:12px;
 }
 
-#gt-lhnav-container ul #mini-left-nav li a #collections {
-    background: url("../images/main-header-icon-collections.png") no-repeat center center transparent;
+#gt-lhnav-container ul li, #gt-lhnav-side-container ul li {
+    padding-bottom: 10px;
+}
+
+#gt-lhnav-container ul li:hover, #gt-lhnav-side-container ul li:hover {
+    cursor: pointer;
+}
+    
+#gt-lhnav-container ul li #collections, #gt-lhnav-side-container ul li #collections {
+    background: url("../images/context-icon-collections.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #collections:hover, #gt-lhnav-side-container ul li #collections:hover {
+    background: url("../images/context-icon-collections-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #collections:active, #gt-lhnav-side-container ul li #collections:active {
+    background: url("../images/context-icon-collections-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #tasks, #gt-lhnav-side-container ul li #tasks {
+    background: url("../images/context-icon-tasks.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #tasks:hover, #gt-lhnav-side-container ul li #tasks:hover {
+    background: url("../images/context-icon-tasks-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #tasks:active, #gt-lhnav-side-container ul li #tasks:active {
+    background: url("../images/context-icon-tasks-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #courses, #gt-lhnav-side-container ul li #courses {
+    background: url("../images/context-icon-courses.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #courses:hover, #gt-lhnav-side-container ul li #courses:hover {
+    background: url("../images/context-icon-courses-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #courses:active, #gt-lhnav-side-container ul li #courses:active {
+    background: url("../images/context-icon-courses-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #groups, #gt-lhnav-side-container ul li #groups {
+    background: url("../images/context-icon-groups.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #groups:hover, #gt-lhnav-side-container ul li #groups:hover {
+    background: url("../images/context-icon-groups-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #groups:active, #gt-lhnav-side-container ul li #groups:active {
+    background: url("../images/context-icon-groups-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #network, #gt-lhnav-side-container ul li #network {
+    background: url("../images/context-icon-network.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #network:hover, #gt-lhnav-side-container ul li #network:hover {
+    background: url("../images/context-icon-network-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #network:active, #gt-lhnav-side-container ul li #network:active {
+    background: url("../images/context-icon-network-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #archive, #gt-lhnav-side-container ul li #archive {
+    background: url("../images/context-icon-archive.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #archive:hover, #gt-lhnav-side-container ul li #archive:hover {
+    background: url("../images/context-icon-archive-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #archive:active, #gt-lhnav-side-container ul li #archive:active {
+    background: url("../images/context-icon-archive-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #projects, #gt-lhnav-side-container ul li #projects {
+    background: url("../images/context-icon-projects.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #projects:hover, #gt-lhnav-side-container ul li #projects:hover {
+    background: url("../images/context-icon-projects-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #projects:active, #gt-lhnav-side-container ul li #projects:active {
+    background: url("../images/context-icon-projects-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #discussions, #gt-lhnav-side-container ul li #discussions {
+    background: url("../images/context-icon-discussions.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #discussions:hover, #gt-lhnav-side-container ul li #discussions:hover {
+    background: url("../images/context-icon-discussions-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #discussions:active, #gt-lhnav-side-container ul li #discussions:active {
+    background: url("../images/context-icon-discussions-clicked.png") no-repeat center center transparent;
 }
 
 #gt-lhnav-container ul {
     margin: 12px;
+    display: block;
 }
 
 #gt-lhnav-container ul li,
@@ -635,7 +759,7 @@ a.questions {
 #gridview-listed-item {
     float: left;
     display: block;
-    margin: 0 20px 20px 0;
+    margin: 0 11px 20px 0;
 }
 
 #gridview-listed-item #container, #gridview-listed-item #container-open {
@@ -671,30 +795,33 @@ a.questions {
 
 }
 
+#title {
+    font-weight: 400;
+    font-size: 12px;
+    color: #ccc;
+    font-style: italic;
+}
+
 #gridview-listed-item #title {
     max-height: 100%;
     min-height: 2%;
     width: 95%;
     padding: 2% 2% 0 3%;
     margin: 2% 2% 0 2%;
-    color: #ccc;
-    font-style: italic;
 }
 
 #gridview-listed-item #title a {
-    font-weight: 400;
-    font-size: 12px;
     text-shadow: 0px 1px 0px #000;
     color: #fff;
     text-decoration: none;
     font-style: normal;
 }
 
-#gridview-listed-item #title a:hover {
+#title a:hover {
     text-decoration: underline;
 }
 
-#gridview-listed-item #title a:active {
+#title a:active {
     text-decoration: none;
     color: #999;
 }
@@ -733,16 +860,19 @@ a.questions {
     border-left: 1px solid #bbbab7;
 }
 
-#gridview-content-details #gridview-grabber {
-    background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
+#gridview-content-details #grabber,
+#gridview-content-details #grabber:hover,
+#gridview-content-details #grabber:active, {
     background-position: 3px 65px; 
-    height: 159px;
 }
 
-#gridview-content-details #gridview-grabber:hover {
+#grabber {
     background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
-    background-position: 3px 65px; 
-    height: 159px;
+    height: 100%;
+}
+
+#grabber:hover {
+    background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
     filter:alpha(opacity=50); /* IE's opacity*/
     opacity: 0.50;
     background-color: #fff;
@@ -750,11 +880,8 @@ a.questions {
     -moz-border-radius: 0 3px 3px 0;
     -webkit-border-radius: 0 3px 3px 0;
 }
-
-#gridview-content-details #gridview-grabber:active {
+#grabber:active {
     background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
-    background-position: 3px 65px; 
-    height: 159px;
     background-color: #999;
     border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
@@ -797,7 +924,13 @@ a.questions {
     float: left;
 }
 
-#gridview-listed-item #gridview-content-details-closed #gridview-grabber-closed {
+#gridview-listed-item #gridview-content-details-closed #grabber-closed {
+    background-position: 2px 65px; 
+    width: 12px;
+    height: 158px;
+}
+
+#grabber-closed {
     background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
     background-position: 2px 65px; 
     width: 12px;
@@ -810,7 +943,7 @@ a.questions {
     border-left: 1px solid #bbbab7;
 }
 
-#gridview-listed-item #gridview-content-details-closed #gridview-grabber-closed:hover {
+#grabber-closed:hover {
     filter:alpha(opacity=50); /* IE's opacity*/
     opacity: 0.50;
     background-color: #fff;
@@ -819,7 +952,7 @@ a.questions {
     -webkit-border-radius: 3px 0 0 3px;
 }
 
-#gridview-listed-item #gridview-content-details-closed #gridview-grabber-closed:active {
+#grabber-closed:active {
     border-radius: 3px 0 0 3px;
     -moz-border-radius: 3px 0 0 3px;
     -webkit-border-radius: 3px 0 0 3px;
@@ -922,6 +1055,107 @@ a.questions {
     height: 158px;
     width: 148px;
 }
+
+ /** THUMB VIEW OPEN **/
+
+#results-header-divider {
+    clear: both;
+    border-top: 1px solid #bbbab7;
+    margin-bottom: 20px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+#thumb-listed-item {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+#thumb-listed-item #container {
+    float: left;
+    max-width: 95%;
+    min-width: 95%;
+    display: block;
+    border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border: 1px solid #bbbab7;
+}
+
+#thumb-listed-item #container img {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+#thumb-listed-item #title {
+    float: left;
+    padding: 5px 0 0 0;
+    font-weight: 600;
+    color: #666;
+    width: 65%;
+}
+
+#thumb-listed-item #title span {
+    display: block;
+    margin: 5px 0 0 0;
+    font-style: italic;
+    color: #666;
+    width: 50%; 
+}
+
+#thumb-listed-item #title a {
+    color: #333;
+    text-decoration: none;
+    font-style: normal;
+}
+
+#thumb-listed-item #add-share { 
+    float: right;
+    margin: 15px 20px 15px 0;
+    background: url("../images/icon-add+share-list.png") no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+#thumb-listed-item #add-share:hover {
+    background: url("../images/icon-add+share-white.png") no-repeat;
+    background-position: center center;
+    background-color: #333;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#thumb-listed-item #add-share:active {
+    background: url("../images/icon-add+share-white-clicked.png") no-repeat;
+    background-position: center center;
+    background-color: #333;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#thumbview-content-details {
+    float: left;
+    width: 12px;
+    height: 64px;
+    background: url("../images/list-item-grid-view-details-shadow.png") no-repeat left center transparent;
+    background-color: #eae9e5;
+    border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+}
+
+#thumbview-content-details #grabber {
+    background-position: 3px 18px; 
+}
+
+
+
 
 /************
  * ELEMENTS *
@@ -1087,15 +1321,17 @@ a.questions {
     background: -o-linear-gradient(top, #fefefe 0%,#e9e8e2 100%);
     background: -ms-linear-gradient(top, #fefefe 0%,#e9e8e2 100%);
     background: linear-gradient(to bottom, #fefefe 0%,#e9e8e2 100%);
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     color: #777;
     font-weight: normal;
+    font-size: 11px;
     letter-spacing: 0.05em;
     line-height: 16px;
     margin-top: 7px;
-    padding: 2px 4px;
+    padding: 1px 4px;
+    text-align: center;
     text-shadow: 0 0 1px #999;
     box-shadow: 1px 0 1px #AAAAAA;
     -moz-box-shadow: 1px 0 1px #AAAAAA;
@@ -1365,25 +1601,35 @@ a.questions {
 /** CENTER PANEL **/ 
 /******************/
 
+
 .center_panel {
-    background-color: #EAE9E5;
-    border-radius: 0 0 2px 2px;
-    box-shadow: 0 1px 1px 0 #888888;
-    margin-bottom: 20px;
-    padding: 12px 12px 5px;
+    background: url("../images/list-options-shadow-search.png") no-repeat center 90px transparent;
     width: 94%;
+    margin: 0;
 }
 
-.center_panel #grabber_bar {
-    display: block;
-    height: 8px;
-    margin: 0 auto;
-    width: 45px;
-    cursor: pointer;
+.center-panel-inner {
+    background-color: #EAE9E5;
+    border-radius: 0 0 4px 4px;
+    margin: 0 0 20px 0;
+    padding: 10px 10px 0;
+    height: 70%;
+    width: 100%;
+}
+
+.center_panel #grabber-list-options {
+    background: url("../images/list-options-grabber.png") no-repeat center center transparent;
+    height: 18px;
+    margin: 0 auto 20px auto;
+}
+
+.center_panel #grabber-list-options:hover {
+    background: url("../images/list-options-grabber-hover.png") no-repeat center center transparent;
+    height: 18px;
+    margin: 0 auto 20px auto;
 }
 
 .center_panel .action_button {
-    cursor: pointer;
     display: inline-block;
     margin-left: 30px;
 }
@@ -1415,6 +1661,75 @@ input.refine_search {
 #panel_sort_by {
     line-height: 9px;
     margin-right: 17px;
+}
+
+#display-toggle {
+    background-color: #c7c7c7;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 1px;
+}
+
+#display-toggle li {
+    float: left;
+    height: 17px;
+    width: 17px;
+    padding: 1px;
+}
+
+#display-toggle #list .list-off {
+    background: url("../images/list-options-display-list-off.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #list .list-on {
+    background: url("../images/list-options-display-list-on.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #list a:hover {
+    background: url("../images/list-options-display-list-hover.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #thumb .thumb-off {
+    background: url("../images/list-options-display-thumb-list-off.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #thumb .thumb-on {
+    background: url("../images/list-options-display-thumb-list-on.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #thumb a:hover {
+    background: url("../images/list-options-display-thumb-list-hover.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #grid .grid-off {
+    background: url("../images/list-options-display-grid-view-off.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #grid a.grid-on {
+    background: url("../images/list-options-display-grid-view-on.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #grid a:hover {
+    background: url("../images/list-options-display-grid-view-hover.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
 }
 
 
