@@ -1439,6 +1439,12 @@ a.questions {
     padding-left: 7px;
 }
 
+.as-result-item img,
+.as-selection-item img {
+    width: 25px;
+    height: 25px;
+}
+
 /*******
  * TAGS *
  *******/

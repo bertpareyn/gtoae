@@ -33,6 +33,21 @@
                 value: "janderson23",
                 name: "Joyce Anderson",
                 img: 'images/dummy_users/profile-pic-joyce.png'
+            },
+            {
+                value: "bio101",
+                name: "Biology 101",
+                img: 'images/dummy_content/activity-item5-collection-item1.png'
+            },
+            {
+                value: "bioinspired",
+                name: "Bio Microsystems",
+                img: 'images/dummy_content/activity-item5-collection-item5.png'
+            },
+            {
+                value: "biorobotics",
+                name: "Bio-Robotics",
+                img: 'images/dummy_content/activity-item5-collection-item6.png'
             }
         ]};
 
@@ -125,12 +140,25 @@
         });
     };
 
+    var initOverlays = function() {
+        $('#gt_video_overlay_link').on('click', function() {
+            $('#gt_video_overlay').show();
+            $('#gt_video_overlay + div').show();
+        });
+
+        $('#gt_video_overlay_close').on('click', function() {
+            $('#gt_video_overlay').hide();
+            $('#gt_video_overlay + div').hide();
+        });
+    };
+
     var init = function() {
         initAutoSuggestExample();
         initSearchField();
         initQuestionsPopup();
         initSharePopup();
         initCenterPanel();
+        initOverlays();
     };
 
     $(document).ready(init);

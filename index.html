@@ -12,6 +12,13 @@
         <script src="js/main.js"></script>
     </head>
     <body>
+        <div class="overlay_window" id="gt_video_overlay" style="display: none;"></div>
+        <div class="overlay_container" style="display: none;">
+            <div class="gt-popup-close" id="gt_video_overlay_close"></div>
+            <a href="http://www.gatech.edu/">
+                <img src="images/dummy_gt_video.png" class="overlay1_dummy"/>
+            </a>
+        </div>
         <div id="gt-page-container">
             <div id="gt-topnavigation-container">
                 <div id="gt-topnavigation-left">
@@ -48,7 +55,7 @@
 
                     <div id="topnavigation_search_results_container" style="display: none;">
                         <div id="topnavigation_search_results_top">
-                            <div class="gt-force-right">
+                            <div class="gt-force-right" style="display: none;">
                                 <img src="images/switch-off.png" class="gt-force-right research_assistance_switch" style="display: none;"/>
                                 <img src="images/switch-on.png" class="gt-force-right research_assistance_switch"/>
                                 <div class="gt-force-left">Research assistance</div>
@@ -56,7 +63,7 @@
                             <img src="images/gt-search-icon.png" class="gt-force-left"/>
                         </div>
                         <div id="topnavigation_search_results_results">
-                            <div id="research-assistance-off" style="display:none;">
+                            <div id="research-assistance-off">
                                 <h2>Documents, files and links</h2>
                                 <ul>
                                     <li>
@@ -137,7 +144,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div id="research-assistance-on">
+                            <div id="research-assistance-on" style="display: none;">
                                 <h2>Research materials</h2>
                                 <div>
                                     <input type="checkbox" id="search_journal_articles">
@@ -511,7 +518,7 @@
                 <div class="gt-content-column">
                     <h2>Recommended <span class="h2-large">Tutorials</span></h2>
                     <ul>
-                        <li><a href="javascript:;" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
+                        <li><a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
                         <li><a href="javascript:;" title="Developing a Search Strategy">Developing a Search Strategy</a></li>
                         <li><a href="javascript:;" title="Using Fintit@GT to Obtain Articles &amp; Books">Using Fintit@GT to Obtain Articles &amp; Books</a></li>
                         <li><a href="javascript:;" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a></li>
