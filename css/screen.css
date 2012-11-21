@@ -651,30 +651,33 @@ a.questions {
 
 }
 
+#title {
+    font-weight: 400;
+    font-size: 12px;
+    color: #ccc;
+    font-style: italic;
+}
+
 #gridview-listed-item #title {
     max-height: 100%;
     min-height: 2%;
     width: 95%;
     padding: 2% 2% 0 3%;
     margin: 2% 2% 0 2%;
-    color: #ccc;
-    font-style: italic;
 }
 
 #gridview-listed-item #title a {
-    font-weight: 400;
-    font-size: 12px;
     text-shadow: 0px 1px 0px #000;
     color: #fff;
     text-decoration: none;
     font-style: normal;
 }
 
-#gridview-listed-item #title a:hover {
+#title a:hover {
     text-decoration: underline;
 }
 
-#gridview-listed-item #title a:active {
+#title a:active {
     text-decoration: none;
     color: #999;
 }
@@ -713,16 +716,19 @@ a.questions {
     border-left: 1px solid #bbbab7;
 }
 
-#gridview-content-details #gridview-grabber {
-    background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
+#gridview-content-details #grabber,
+#gridview-content-details #grabber:hover,
+#gridview-content-details #grabber:active, {
     background-position: 3px 65px; 
-    height: 159px;
 }
 
-#gridview-content-details #gridview-grabber:hover {
+#grabber {
     background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
-    background-position: 3px 65px; 
-    height: 159px;
+    height: 100%;
+}
+
+#grabber:hover {
+    background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
     filter:alpha(opacity=50); /* IE's opacity*/
     opacity: 0.50;
     background-color: #fff;
@@ -730,11 +736,8 @@ a.questions {
     -moz-border-radius: 0 3px 3px 0;
     -webkit-border-radius: 0 3px 3px 0;
 }
-
-#gridview-content-details #gridview-grabber:active {
+#grabber:active {
     background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
-    background-position: 3px 65px; 
-    height: 159px;
     background-color: #999;
     border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
@@ -777,7 +780,13 @@ a.questions {
     float: left;
 }
 
-#gridview-listed-item #gridview-content-details-closed #gridview-grabber-closed {
+#gridview-listed-item #gridview-content-details-closed #grabber-closed {
+    background-position: 2px 65px; 
+    width: 12px;
+    height: 158px;
+}
+
+#grabber-closed {
     background: url("../images/list-item-grid-view-details-grabber.png") no-repeat center center transparent;
     background-position: 2px 65px; 
     width: 12px;
@@ -790,7 +799,7 @@ a.questions {
     border-left: 1px solid #bbbab7;
 }
 
-#gridview-listed-item #gridview-content-details-closed #gridview-grabber-closed:hover {
+#grabber-closed:hover {
     filter:alpha(opacity=50); /* IE's opacity*/
     opacity: 0.50;
     background-color: #fff;
@@ -799,7 +808,7 @@ a.questions {
     -webkit-border-radius: 3px 0 0 3px;
 }
 
-#gridview-listed-item #gridview-content-details-closed #gridview-grabber-closed:active {
+#grabber-closed:active {
     border-radius: 3px 0 0 3px;
     -moz-border-radius: 3px 0 0 3px;
     -webkit-border-radius: 3px 0 0 3px;
@@ -902,6 +911,107 @@ a.questions {
     height: 158px;
     width: 148px;
 }
+
+ /** THUMB VIEW OPEN **/
+
+#results-header-divider {
+    clear: both;
+    border-top: 1px solid #bbbab7;
+    margin-bottom: 20px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+#thumb-listed-item {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+#thumb-listed-item #container {
+    float: left;
+    max-width: 95%;
+    min-width: 95%;
+    display: block;
+    border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border: 1px solid #bbbab7;
+}
+
+#thumb-listed-item #container img {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+#thumb-listed-item #title {
+    float: left;
+    padding: 5px 0 0 0;
+    font-weight: 600;
+    color: #666;
+    width: 65%;
+}
+
+#thumb-listed-item #title span {
+    display: block;
+    margin: 5px 0 0 0;
+    font-style: italic;
+    color: #666;
+    width: 50%; 
+}
+
+#thumb-listed-item #title a {
+    color: #333;
+    text-decoration: none;
+    font-style: normal;
+}
+
+#thumb-listed-item #add-share { 
+    float: right;
+    margin: 15px 20px 15px 0;
+    background: url("../images/icon-add+share-list.png") no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+#thumb-listed-item #add-share:hover {
+    background: url("../images/icon-add+share-white.png") no-repeat;
+    background-position: center center;
+    background-color: #333;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#thumb-listed-item #add-share:active {
+    background: url("../images/icon-add+share-white-clicked.png") no-repeat;
+    background-position: center center;
+    background-color: #333;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#thumbview-content-details {
+    float: left;
+    width: 12px;
+    height: 64px;
+    background: url("../images/list-item-grid-view-details-shadow.png") no-repeat left center transparent;
+    background-color: #eae9e5;
+    border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+}
+
+#thumbview-content-details #grabber {
+    background-position: 3px 18px; 
+}
+
+
+
 
 /************
  * ELEMENTS *
