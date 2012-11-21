@@ -1,6 +1,7 @@
 /******************
  * GENERAL MARKUP *
  ******************/
+
 body, html {
     margin: 0;
     padding: 0;
@@ -47,7 +48,6 @@ h2 {
 }
 
 h2.panel_header {
-    font-size: 15px;
     font-style: normal;
     text-shadow: 1px 1px #FFFFFF;
     margin-top: 6px;
@@ -288,7 +288,7 @@ label {
 
 .gt-content-column {
     float: left;
-    margin: 35px 12px 12px;
+    margin: 36px 12px 12px;
     width: 17%;
 }
 
@@ -572,6 +572,7 @@ a.questions {
  * LEFT HAND NAVIGATION *
  ************************/
 
+
 #gt-lhnav-container > div {
     overflow: hidden;
     white-space: nowrap;
@@ -592,18 +593,141 @@ a.questions {
     opacity: 0.50;
 }
 
+#gt-lhnav-container #profile-image:active {
+    cursor: pointer;
+    filter:alpha(opacity=100); /* IE's opacity*/
+    opacity: 100;
+}
+
 #gt-content-container ul #mini-left-nav  {
     height: 25px;
     width: 25px;
     margin-right:12px;
 }
 
-#gt-lhnav-container ul #mini-left-nav li a #collections {
-    background: url("../images/main-header-icon-collections.png") no-repeat center center transparent;
+#gt-lhnav-container ul li, #gt-lhnav-side-container ul li {
+    padding-bottom: 10px;
+}
+
+#gt-lhnav-container ul li:hover, #gt-lhnav-side-container ul li:hover {
+    cursor: pointer;
+}
+    
+#gt-lhnav-container ul li #collections, #gt-lhnav-side-container ul li #collections {
+    background: url("../images/context-icon-collections.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #collections:hover, #gt-lhnav-side-container ul li #collections:hover {
+    background: url("../images/context-icon-collections-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #collections:active, #gt-lhnav-side-container ul li #collections:active {
+    background: url("../images/context-icon-collections-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #tasks, #gt-lhnav-side-container ul li #tasks {
+    background: url("../images/context-icon-tasks.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #tasks:hover, #gt-lhnav-side-container ul li #tasks:hover {
+    background: url("../images/context-icon-tasks-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #tasks:active, #gt-lhnav-side-container ul li #tasks:active {
+    background: url("../images/context-icon-tasks-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #courses, #gt-lhnav-side-container ul li #courses {
+    background: url("../images/context-icon-courses.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #courses:hover, #gt-lhnav-side-container ul li #courses:hover {
+    background: url("../images/context-icon-courses-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #courses:active, #gt-lhnav-side-container ul li #courses:active {
+    background: url("../images/context-icon-courses-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #groups, #gt-lhnav-side-container ul li #groups {
+    background: url("../images/context-icon-groups.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #groups:hover, #gt-lhnav-side-container ul li #groups:hover {
+    background: url("../images/context-icon-groups-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #groups:active, #gt-lhnav-side-container ul li #groups:active {
+    background: url("../images/context-icon-groups-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #network, #gt-lhnav-side-container ul li #network {
+    background: url("../images/context-icon-network.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #network:hover, #gt-lhnav-side-container ul li #network:hover {
+    background: url("../images/context-icon-network-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #network:active, #gt-lhnav-side-container ul li #network:active {
+    background: url("../images/context-icon-network-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #archive, #gt-lhnav-side-container ul li #archive {
+    background: url("../images/context-icon-archive.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #archive:hover, #gt-lhnav-side-container ul li #archive:hover {
+    background: url("../images/context-icon-archive-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #archive:active, #gt-lhnav-side-container ul li #archive:active {
+    background: url("../images/context-icon-archive-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #projects, #gt-lhnav-side-container ul li #projects {
+    background: url("../images/context-icon-projects.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #projects:hover, #gt-lhnav-side-container ul li #projects:hover {
+    background: url("../images/context-icon-projects-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #projects:active, #gt-lhnav-side-container ul li #projects:active {
+    background: url("../images/context-icon-projects-clicked.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #discussions, #gt-lhnav-side-container ul li #discussions {
+    background: url("../images/context-icon-discussions.png") no-repeat center center transparent;
+    width: 34px;
+    height: 34px;
+}
+
+#gt-lhnav-container ul li #discussions:hover, #gt-lhnav-side-container ul li #discussions:hover {
+    background: url("../images/context-icon-discussions-hover.png") no-repeat center center transparent;
+}
+
+#gt-lhnav-container ul li #discussions:active, #gt-lhnav-side-container ul li #discussions:active {
+    background: url("../images/context-icon-discussions-clicked.png") no-repeat center center transparent;
 }
 
 #gt-lhnav-container ul {
     margin: 12px;
+    display: block;
 }
 
 #gt-lhnav-container ul li,
@@ -635,7 +759,7 @@ a.questions {
 #gridview-listed-item {
     float: left;
     display: block;
-    margin: 0 20px 20px 0;
+    margin: 0 11px 20px 0;
 }
 
 #gridview-listed-item #container, #gridview-listed-item #container-open {
@@ -1197,15 +1321,17 @@ a.questions {
     background: -o-linear-gradient(top, #fefefe 0%,#e9e8e2 100%);
     background: -ms-linear-gradient(top, #fefefe 0%,#e9e8e2 100%);
     background: linear-gradient(to bottom, #fefefe 0%,#e9e8e2 100%);
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     color: #777;
     font-weight: normal;
+    font-size: 11px;
     letter-spacing: 0.05em;
     line-height: 16px;
     margin-top: 7px;
-    padding: 2px 4px;
+    padding: 1px 4px;
+    text-align: center;
     text-shadow: 0 0 1px #999;
     box-shadow: 1px 0 1px #AAAAAA;
     -moz-box-shadow: 1px 0 1px #AAAAAA;
@@ -1475,25 +1601,35 @@ a.questions {
 /** CENTER PANEL **/ 
 /******************/
 
+
 .center_panel {
-    background-color: #EAE9E5;
-    border-radius: 0 0 2px 2px;
-    box-shadow: 0 1px 1px 0 #888888;
-    margin-bottom: 20px;
-    padding: 12px 12px 5px;
+    background: url("../images/list-options-shadow-search.png") no-repeat center 90px transparent;
     width: 94%;
+    margin: 0;
 }
 
-.center_panel #grabber_bar {
-    display: block;
-    height: 8px;
-    margin: 0 auto;
-    width: 45px;
-    cursor: pointer;
+.center-panel-inner {
+    background-color: #EAE9E5;
+    border-radius: 0 0 4px 4px;
+    margin: 0 0 20px 0;
+    padding: 10px 10px 0;
+    height: 70%;
+    width: 100%;
+}
+
+.center_panel #grabber-list-options {
+    background: url("../images/list-options-grabber.png") no-repeat center center transparent;
+    height: 18px;
+    margin: 0 auto 20px auto;
+}
+
+.center_panel #grabber-list-options:hover {
+    background: url("../images/list-options-grabber-hover.png") no-repeat center center transparent;
+    height: 18px;
+    margin: 0 auto 20px auto;
 }
 
 .center_panel .action_button {
-    cursor: pointer;
     display: inline-block;
     margin-left: 30px;
 }
@@ -1525,6 +1661,75 @@ input.refine_search {
 #panel_sort_by {
     line-height: 9px;
     margin-right: 17px;
+}
+
+#display-toggle {
+    background-color: #c7c7c7;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 1px;
+}
+
+#display-toggle li {
+    float: left;
+    height: 17px;
+    width: 17px;
+    padding: 1px;
+}
+
+#display-toggle #list .list-off {
+    background: url("../images/list-options-display-list-off.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #list .list-on {
+    background: url("../images/list-options-display-list-on.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #list a:hover {
+    background: url("../images/list-options-display-list-hover.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #thumb .thumb-off {
+    background: url("../images/list-options-display-thumb-list-off.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #thumb .thumb-on {
+    background: url("../images/list-options-display-thumb-list-on.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #thumb a:hover {
+    background: url("../images/list-options-display-thumb-list-hover.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #grid .grid-off {
+    background: url("../images/list-options-display-grid-view-off.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #grid a.grid-on {
+    background: url("../images/list-options-display-grid-view-on.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
+}
+
+#display-toggle #grid a:hover {
+    background: url("../images/list-options-display-grid-view-hover.png") no-repeat center center transparent;
+    height: 17px;
+    width: 17px;
 }
 
 

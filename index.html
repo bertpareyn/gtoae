@@ -189,16 +189,16 @@
 
              <div id="gt-lhnav-container">
                 <div id="lhnav-level-1">
-                    <a href="#" title="Sarah's dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
+                    <a href="#" title="Sarah's Dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
                     <ul id="mini-left-nav">
-                        <li><a href="#" title="Collections"><div id="collections"></div></a></li>
-                        <li><a href="#" title="Collections"><div id="collections"></div></a></li>
-                        <li><a href="#" title="Collections"><div id="collections"></div></a></li>
-                        <li><a href="#" title="Collections"><div id="collections"></div></a></li>
-                        <li><a href="#" title="Collections"><div id="collections"></div></a></li>
-                        <li><a href="#" title="Collections"><div id="collections"></div></a></li>
-                        <li><a href="#" title="Collections"><div id="collections"></div></a></li>
-                        <li><a href="#" title="Collections"><div id="collections"></div></a></li>
+                        <li><a href="#" title="Sarah's Collections"><div id="collections"></div></a></li>
+                        <li><a href="#" title="Sarah's Tasks"><div id="tasks"></div></a></li>
+                        <li><a href="#" title="Sarah's Courses"><div id="courses"></div></a></li>
+                        <li><a href="#" title="Sarah's Groups"><div id="groups"></div></a></li>
+                        <li><a href="#" title="Sarah's Network"><div id="network"></div></a></li>
+                        <li><a href="#" title="Sarah's Archive"><div id="archive"></div></a></li>
+                        <li><a href="#" title="Sarah's Projects"><div id="projects"></div></a></li>
+                        <li><a href="#" title="Sarah's Discussions"><div id="discussions"></div></a></li>
                     </ul>
                 </div>
              </div>
@@ -301,20 +301,29 @@
 
                 </div>
                 <div class="gt-content-column" id="gt-center-column">
+                    
                     <div class="center_panel">
-                        <div class="gt-force-right action_button">
-                            <input type="text" placeholder="Narrow by keyword" class="refine_search"/>
-                            <img src="images/list_switcher_dummy_image.png" class="gt-force-right"/>
-                            <span class="gt-force-right" id="panel_sort_by">Sort by</span>
+                        <div class="center-panel-inner">
+                            <div class="gt-force-right action_button">
+                                <input type="text" placeholder="Narrow by keyword" class="refine_search"/>
+                                <div class="gt-force-right" id="display-toggle">
+                                    <ul>
+                                        <li id="list"><a href="#" class="list-off"></a></li>
+                                        <li id="thumb"><a href="#" class="thumb-off"></a></li>
+                                        <li id="grid"><a href="#" class="grid-on"></a></li>
+                                    </ul>
+                                </div>
+                                <span class="gt-force-right" id="panel_sort_by">Sort by</span>
+                            </div>
+                            <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
+                            <input type="checkbox"/>
+                            <div class="action_button share fixed_width">
+                                <div class="share-black-icon gt-force-left"></div>
+                                <span>Share + add</span>
+                            </div>
+                            <a href="#" Title="Close list options"><div id="grabber-list-options"></div></a>
                         </div>
-                        <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
-                        <input type="checkbox"/>
-                        <div class="action_button share fixed_width">
-                            <div class="share-black-icon gt-force-left"></div>
-                            <span>Share + add</span>
-                        </div>
-                        <img src="images/list-options-grabber.png" id="grabber_bar"/>
-                    </div>
+                    </div>    
 
                     <div id="gt-search-results">
 
