@@ -46,6 +46,13 @@ h2 {
     margin-left: 4px;
 }
 
+h2.panel_header {
+    font-size: 15px;
+    font-style: normal;
+    text-shadow: 1px 1px #FFFFFF;
+    margin-top: 6px;
+}
+
 h6 {
     color: #fff;
     font-size: 13px;
@@ -164,6 +171,19 @@ label {
     background: -moz-linear-gradient(center top , #FEFEFE 0%, #E9EDF0 96%, #E2E5E7 100%) repeat scroll 0 0 transparent;
 }
 
+.gt-button.gt-black-button {
+    background: #0e0e0e;
+    background: -moz-linear-gradient(top,  #606060 0%, #0e0e0e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#0e0e0e));
+    background: -webkit-linear-gradient(top,  #606060 0%,#0e0e0e 100%);
+    background: -o-linear-gradient(top,  #606060 0%,#0e0e0e 100%);
+    background: -ms-linear-gradient(top,  #606060 0%,#0e0e0e 100%);
+    background: linear-gradient(to bottom,  #606060 0%,#0e0e0e 100%);
+    border: medium none;
+    box-shadow: none;
+    color: #fff;
+    text-shadow: none;
+}
 
 /*********
  * ICONS *
@@ -543,7 +563,7 @@ a.questions {
     padding: 8px 12px 12px;
 }
 
-#research_assistance_switch {
+.research_assistance_switch {
     cursor: pointer;
     margin-left: 7px;
 }
@@ -1029,12 +1049,14 @@ a.questions {
 
 .gt-popup {
     margin-top: 126px;
-    display: block;
+    display: none;
     background-color: #333;
     border-radius: 3px;
     padding: 15px;
     box-shadow: 0 0 5px #222;
     width: 230px;
+    position: absolute;
+    z-index: 100;
 }
 
 .gt-popup .gt-pop-up-list {
@@ -1047,6 +1069,26 @@ a.questions {
     line-height: 34px;
     margin-bottom: 3px;
     padding: 0 6px 0 0;
+}
+
+.gt-popup .gt-pop-up-list.highlighted {
+    background-color: #c0dff0 !important;
+}
+
+.gt-popup #share_new_collection {
+    color: #efefef;
+}
+
+.gt-popup #share_new_collection_input {
+    width: 175px;
+}
+
+#share_new_collection_create {
+    height: 20px;
+    margin-top: -27px;
+    padding: 2px;
+    position: relative;
+    z-index: 1000;
 }
 
 .gt-popup .secondary-arrow-up {
@@ -1086,6 +1128,16 @@ a.questions {
     width: 25px;
 }
 
+.share-black-icon {
+    background: url("../images/icon-add+share-list-options.png") no-repeat scroll left center transparent;
+    height: 29px;
+    width: 25px;
+}
+
+.share-black-icon:hover {
+    background: url("../images/icon-add+share-list-options-hover.png") no-repeat scroll left center transparent;
+}
+
 .archive-icon {
     background: url("../images/context-icon-archive.png") no-repeat scroll left center transparent;
     height: 34px;
@@ -1100,6 +1152,12 @@ a.questions {
 
 .collection-icon {
     background: url("../images/context-icon-collections.png") no-repeat scroll center center transparent;
+    height: 34px;
+    width: 34px;
+}
+
+.gt-popup .gt-pop-up-list.highlighted .collection-icon {
+    background: url("../images/context-icon-collections-hover.png") no-repeat scroll center center transparent;
     height: 34px;
     width: 34px;
 }
@@ -1131,7 +1189,7 @@ a.questions {
     padding: 7px;
 }
 
-.gt-popup .gt-counts-container {
+.gt-counts-container {
     background: #fefefe;
     background: -moz-linear-gradient(top, #fefefe 0%, #e9e8e2 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#e9e8e2));
@@ -1149,6 +1207,20 @@ a.questions {
     margin-top: 7px;
     padding: 2px 4px;
     text-shadow: 0 0 1px #999;
+    box-shadow: 1px 0 1px #AAAAAA;
+    -moz-box-shadow: 1px 0 1px #AAAAAA;
+    -webkit-box-shadow: 1px 0 1px #AAAAAA;
+}
+
+.gt-popup .gt-pop-up-list.highlighted .gt-counts-container {
+    background: #060606;
+    background: -moz-linear-gradient(top, #060606 0%, #606060 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#060606), color-stop(100%,#606060));
+    background: -webkit-linear-gradient(top, #060606 0%,#606060 100%);
+    background: -o-linear-gradient(top, #060606 0%,#606060 100%);
+    background: -ms-linear-gradient(top, #060606 0%,#606060 100%);
+    background: linear-gradient(to bottom, #060606 0%,#606060 100%);
+    color: #fff;
 }
 
 .gt-popup #question {
@@ -1193,6 +1265,34 @@ a.questions {
     line-height: 14px; 
     text-shadow: 0px 1px 0px #fff;
     resize: none;   
+}
+
+.gt-popup.question {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+.gt-popup.success {
+    background-color: #EEE;
+    box-shadow:inset 0 0 2px #222;
+    -webkit-box-shadow:inset 0 0 2px #222;
+    -moz-box-shadow:inset 0 0 2px #222;
+    color: #555;
+    opacity: .95;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    margin-top: 55px;
+    padding: 10px;
+}
+
+.gt-popup.success h6 {
+    color: #555;
+}
+
+.gt-popup.success p {
+    padding-bottom: 0;
 }
 
 .btn-cancel {
@@ -1371,5 +1471,94 @@ a.questions {
 }
 
 
+/******************/
+/** CENTER PANEL **/ 
+/******************/
+
+.center_panel {
+    background-color: #EAE9E5;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 1px 1px 0 #888888;
+    margin-bottom: 20px;
+    padding: 12px 12px 5px;
+    width: 94%;
+}
+
+.center_panel #grabber_bar {
+    display: block;
+    height: 8px;
+    margin: 0 auto;
+    width: 45px;
+    cursor: pointer;
+}
+
+.center_panel .action_button {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.center_panel.absolute_panel {
+    position: absolute;
+    top: 128px;
+    width: 495px;
+    z-index: 101;
+}
+
+.center_panel .action_button.fixed_width {
+    width: 120px;
+}
+
+.center_panel .action_button span {
+    color: #555555;
+    display: block;
+    font-size: 13px;
+    padding-top: 7px;
+}
+
+input.refine_search {
+    display: block;
+    margin-bottom: 13px;
+    width: 190px;
+}
+
+#panel_sort_by {
+    line-height: 9px;
+    margin-right: 17px;
+}
 
 
+/************
+ * OVERLAYS *
+ ************/
+
+.overlay_window {
+    background-color: #000000;
+    height: 100%;
+    opacity: 0.4;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.overlay_container {
+    background-color: #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 10px 3px #333333;
+    height: 275px;
+    left: 50%;
+    margin-left: -275px;
+    margin-top: 100px;
+    padding: 25px;
+    position: absolute;
+    width: 500px;
+    z-index: 1001;
+}
+
+img.overlay1_dummy {
+    margin: 2px 0 0 4px;
+}
+
+.overlay_container a {
+    color: #666;
+}
