@@ -1614,13 +1614,34 @@ a.questions {
     margin: 0;
 }
 
-.center-panel-inner {
+.center_panel_shown > div {
+    display: block !important;
+}
+
+.center-panel-inner.center_panel_shown {
     background-color: #EAE9E5;
+}
+
+.center-panel-inner {
+    background-color: #fff;
     border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
     margin: 0 0 20px 0;
     padding: 10px 10px 0;
     height: 70%;
     width: 100%;
+}
+
+.center-panel-inner.center_panel_shown > img {
+    display: none;
+}
+
+.center-panel-inner > img {
+    display: block;
+    height: 5px;
+    margin: 0 auto;
+    width: 528px;
 }
 
 .center_panel #grabber-list-options {

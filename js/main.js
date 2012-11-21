@@ -138,6 +138,14 @@
                 panelWidth = $panel.width();
             }
         });
+
+        $('#gt-search-results input[type=checkbox]').on('change', function() {
+            if ($('#gt-search-results input[type=checkbox]').is(':checked')) {
+                $('.center-panel-inner').addClass('center_panel_shown');
+            } else {
+                $('.center-panel-inner').removeClass('center_panel_shown');
+            }
+        });
     };
 
     var initOverlays = function() {
