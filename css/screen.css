@@ -1524,6 +1524,12 @@ a.questions {
 
 .gt-popover .gt-popup-close {
     margin: -5px -15px 0 0;
+
+}
+.as-result-item img,
+.as-selection-item img {
+    width: 25px;
+    height: 25px;
 }
 
 /*******
