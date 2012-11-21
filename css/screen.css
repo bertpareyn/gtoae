@@ -599,45 +599,65 @@ a.questions {
     opacity: 100;
 }
 
-#gt-content-container ul #mini-left-nav  {
-    height: 25px;
-    width: 25px;
-    margin-right:12px;
+#gt-lhnav-container-maxi {
+    float: left;
+    width: 17%;
+    white-space: nowrap;
 }
 
-#gt-lhnav-container ul li, #gt-lhnav-side-container ul li {
+#gt-lhnav-container-maxi ul {
+    margin: 40px 0 0 10px;
+}
+
+#gt-lhnav-container-maxi ul span {
+    float: left;
+}
+
+#gt-lhnav-container-maxi div {
+    float: left;
+}
+
+#gt-lhnav-container-maxi ul li, 
+#gt-lhnav-container ul li {
     padding-bottom: 10px;
 }
 
-#gt-lhnav-container ul li:hover, #gt-lhnav-side-container ul li:hover {
+#gt-lhnav-container-maxi ul li:hover, 
+#gt-lhnav-container ul li:hover {
     cursor: pointer;
 }
     
-#gt-lhnav-container ul li #collections, #gt-lhnav-side-container ul li #collections {
+#gt-lhnav-container ul li #collections,
+#gt-lhnav-container-maxi ul li #collections {
     background: url("../images/context-icon-collections.png") no-repeat center center transparent;
     width: 34px;
     height: 34px;
 }
 
-#gt-lhnav-container ul li #collections:hover, #gt-lhnav-side-container ul li #collections:hover {
+#gt-lhnav-container ul li #collections:hover, 
+#gt-lhnav-container-maxi ul li #collections:hover {
     background: url("../images/context-icon-collections-hover.png") no-repeat center center transparent;
 }
 
-#gt-lhnav-container ul li #collections:active, #gt-lhnav-side-container ul li #collections:active {
+#gt-lhnav-container ul li #collections:active,
+#gt-lhnav-container-maxi ul li #collections:active {
     background: url("../images/context-icon-collections-clicked.png") no-repeat center center transparent;
 }
 
-#gt-lhnav-container ul li #tasks, #gt-lhnav-side-container ul li #tasks {
+#gt-lhnav-container ul li #tasks,
+#gt-lhnav-container-maxi ul li #tasks {
     background: url("../images/context-icon-tasks.png") no-repeat center center transparent;
     width: 34px;
     height: 34px;
 }
 
-#gt-lhnav-container ul li #tasks:hover, #gt-lhnav-side-container ul li #tasks:hover {
+#gt-lhnav-container ul li #tasks:hover,
+#gt-lhnav-container-maxi ul li #tasks:hover {
     background: url("../images/context-icon-tasks-hover.png") no-repeat center center transparent;
 }
 
-#gt-lhnav-container ul li #tasks:active, #gt-lhnav-side-container ul li #tasks:active {
+#gt-lhnav-container ul li #tasks:active,
+#gt-lhnav-container-maxi ul li #tasks:active {
     background: url("../images/context-icon-tasks-clicked.png") no-repeat center center transparent;
 }
 
@@ -1439,6 +1459,73 @@ a.questions {
     padding-left: 7px;
 }
 
+.gt-popover.guide {
+    float: left;
+    position: absolute;   
+    top: 0;
+    right: 5px; 
+    width: 127px;
+    margin: 55px 0 0 40px;
+    padding: 10px 20px 10px 10px;
+    background-color: #fff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f5f5f5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f5f5f5));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#f5f5f5 100%);    color: #666;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-box-shadow: 0px 0px 5px #888;
+    -webkit-box-shadow: 0px 0px 5px #888;
+    box-shadow: 0px 0px 5px #888;
+}
+
+.gt-popover .tertiary-arrow-left {
+    float: left;
+    background: url('../images/popup-tertiary-arrow-left.png') no-repeat left center transparent;
+    width: 11px;
+    height: 15px;
+    margin-left: -19px;
+    position: relative;
+}
+
+.gt-popover .tertiary-arrow-right {
+    float: right;
+    background: url('../images/popup-tertiary-arrow-right.png') no-repeat left center transparent;
+    width: 11px;
+    height: 15px;
+    margin-right: -29px;
+    position: relative;
+}
+
+.gt-popover .tertiary-arrow-up {
+    background: url('../images/popup-tertiary-arrow-up.png') no-repeat left center transparent;
+    width: 15px;
+    height: 11px;
+    margin-top: -20px;
+    position: relative;
+}
+
+.gt-popover h6 {
+    float: left;
+    color: #666;
+    font-weight: 600;
+    text-shadow: none;
+}
+
+.gt-popover p {
+    clear: both;
+    display: block;
+    margin-bottom: 0; 
+    text-shadow: none;
+}
+
+.gt-popover .gt-popup-close {
+    margin: -5px -15px 0 0;
+}
+
 /*******
  * TAGS *
  *******/
@@ -1648,7 +1735,7 @@ a.questions {
 .center_panel .action_button span {
     color: #555555;
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     padding-top: 7px;
 }
 
@@ -1656,11 +1743,24 @@ input.refine_search {
     display: block;
     margin-bottom: 13px;
     width: 190px;
+    filter:alpha(opacity=   ); /* IE's opacity*/
+    opacity: 0.50;
+}
+
+#select-all {
+    margin: 5px 0 0 0;
+    float: left;
+    background: url("../images/down-arrow.png") no-repeat center right transparent;
+    width: 28px;
+    height: 20px;
 }
 
 #panel_sort_by {
+    background: url("../images/down-arrow.png") no-repeat center right transparent;
+    width: 50px;
+    height: 15px;
     line-height: 9px;
-    margin-right: 17px;
+    margin-right: 40px;
 }
 
 #display-toggle {
@@ -1767,3 +1867,4 @@ img.overlay1_dummy {
 .overlay_container a {
     color: #666;
 }
+
