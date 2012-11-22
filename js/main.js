@@ -169,5 +169,5 @@
         initOverlays();
     };
 
-    $(document).ready(init);
+$(document).ready(init);
 })();
