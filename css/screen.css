@@ -53,6 +53,10 @@ h2.panel_header {
     margin-top: 6px;
 }
 
+h3 {
+    
+}
+
 h6 {
     color: #fff;
     font-size: 13px;
@@ -1989,10 +1993,14 @@ img.overlay1_dummy {
     display: block; 
     cursor: pointer; 
     position: relative; 
-    margin-top: 2px; 
-    padding: .5em .5em .5em .7em; 
+    margin-top: 20px 0 0 0; 
     zoom: 1; 
+    background: url("../images/accordian-shadow.png") no-repeat center top transparent;
+    height: 25px;
+    padding-top: 5px; 
 }
+
+
 .ui-accordion .ui-accordion-icons {
     padding-left: 2.2em; 
 }
@@ -2005,20 +2013,23 @@ img.overlay1_dummy {
 .ui-accordion .ui-accordion-header .ui-accordion-header-icon { 
     position: absolute; 
     left: .5em; 
-    top: 50%; margin-top: -8px; 
+    top: 50%;
+    margin-top: -8px; 
 }
 .ui-accordion .ui-accordion-content { 
     padding: 1em 2.2em; 
     border-top: 0; 
-    overflow: 
-    auto; 
+    overflow: auto; 
     zoom: 1; 
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-box-shadow: inset 0 0 2px #999999;
+    -webkit-box-shadow: inset 0 0 2px #999999;
+    box-shadow: inset 0 0 3px #999999;
 }
 
-
-
 /** TASKS WIDGET **/
-
 
 
 /********
