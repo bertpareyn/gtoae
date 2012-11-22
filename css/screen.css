@@ -451,7 +451,8 @@ label {
     white-space: nowrap;
 }
 
-#gt-lhnav-container #profile-image {
+#gt-lhnav-container #profile-image,
+#gt-lhnav-container #go-back-level {
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -460,10 +461,25 @@ label {
     width: 30px;
 }
 
-#gt-lhnav-container #profile-image:hover {
+.second-level-nav #profile-image {
+    margin-top: 10px !important;
+}
+
+.second-level-nav #maxi-left-nav {
+    margin-top: 10px !important;
+}
+
+#gt-lhnav-container #profile-image:hover,
+#gt-lhnav-container #go-back-level:hover {
     cursor: pointer;
     filter:alpha(opacity=50); /* IE's opacity*/
     opacity: 0.50;
+}
+
+#gt-lhnav-container #go-back-level {
+    height: 26px;
+    margin-top: 12px;
+    width: 15px;
 }
 
 #gt-lhnav-container #profile-image:active {
@@ -524,6 +540,39 @@ label {
 #gt-lhnav-container ul li a:hover {
     cursor: pointer;
 }
+
+
+
+
+
+#gt-lhnav-container ul li #participants,
+#gt-lhnav-container-maxi ul li #participants {
+    background: url("../images/context-icon-participants.png") no-repeat 0 0 transparent;
+}
+
+#gt-lhnav-container ul li #participants:hover, 
+#gt-lhnav-container-maxi ul li #participants:hover {
+    background: url("../images/context-icon-participants-hover.png") no-repeat 0 0 transparent;
+}
+
+#gt-lhnav-container ul li #search,
+#gt-lhnav-container-maxi ul li #search {
+    background: url("../images/context-icon-search-history.png") no-repeat 0 0 transparent;
+}
+
+#gt-lhnav-container ul li #search:hover, 
+#gt-lhnav-container-maxi ul li #search:hover {
+    background: url("../images/context-icon-search-history-hover.png") no-repeat 0 0 transparent;
+}
+
+
+
+
+
+
+
+
+
     
 #gt-lhnav-container ul li #collections,
 #gt-lhnav-container-maxi ul li #collections {
@@ -727,7 +776,9 @@ label {
 
 #user-box.gt-title-clip img {
     float: left;
+    height: 30px;
     margin: 13px 0 0 6px;
+    width: 30px;
 }
 
 #user-box.gt-title-clip img:hover {
@@ -749,7 +800,6 @@ label {
     text-decoration: none;
     float: left;
     background: url("../images/header-clip-down-arrow.png") no-repeat center right transparent;
-
 }
 #user-box a h1:hover {
     color: #fff;
@@ -760,6 +810,22 @@ label {
     color: #666;
     float: left;
     background: url("../images/header-clip-down-arrow-clicked.png") no-repeat center right transparent;
+}
+#user-box .user-box-multiline h1{
+    background: url("../images/header-clip-down-arrow.png") no-repeat scroll right center transparent;
+    display: inline-block;
+    float: left;
+    height: 20px;
+    line-height: 3px;
+    margin: 6px 0 -20px;
+    padding-right: 25px;
+}
+
+#user-box .user-box-multiline span {
+    color: #FFFFFF;
+    display: block;
+    font-size: 13px;
+    padding: 0 0 0 10px;
 }
 
 /** RIGHT YELLOW PRIMARY ACTION CLIPS **/
