@@ -9,6 +9,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,greek-ext' rel='stylesheet' type='text/css'>
         <script src="lib/jquery-1.8.2.js"></script>
         <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
+        <script src="lib/jquery-ui.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
@@ -197,14 +198,14 @@
              <div id="gt-lhnav-container">
                 <a href="#" title="Sarah's Dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
                 <ul id="mini-left-nav">
-                    <li><a href="#" title="Sarah's Collections"><div id="collections"></div></a></li>
-                    <li><a href="#" title="Sarah's Tasks"><div id="tasks"></div></a></li>
-                    <li><a href="#" title="Sarah's Courses"><div id="courses"></div></a></li>
-                    <li><a href="#" title="Sarah's Groups"><div id="groups"></div></a></li>
-                    <li><a href="#" title="Sarah's Network"><div id="network"></div></a></li>
-                    <li><a href="#" title="Sarah's Archive"><div id="archive"></div></a></li>
-                    <li><a href="#" title="Sarah's Projects"><div id="projects"></div></a></li>
-                    <li><a href="#" title="Sarah's Discussions"><div id="discussions"></div></a></li>
+                    <li><a href="#" title="Sarah's Discussions" id="discussions"></a></li>
+                    <li><a href="#" title="Sarah's Collections" id="collections"></a></li>
+                    <li><a href="#" title="Sarah's Tasks" id="tasks"></a></li>
+                    <li><a href="#" title="Sarah's Courses" id="courses"></a></li>
+                    <li><a href="#" title="Sarah's Groups" id="groups"></a></li>
+                    <li><a href="#" title="Sarah's Projects" id="projects"></a></li>
+                    <li><a href="#" title="Sarah's Network" id="network"></a></li>
+                    <li><a href="#" title="Sarah's Archive" id="archive"></a></li>
                 </ul>
              </div>
 
@@ -230,7 +231,7 @@
                     <div class="gt-action-clip-primary">
                         <div class="action-clip-right"></div>
                         <div class="action-clip-left"></div>
-                        <div class="action-icon">Ask a question</div>
+                        <div class="action-icon" id="ask-question">Ask a question</div>
                     </div>
                 </a>
 
@@ -306,7 +307,6 @@
 
                 </div>
                 <div class="gt-content-column" id="gt-center-column">
-                    
                     <div class="center_panel">
                         <div class="center-panel-inner">
                             <div style="display: none;">
@@ -329,7 +329,14 @@
                                 </div>
                             </div>
                             <img src="images/list-options-shadow-search.png"/>
-                            <a href="#" Title="Close list options"><div id="grabber-list-options"></div></a>
+                            <a href="#" title="Close list options"><div id="grabber-list-options"></div></a>
+                            <div class="center-panel-closed">
+                                <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
+                                <form action="" method="get">
+                                    <label for="enjoy_web">Show source</label>
+                                    <input class="checkbox" type="checkbox" name="enjoy_web" value="no" id="enjoy_web" checked="true" />
+                                </form>
+                            </div>
                         </div>
                     </div>    
 
@@ -517,21 +524,55 @@
 
                 </div>
                 <div class="gt-content-column">
-                    <h2>Recommended <span class="h2-large">Tutorials</span></h2>
-                    <ul>
-                        <li><a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
-                        <li><a href="javascript:;" title="Developing a Search Strategy">Developing a Search Strategy</a></li>
-                        <li><a href="javascript:;" title="Using Fintit@GT to Obtain Articles &amp; Books">Using Fintit@GT to Obtain Articles &amp; Books</a></li>
-                        <li><a href="javascript:;" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a></li>
-                        <li><a href="javascript:;" title="Using EndNote to Create Citations and Bibliographies">Using EndNote to Create Citations and Bibliographies</a></li>
-                        <li><a href="javascript:;" title="Creating an Annotated Bibliography with EndNote">Creating an Annotated Bibliography with EndNote</a></li>
-                        <li><a href="javascript:;" title="Using Wordpress to Create a Project Website">Using Wordpress to Create a Project Website</a></li>
-                        <li><a href="javascript:;" title="Presentation skills">Presentation skills</a></li>
-                        <li><a href="javascript:;" title="Video editing">Video editing</a></li>
-                        <li><a href="javascript:;" title="Resources &amp; equipment for Creating a Video">Resources &amp; equipment for Creating a Video</a></li>
-                        <li><a href="javascript:;" title="Avoiding Plagiarism - Citing Sources">Avoiding Plagiarism - Citing Sources</a></li>
-                        <li><a href="javascript:;" title="Writing a paper">Writing a paper</a></li>
-                    <ul>
+
+                    <div id="accordion">
+                        <h3>Research skills</h3>
+                        <div>
+                            <p>
+                                <ul>
+                                    <li><a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
+                                    <li><a href="javascript:;" title="Developing a Search Strategy">Developing a Search Strategy</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                        <h3>Citations/bibliographies</h3>
+                        <div>
+                            <p>
+                                <ul>
+                                    <li><a href="javascript:;" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a></li>
+                                    <li><a href="javascript:;" title="Using EndNote to Create Citations and Bibliographies">Using EndNote to Create Citations and Bibliographies</a></li>
+                                    <li><a href="javascript:;" title="Creating an Annotated Bibliography with EndNote">Creating an Annotated Bibliography with EndNote</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                        <h3>Papers</h3>
+                        <div>
+                            <p>
+                                <ul>
+                                    <li><a href="javascript:;" title="Avoiding Plagiarism - Citing Sources">Avoiding Plagiarism - Citing Sources</a></li>
+                                    <li><a href="javascript:;" title="Writing a paper">Writing a paper</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                        <h3>Video</h3>
+                        <div>
+                            <p>
+                                <ul>
+                                    <li><a href="javascript:;" title="Video editing">Video editing</a></li>
+                                    <li><a href="javascript:;" title="Resources &amp; equipment for Creating a Video">Resources &amp; equipment for Creating a Video</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                        <h3>Further skills</h3>
+                        <div>
+                            <p>
+                                <ul>
+                                    <li><a href="javascript:;" title="Using Wordpress to Create a Project Website">Using Wordpress to Create a Project Website</a></li>
+                                    <li><a href="javascript:;" title="Presentation skills">Presentation skills</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
              </div>
         </div>
@@ -572,7 +613,7 @@
                 <div class="gt-force-left collection-icon"></div>
                 <div>Videos</div>
             </div>
-            <div class="gt-pop-up-list alternate white">
+            <div class="gt-pop-up-list alternate white">    
                 <div class="gt-force-right gt-counts-container">27</div>
                 <div class="gt-force-left collection-icon"></div>
                 <div>Photos</div>
