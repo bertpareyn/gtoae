@@ -189,6 +189,11 @@ label {
     text-shadow: none;
 }
 
+.gt-button.gt-black-button.centered {
+    display: block;
+    margin: 12px auto 0;
+}
+
 #add-collection-btn {
     display: block;
     margin: 15px auto 0;
@@ -370,6 +375,7 @@ label {
 
 #gt-topnavigation-container #gt-topnavigation-right > * {
     margin-top: 14px;
+    z-index: 1000;
 }
 
 #gt-topnavigation-container #gt-topnavigation-right a #topnavigation_settings {
@@ -437,6 +443,34 @@ label {
 .research_assistance_switch {
     cursor: pointer;
     margin-left: 7px;
+}
+
+#research-assistance-on #topnavigation_search_results_bottom {
+    height: 35px;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+#search_wt_step_one,
+#search_wt_step_two,
+#search_wt_step_three {
+    padding: 0 15px;
+}
+
+.search_wt_content_box {
+    margin-top: 15px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 0 3px 0 #999999;
+    padding: 7px 12px;
+}
+
+.search_wt_content_box h1 {
+    color: #999;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
 }
 
 /************************
@@ -2048,6 +2082,10 @@ img.overlay1_dummy {
     border: none;
 }
 
+#suggested-terms ul li {
+    width: auto !important;
+}
+
 #suggested-terms ul.as-selections li.as-selection-item,
 #search-keywords ul.as-selections li.as-selection-item {
     margin: 0;
@@ -2089,7 +2127,8 @@ img.overlay1_dummy {
 }
 
 #suggested-terms ul.as-selections div#add-tag,
-#search-keywords ul.as-selections div#add-tag {
+#search-keywords ul.as-selections div#add-tag,
+#add-tag {
     background-image: url("../images/tag-icon-add.png");
     background-position: right;
     background-repeat: no-repeat;
@@ -2100,7 +2139,8 @@ img.overlay1_dummy {
 }
 
 #suggested-terms ul.as-selections li.as-selection-item div#add-tag:hover,
-#search-keywords ul.as-selections li.as-selection-item div#add-tag:hover {
+#search-keywords ul.as-selections li.as-selection-item div#add-tag:hover,
+#add-tag:hover {
     background-image: url("../images/tag-icon-add-hover.png");
     background-position: right;
     background-repeat: no-repeat;

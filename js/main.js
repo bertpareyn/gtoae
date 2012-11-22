@@ -10,8 +10,34 @@
 
         $('.research_assistance_switch').click(function() {
             $('.research_assistance_switch').toggle();
-            $('#topnavigation_search_results_results > div').toggle();
+            $('#research-assistance-off').toggle();
+            $('#research-assistance-on').toggle();
+            $('.search_footer').toggle();
         });
+
+        $('#start_search_assistance_walkthrough').on('click', function() {
+            $('.search_footer').hide();
+            $('#topnavigation_search_results_results > div').hide();
+            $('#search_wt_step_one').show();
+        });
+
+        $('#start_second_sa_step').on('click', function() {
+            $('#search_wt_step_one').hide();
+            $('#search_wt_step_two').show();
+        });
+
+        $('#start_third_sa_step').on('click', function() {
+            $('#search_wt_step_two').hide();
+            $('#search_wt_step_three').show();
+        });
+
+        $('#close_sa').on('click', function() {
+            $('#topnavigation_search_results_container').hide();
+            $('.research_assistance_switch').toggle();
+            $('#search_wt_step_three').hide();
+            $('.main_search_footer.search_footer').toggle();
+            $('#research-assistance-off').toggle();
+        })
     };
 
     /**
