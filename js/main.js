@@ -142,8 +142,10 @@
         $('#gt-search-results input[type=checkbox]').on('change', function() {
             if ($('#gt-search-results input[type=checkbox]').is(':checked')) {
                 $('.center-panel-inner').addClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: none !important');
             } else {
                 $('.center-panel-inner').removeClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: block');
             }
         });
     };
@@ -160,6 +162,19 @@
         });
     };
 
+    var initSorryMessage = function() {
+        // Set action on all links with no href
+        $("a").each(function(index, el){
+            var $anchor = $(el);
+            if ($anchor.attr("href") && ($anchor.attr("href") === "#" || $anchor.attr("href") === "javascript:;")) {
+                $anchor.on("click", function(){
+                    alert("Ooops, not your fault, it's ours, try again...");
+                    return false;
+                });
+            }
+        });
+    }
+
     var init = function() {
         initAutoSuggestExample();
         initSearchField();
@@ -167,6 +182,7 @@
         initSharePopup();
         initCenterPanel();
         initOverlays();
+        initSorryMessage();
     };
 
 $(document).ready(init);
