@@ -11,6 +11,11 @@
         <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
         <script src="lib/jquery-ui.js"></script>
         <script src="js/main.js"></script>
+        <script>
+        $(function() {
+            $( "#accordion" ).accordion();
+        });
+        </script>
     </head>
     <body>
         <div class="overlay_window" id="gt_video_overlay" style="display: none;"></div>
@@ -332,10 +337,8 @@
                             <a href="#" title="Close list options"><div id="grabber-list-options"></div></a>
                             <div class="center-panel-closed">
                                 <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
-                                <form action="" method="get">
-                                    <label for="enjoy_web">Show source</label>
-                                    <input class="checkbox" type="checkbox" name="enjoy_web" value="no" id="enjoy_web" checked="true" />
-                                </form>
+                                <a href="#" title="Sort this list by where it's all been found from"><img src="images/switch-off.png" alt="Sort this list by where it's all been found from" /></a>
+                                <h3>Sort by source</h3>
                             </div>
                         </div>
                     </div>    
@@ -524,53 +527,44 @@
 
                 </div>
                 <div class="gt-content-column">
-
+                    <h2>Tutorials</h2>
                     <div id="accordion">
                         <h3>Research skills</h3>
                         <div>
-                            <p>
                                 <ul>
                                     <li><a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
                                     <li><a href="javascript:;" title="Developing a Search Strategy">Developing a Search Strategy</a></li>
                                 </ul>
-                            </p>
+
                         </div>
                         <h3>Citations/bibliographies</h3>
                         <div>
-                            <p>
                                 <ul>
                                     <li><a href="javascript:;" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a></li>
                                     <li><a href="javascript:;" title="Using EndNote to Create Citations and Bibliographies">Using EndNote to Create Citations and Bibliographies</a></li>
                                     <li><a href="javascript:;" title="Creating an Annotated Bibliography with EndNote">Creating an Annotated Bibliography with EndNote</a></li>
                                 </ul>
-                            </p>
                         </div>
                         <h3>Papers</h3>
                         <div>
-                            <p>
                                 <ul>
                                     <li><a href="javascript:;" title="Avoiding Plagiarism - Citing Sources">Avoiding Plagiarism - Citing Sources</a></li>
                                     <li><a href="javascript:;" title="Writing a paper">Writing a paper</a></li>
                                 </ul>
-                            </p>
                         </div>
                         <h3>Video</h3>
                         <div>
-                            <p>
                                 <ul>
                                     <li><a href="javascript:;" title="Video editing">Video editing</a></li>
                                     <li><a href="javascript:;" title="Resources &amp; equipment for Creating a Video">Resources &amp; equipment for Creating a Video</a></li>
                                 </ul>
-                            </p>
                         </div>
                         <h3>Further skills</h3>
                         <div>
-                            <p>
                                 <ul>
                                     <li><a href="javascript:;" title="Using Wordpress to Create a Project Website">Using Wordpress to Create a Project Website</a></li>
                                     <li><a href="javascript:;" title="Presentation skills">Presentation skills</a></li>
                                 </ul>
-                            </p>
                         </div>
                     </div>
                 </div>

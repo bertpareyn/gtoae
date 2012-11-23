@@ -53,6 +53,15 @@ h2.panel_header {
     margin-top: 6px;
 }
 
+h3 {
+    line-height: 14px; 
+    font-size: 12px;
+    font-weight: 600;
+    color: #666; 
+    margin: 0;
+    padding: 0;
+}
+
 h6 {
     color: #fff;
     font-size: 13px;
@@ -866,9 +875,9 @@ label {
 
 .gt-action-clip-primary {
     background-image: url("../images/clip-button-primary-bg-tile.png");
-    float: right;
     height: 44px;
     margin-right: 20px;
+    position: absolute;
 }
 
 .action-clip-left {
@@ -918,6 +927,11 @@ a.questions {
     float: right;
     margin-right: 180px;
 }
+
+a.questions .gt-action-clip-primary {
+    width: 170px;
+}
+
 
 .action-icon#ask-question {
     background: url("../images/clip-button-icon-ask-question.png") no-repeat 10px 10px transparent;
@@ -1947,7 +1961,7 @@ input.refine_search {
 
 .center-panel-closed {
     height: 30px;
-    width: 100%;
+    width: 98%;
     margin:0;
     padding:0;
 }
@@ -1956,32 +1970,21 @@ input.refine_search {
     float: left;
 }
 
-.center-panel-closed form {
+.center-panel-closed h3 {
     float: right;
-    width: 130px; 
-    line-height: 18px; 
-}
-.center-panel-closed form label {
+    line-height: 4px; 
+    font-size: 12px;
     font-weight: 600;
-}
-.center-panel-closed a {
-  float: right;
+    color: #666;   
+} 
+
+.center-panel-closed a{
+    float: right;
+    width: 50px;
+    height: 19px;
+    margin: 4px 0 0 10px;
 }
 
-.js .checkbox{
-  display:none;
-}
-
-.toggle{
-   background:url("../images/toggle.png") bottom left;
-    display:block;
-    width:50px;
-    height:19px;
-}
-
-.toggle.checked{
-  background-position:top left;
-}
 
 /************
  * OVERLAYS *
@@ -2029,36 +2032,51 @@ img.overlay1_dummy {
     display: block; 
     cursor: pointer; 
     position: relative; 
-    margin-top: 2px; 
-    padding: .5em .5em .5em .7em; 
+    margin-top: 20px 0 0 0; 
     zoom: 1; 
+    background: url("../images/accordian-shadow.png") no-repeat center top transparent;
+    background-size: 100% 5px;
+    height: 25px;
+    width: 100%;
+    padding-top: 5px; 
 }
+
 .ui-accordion .ui-accordion-icons {
-    padding-left: 2.2em; 
+
 }
+
+.ui-accordion ul {
+    max-height: 80px;
+    padding-bottom: 20px;
+}
+
 .ui-accordion .ui-accordion-noicons { 
     padding-left: .7em; 
 }
+
 .ui-accordion .ui-accordion-icons .ui-accordion-icons { 
     padding-left: 2.2em; 
 }
+
 .ui-accordion .ui-accordion-header .ui-accordion-header-icon { 
     position: absolute; 
     left: .5em; 
-    top: 50%; margin-top: -8px; 
+    top: 50%;
+    margin-top: -8px; 
 }
+
 .ui-accordion .ui-accordion-content { 
-    padding: 1em 2.2em; 
-    border-top: 0; 
-    overflow: 
-    auto; 
+    border-top: 0;
     zoom: 1; 
+    /** border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-box-shadow: inset 0 0 2px #999999;
+    -webkit-box-shadow: inset 0 0 2px #999999;
+    box-shadow: inset 0 0 3px #999999;**/
 }
-
-
 
 /** TASKS WIDGET **/
-
 
 
 /********
