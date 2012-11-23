@@ -13,7 +13,14 @@
         <script src="js/main.js"></script>
         <script>
             $(function() {
-                $( "#accordion" ).accordion();
+                $( "#accordion" ).accordion({
+                    heightStyle: "content"
+                });
+            });
+            $(function() {
+                $( "#accordion" ).accordion({
+                    collapsible: true
+                });
             });
         </script>
     </head>
@@ -190,7 +197,7 @@
                             </div>
                         </div>
                         <div id="topnavigation_search_results_bottom">
-                            <button type="button" class="gt-button gt-overlay-button gt-force-right">See all</button>
+                            <a href="#"><button type="button" class="gt-button gt-overlay-button gt-force-right">See all</button></a>
                             <div class="gt-force-left">16 of 134 search results</div>
                         </div>
                     </div>
@@ -203,7 +210,7 @@
              <div id="gt-lhnav-container">
                 <a href="#" title="Sarah's Dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
                 <ul id="mini-left-nav">
-                    <li><a href="#" title="Sarah's Discussions" id="discussions"></a></li>
+                    <li><a href="1column.html" title="Sarah's Discussions" id="discussions"></a></li>
                     <li><a href="#" title="Sarah's Collections" id="collections"></a></li>
                     <li><a href="#" title="Sarah's Tasks" id="tasks"></a></li>
                     <li><a href="#" title="Sarah's Courses" id="courses"></a></li>
@@ -314,7 +321,7 @@
                 <div class="gt-content-column" id="gt-center-column">
                     <div class="center_panel">
                         <div class="center-panel-inner">
-                            <div style="display: none;">
+                            <div style="display: none; margin-bottom: 0;">
                                 <div class="gt-force-right action_button">
                                     <input type="text" placeholder="Narrow by keyword" class="refine_search"/>
                                     <div class="gt-force-right" id="display-toggle">
@@ -334,7 +341,7 @@
                                 </div>
                             </div>
                             <img src="images/list-options-shadow-search.png"/>
-                            <a href="#" title="Close list options"><div id="grabber-list-options"></div></a>
+                            <a href="" title="Close list options" id="research-results-1"><div id="grabber-list-options"></div></a>
                             <div class="center-panel-closed">
                                 <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
                                 <a href="#" title="Sort this list by where it's all been found from"><img src="images/switch-off.png" alt="Sort this list by where it's all been found from" /></a>
@@ -531,46 +538,45 @@
                     <div id="accordion">
                         <h3>Research skills</h3>
                         <div>
-                                <ul>
-                                    <li><a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
-                                    <li><a href="javascript:;" title="Developing a Search Strategy">Developing a Search Strategy</a></li>
-                                </ul>
-
+                            <ul>
+                                <li><a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
+                                <li id="with-divider"><a href="javascript:;" title="Developing a Search Strategy">Developing a Search Strategy</a></li>
+                            </ul>
                         </div>
                         <h3>Citations/bibliographies</h3>
                         <div>
-                                <ul>
-                                    <li><a href="javascript:;" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a></li>
-                                    <li><a href="javascript:;" title="Creating an Annotated Bibliography with EndNote">Creating an Annotated Bibliography with EndNote</a></li>
-                                </ul>
+                            <ul>
+                                <li><a href="javascript:;" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a></li>
+                                <li><a href="javascript:;" title="Creating an Annotated Bibliography with EndNote">Creating an Annotated Bibliography with EndNote</a></li>
+                            </ul>
                         </div>
                         <h3>Papers</h3>
                         <div>
-                                <ul>
-                                    <li><a href="javascript:;" title="Avoiding Plagiarism - Citing Sources">Avoiding Plagiarism - Citing Sources</a></li>
-                                    <li><a href="javascript:;" title="Writing a paper">Writing a paper</a></li>
-                                </ul>
+                            <ul>
+                                <li><a href="javascript:;" title="Avoiding Plagiarism - Citing Sources">Avoiding Plagiarism - Citing Sources</a></li>
+                                <li><a href="javascript:;" title="Writing a paper">Writing a paper</a></li>
+                            </ul>
                         </div>
                         <h3>Video</h3>
                         <div>
-                                <ul>
-                                    <li><a href="javascript:;" title="Video editing">Video editing</a></li>
-                                    <li><a href="javascript:;" title="Resources &amp; equipment for Creating a Video">Resources &amp; equipment for Creating a Video</a></li>
-                                </ul>
+                            <ul>
+                                <li><a href="javascript:;" title="Video editing">Video editing</a></li>
+                                <li><a href="javascript:;" title="Resources &amp; equipment for Creating a Video">Resources &amp; equipment for Creating a Video</a></li>
+                            </ul>
                         </div>
                         <h3>Further skills</h3>
                         <div>
-                                <ul>
-                                    <li><a href="javascript:;" title="Using Wordpress to Create a Project Website">Using Wordpress to Create a Project Website</a></li>
-                                    <li><a href="javascript:;" title="Presentation skills">Presentation skills</a></li>
-                                </ul>
+                            <ul>
+                                <li><a href="javascript:;" title="Using Wordpress to Create a Project Website">Using Wordpress to Create a Project Website</a></li>
+                                <li><a href="javascript:;" title="Presentation skills">Presentation skills</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
              </div>
         </div>
 
-        <div class="gt-popup share" style="float:left; margin-left: 40px;">
+        <div class="gt-popup share" style="float:left; margin-left: 30px;">
             <div class="secondary-arrow-up"></div>
             <div class="gt-popup-close share"></div>
             <h1><div class="share-white-icon"></div>Share with</h1>
