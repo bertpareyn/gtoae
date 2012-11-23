@@ -68,9 +68,9 @@
 
                     <div id="topnavigation_search_results_container" style="display: none;">
                         <div id="topnavigation_search_results_top">
-                            <div class="gt-force-right" style="display: none;">
-                                <img src="images/switch-off.png" class="gt-force-right research_assistance_switch" style="display: none;"/>
-                                <img src="images/switch-on.png" class="gt-force-right research_assistance_switch"/>
+                            <div class="gt-force-right">
+                                <img src="images/switch-off.png" class="gt-force-right research_assistance_switch"/>
+                                <img src="images/switch-on.png" class="gt-force-right research_assistance_switch" style="display: none;"/>
                                 <div class="gt-force-left">Research assistance</div>
                             </div>
                             <img src="images/gt-search-icon.png" class="gt-force-left"/>
@@ -194,11 +194,176 @@
                                     <input type="checkbox" id="search_websites">
                                     <label for="search_websites">Websites</label>
                                 </div>
+
+                                <h2>Terminology</h2>
+                                <div id="suggested-terms">
+                                    <ul class="as-selections">
+                                        <li class="as-selection-item">
+                                            <a><div id="add-tag"></div></a>
+                                            <div class="autosuggest_term">River</div>
+                                        </li>
+                                        <li class="as-selection-item">
+                                            <a><div id="add-tag"></div></a>
+                                            <div class="autosuggest_term">Water</div>
+                                        </li>
+                                        <li class="as-selection-item">
+                                            <a><div id="add-tag"></div></a>
+                                            <div class="autosuggest_term">Streams</div>
+                                        </li>
+                                        <li class="as-selection-item">
+                                            <a><div id="add-tag"></div></a>
+                                            <div class="autosuggest_term">Virus</div>
+                                        </li>
+                                        <li class="as-selection-item">
+                                            <a><div id="add-tag"></div></a>
+                                            <div class="autosuggest_term">Harmful</div>
+                                        </li>
+                                        <li class="as-selection-item">
+                                            <a><div id="add-tag"></div></a>
+                                            <div class="autosuggest_term">Bacteria</div>
+                                        </li>
+                                        <li class="as-selection-item">
+                                            <a><div id="add-tag"></div></a>
+                                            <div class="autosuggest_term">Germ</div>
+                                        </li>
+                                        <li class="as-selection-item">
+                                            <a><div id="add-tag"></div></a>
+                                            <div class="autosuggest_term">Microorganism</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="topnavigation_search_results_bottom">
+                                    <h2>Save this search in (Search history):</h2>
+                                    <select>
+                                        <option>Water testing</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="search_wt_step_one" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Research criteria</h1>
+                                    <p>Are you looking for materials based on the syllabus or research project recommendations?</p>
+                                    <div>
+                                        <input type="checkbox" id="search_peer_reviewed">
+                                        <label for="search_peer_reviewed">Peer-reviewed articles</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_videos">
+                                        <label for="search_videos">Books</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Conference materials</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Other</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">No, I'll start by researching everything</label>
+                                    </div>
+                                </div>
+                                <button type="button" id="start_second_sa_step" class="gt-button gt-black-button centered">Next</button>
+                            </div>
+                            <div id="search_wt_step_two" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Requirements</h1>
+                                    <p>Are you looking to find resources and tutorials on project deliverables?</p>
+                                    <div>
+                                        <input type="checkbox" id="search_peer_reviewed">
+                                        <label for="search_peer_reviewed">Writing papers</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_videos">
+                                        <label for="search_videos">Annotated bibliographies</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Creating webpages</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Giving oral presentations</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">No, I'm good at all these</label>
+                                    </div>
+                                </div>
+                                <button type="button" id="start_third_sa_step" class="gt-button gt-black-button centered">Next</button>
+                            </div>
+                            <div id="search_wt_step_three" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Terminology</h1>
+                                    <p>Consider alternative terms</p>
+                                    <div id="suggested-terms">
+                                        <ul class="as-selections">
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Virus</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Microbe</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Microorganism</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Stream</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">River</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Creek</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Germ</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Harmful</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Contamination</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Quantitative analysis</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button type="button" id="close_sa" class="gt-button gt-black-button centered">Done</button>
                             </div>
                         </div>
-                        <div id="topnavigation_search_results_bottom">
-                            <a href="#"><button type="button" class="gt-button gt-overlay-button gt-force-right">See all</button></a>
+                        <div id="topnavigation_search_results_bottom" class="search_footer main_search_footer">
+                            <button type="button" class="gt-button gt-overlay-button gt-force-right">See all</button>
                             <div class="gt-force-left">16 of 134 search results</div>
+                        </div>
+                        <div id="topnavigation_search_results_bottom" class="search_footer" style="display: none;">
+                            <button type="button" id="start_search_assistance_walkthrough" class="gt-button gt-black-button gt-force-right">Done</button>
+                            <a href="javascript:;" class="gt-force-left">Clear</a>
                         </div>
                     </div>
 
@@ -361,7 +526,7 @@
                                     </div>
                                 </div>
                                 <a href="#" title="Detection of pathogenic organisms in food, water, and body fluids">
-                                    <img id="grid-view-preview" src="images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
+                                    <img id="grid-view-preview" src="images/s1-images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
                                 </a>
                                 </div>
                                 <a href="#" title="Slide open for more details">
@@ -384,7 +549,7 @@
                                     </div>
                                 </div>
                                 <a href="#" title="Detection of pathogenic organisms in food, water, and body fluids">
-                                    <img id="grid-view-preview" src="images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
+                                    <img id="grid-view-preview" src="images/s1-images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
                                 </a>
                                 </div>
                                 <a href="#" title="Slide open for more details">
@@ -407,7 +572,7 @@
                                     </div>
                                 </div>
                                 <a href="#" title="Detection of pathogenic organisms in food, water, and body fluids">
-                                    <img id="grid-view-preview" src="images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
+                                    <img id="grid-view-preview" src="images/s1-images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
                                 </a>
                                 </div>
                                 <a href="#" title="Slide open for more details">
@@ -430,7 +595,7 @@
                                     </div>
                                 </div>
                                 <a href="#" title="Detection of pathogenic organisms in food, water, and body fluids">
-                                    <img id="grid-view-preview" src="images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
+                                    <img id="grid-view-preview" src="images/s1-images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
                                 </a>
                                 </div>
                                 <a href="#" title="Slide open for more details">
@@ -453,7 +618,7 @@
                                     </div>
                                 </div>
                                 <a href="#" title="Detection of pathogenic organisms in food, water, and body fluids">
-                                    <img id="grid-view-preview" src="images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
+                                    <img id="grid-view-preview" src="images/s1-images/result-01-list-grid-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
                                 </a>
                                 </div>
                                 <a href="#" title="Slide open for more details">
@@ -488,45 +653,96 @@
                         </div>
 
                         <div id="results-header-divider">
-                            <h4>Environment complete</h4>
-
-                            <div id="thumb-listed-item">
-                                <div id="container">
-                                    <a href="#" title="Detection of pathogenic organisms in food, water, and body fluids">
-                                        <img id="grid-view-preview" src="images/result-01-list-thumb-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
-                                    </a>
-                                    <div id="container-inner">
-                                        <div id="title">
-                                            <a href="#">Detection of pathogenic organisms in food, water, and body fluids<span>PPT</span></a>
+                            <h4>Google Scholar</h4>
+                        
+                            <div id="thumb-listed">
+                                <input type="checkbox"></input>
+                                <div id="thumb-listed-item">
+                                    <div id="container">
+                                        <a href="#" title="Feasibility of fast-response testing for coliform bacteria in distribution systems">
+                                            <img id="grid-view-preview" src="images/s1-images/result-01-list-thumb-preview.png" alt="Feasibility of fast-response testing for coliform bacteria in distribution systems" />
+                                        </a>
+                                        <div id="container-inner">
+                                            <div id="title">
+                                                <a href="#">Feasibility of fast-response testing for coliform bacteria in distribution systems<span>PDF</span></a>
+                                            </div>
+                                            <a href="#" title="Add+Share"></a><div id="add-share" title="Add+Share"></div></a>
                                         </div>
-                                        <a href="#" title="Add+Share"></a><div id="add-share" title="Add+Share"></div></a>
                                     </div>
+                                    <a href="#" title="Slide open for more details">
+                                        <div id="thumbview-content-details">
+                                            <div id="grabber"></div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <a href="#" title="Slide open for more details">
-                                    <div id="thumbview-content-details">
-                                        <div id="grabber"></div>
-                                    </div>
-                                </a>
                             </div>
 
-                            <div id="thumb-listed-item">
-                                <div id="container">
-                                    <a href="#" title="Detection of pathogenic organisms in food, water, and body fluids">
-                                        <img id="grid-view-preview" src="images/result-01-list-thumb-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
-                                    </a>
-                                    <div id="container-inner">
-                                        <div id="title">
-                                            <a href="#">Detection of pathogenic organisms in food, water, and body fluids<span>PPT</span></a>
+                            <div id="thumb-listed">
+                                <input type="checkbox"></input>
+                                <div id="thumb-listed-item">
+                                    <div id="container">
+                                        <a href="#" title="Occurrence of fecal-indicator bacteria and protocols for identification of fecal-contamination sources in selected reaches of the West Branch Brandywine Creek, Chester County, Pennsylvania">
+                                            <img id="grid-view-preview" src="images/s1-images/result-02-list-thumb-preview.png" alt="Occurrence of fecal-indicator bacteria and protocols for identification of fecal-contamination sources in selected reaches of the West Branch Brandywine Creek, Chester County, Pennsylvania" />
+                                        </a>
+                                        <div id="container-inner">
+                                            <div id="title">
+                                                <a href="#">Occurrence of fecal-indicator bacteria and protocols for identification ... West Branch Brandywine Creek, Chester County, Pennsylvania<span>PDF</span></a>
+                                            </div>
+                                            <a href="#" title="Add+Share"></a><div id="add-share" title="Add+Share"></div></a>
                                         </div>
-                                        <a href="#" title="Add+Share"></a><div id="add-share" title="Add+Share"></div></a>
                                     </div>
+                                    <a href="#" title="Slide open for more details">
+                                        <div id="thumbview-content-details">
+                                            <div id="grabber"></div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <a href="#" title="Slide open for more details">
-                                    <div id="thumbview-content-details">
-                                        <div id="grabber"></div>
-                                    </div>
-                                </a>
                             </div>
+
+                            <div id="thumb-listed">
+                                <input type="checkbox"></input>
+                                <div id="thumb-listed-item">
+                                    <div id="container">
+                                        <a href="#" title="Chapter 5: Analytical methods for the detection of waterborne and environmental pathogenic mycobacteria">
+                                            <img id="grid-view-preview" src="images/s1-images/result-03-list-thumb-preview.png" alt="Chapter 5: Analytical methods for the detection of waterborne and environmental pathogenic mycobacteria" />
+                                        </a>
+                                        <div id="container-inner">
+                                            <div id="title">
+                                                <a href="#">Chapter 5: Analytical methods for the detection of waterborne and environmental pathogenic mycobacteria<span>eBook – Pages 55-73</span></a>
+                                            </div>
+                                            <a href="#" title="Add+Share"></a><div id="add-share" title="Add+Share"></div></a>
+                                        </div>
+                                    </div>
+                                    <a href="#" title="Slide open for more details">
+                                        <div id="thumbview-content-details">
+                                            <div id="grabber"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="thumb-listed">
+                                <input type="checkbox"></input>
+                                <div id="thumb-listed-item">
+                                    <div id="container">
+                                        <a href="#" title="Fast detection and identification of bacteria in potable water">
+                                            <img id="grid-view-preview" src="images/s1-images/result-04-list-thumb-preview.png" alt="Fast detection and identification of bacteria in potable water" />
+                                        </a>
+                                        <div id="container-inner">
+                                            <div id="title">
+                                                <a href="#">Fast detection and identification of bacteria in potable water<span>PDF</span></a>
+                                            </div>
+                                            <a href="#" title="Add+Share"></a><div id="add-share" title="Add+Share"></div></a>
+                                        </div>
+                                    </div>
+                                    <a href="#" title="Slide open for more details">
+                                        <div id="thumbview-content-details">
+                                            <div id="grabber"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
 
                         </div>
 
