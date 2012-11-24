@@ -174,6 +174,17 @@
                 $('.center-panel-closed').attr('style', 'display: block');
             }
         });
+
+        $('#research-results-1').on('click', function(ev) {
+            ev.preventDefault();
+            if ($('.center-panel-inner').hasClass('center_panel_shown')) {
+                $('.center-panel-inner').removeClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: block');
+            } else {
+                $('.center-panel-inner').addClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: none !important');
+            }
+        });
     };
 
     var initOverlays = function() {
