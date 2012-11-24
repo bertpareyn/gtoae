@@ -133,7 +133,7 @@
     var initSharePopup = function() {
         // Bind buttons
         $('.action_button.share').on('click', function() {
-            $('.gt-popup.share').toggle();
+            $('.gt-popup.share').show();
             $('.gt-popup.share').css('z-index', 10000);
             $('.gt-popup.share').css('top', $(this).offset().top - 95);
             $('.gt-popup.share').css('left', $(this).offset().left - 100);
@@ -225,7 +225,7 @@
         // Set action on all links with no href
         $("a").each(function(index, el){
             var $anchor = $(el);
-            if ($anchor.attr("href") === "javascript:;") {
+            if ($anchor.attr("href") === "#") {
                 $anchor.on("click", function(){
                     alert("Ooops, not your fault, it's ours, try again...");
                     return false;
