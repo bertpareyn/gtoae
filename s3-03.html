@@ -9,15 +9,35 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,greek-ext' rel='stylesheet' type='text/css'>
         <script src="lib/jquery-1.8.2.js"></script>
         <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
+        <script src="lib/jquery-ui.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $(function() {
+                $( "#accordion" ).accordion({
+                    heightStyle: "content"
+                });
+            });
+            $(function() {
+                $( "#accordion" ).accordion({
+                    collapsible: true
+                });
+            });
+        </script>
     </head>
     <body>
+        <div class="overlay_window" id="gt_video_overlay" style="display: none;"></div>
+        <div class="overlay_container" style="display: none;">
+            <div class="gt-popup-close" id="gt_video_overlay_close"></div>
+            <a href="http://www.gatech.edu/">
+                <img src="images/s1-images/dummy-gt-video-databases.png" class="overlay1_dummy"/>
+            </a>
+        </div>
         <div id="gt-page-container">
             <div id="gt-topnavigation-container">
                 <div id="gt-topnavigation-left">
                     <ul>
                         <li>
-                            <a href="javascript:;" title="Dashboard" id="topnavigation_home">
+                            <a href="s3-01.html" title="Dashboard" id="topnavigation_home">
                                 <div class="gt-home-icon"></div>
                             </a>
                         </li>
@@ -156,7 +176,7 @@
                 <div id="user-box" class="gt-title-clip">
                     <div class="gt-title-clip-right"></div>
                     <div class="gt-title-clip-left"></div>
-                    <a href="#" title="Sarah's dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
+                    <a href="s3-01.html" title="Sarah's dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
                     <a href="#" title="More of my stuff"><h1>Sarah First</h1><div id="my-dropdown"></div></a>
                 </div>
 
@@ -177,15 +197,14 @@
                     </div>
                 </a>
                
-
                 <div id="gt-lhnav-container-maxi">
-                    <ul id="maxi-left-nav">
+                    <ul class="selected">
                         <li><a href="#" title="Sarah's Discussions" id="discussions">Discussions</a><div class="gt-counts-container ">28</div></li>
                         <li><a href="#" title="Sarah's Collections" id="collections">Collections</a><div class="gt-counts-container">12</div></li>
                         <li><a href="#" title="Sarah's Tasks" id="tasks">Tasks</a><div class="gt-counts-container ">5</div></li>
-                        <li><a href="#" title="Sarah's Courses" id="courses">Courses</a><div class="gt-counts-container ">3</div></li>
+                        <li id="lhnav-arrow"><span title="Sarah's Courses" id="courses">Courses</span><div class="gt-counts-container ">3</div></li>
                         <li><a href="#" title="Sarah's Groups" id="groups">Groups</a><div class="gt-counts-container ">1</div></li>
-                        <li><a href="#" title="Sarah's Projects" id="projects">Projects</a><div class="gt-counts-container ">8</div></li>
+                        <li><a href="s3-02.html" title="Sarah's Projects" id="projects">Projects</a><div class="gt-counts-container ">8</div></li>
                         <li><a href="#" title="Sarah's Network" id="network">Network</a><div class="gt-counts-container ">32</div></li>
                         <li><a href="#" title="Sarah's Archive" id="archive">Archive</a><div class="gt-counts-container ">55</div></li>
                     </ul>
@@ -193,37 +212,145 @@
 
                 <div class="gt-content-column" id="gt-center-column">
 
-                    <div id="gridview-listed-item" class="new-item">
-                        <div id="container">
-                            <button class="gt-button" id="new-item-btn" label="New Project">New project</button>
-                            <div id="gridview-project"></div>
-                        </div>
-                    </div>
-
-                    <div id="gridview-listed-item">
-                        <div id="container">
-                            <div id="container-inner">
-                                <div id="title">
-                                    <a href="#" title="Research lab group 1">Research lab group 1</a>
-                                    <div id="type-add-share">Research project</div>
+                    <div class="center_panel">
+                        <div class="center-panel-inner">
+                            <div style="display: none; margin-bottom: 0;">
+                                <div class="gt-force-right action_button">
+                                    <input type="text" placeholder="Narrow by keyword" class="refine_search"/>
+                                    <div class="gt-force-right" id="display-toggle">
+                                        <ul>
+                                            <li id="list"><a href="#" class="list-off"></a></li>
+                                            <li id="thumb"><a href="#" class="thumb-off"></a></li>
+                                            <li id="grid"><a href="#" class="grid-on"></a></li>
+                                        </ul>
+                                    </div>
+                                    <span class="gt-force-right" id="panel_sort_by">Sort by</span>
+                                </div>
+                                <h2 class="panel_header">Courses</h2>
+                                <div id="select-all"><input type="checkbox"/></div>
+                                <div class="action_button share fixed_width">
                                 </div>
                             </div>
-                            <a href="#" title="Research lab group 1"> 
-                                <div id="no-profile-image-project"></div>
-                            </a>
+                            <img src="images/list-options-shadow-search.png"/>
+                            <a href="" title="Close list options" id="research-results-1"><div id="grabber-list-options"></div></a>
+                            <div class="center-panel-closed">
+                                <h2 class="panel_header">Courses</h2>
                             </div>
-                            <a href="#" title="Slide open for more details">
-                                <div id="gridview-content-details">
-                                    <div id="grabber"></div>
-                                </div>
-                            </a>
-                        <div>
-                            <input type="checkbox" id="research-results-1"/>
                         </div>
-                    </div>
+                    </div>    
 
+                    <div id="gt-search-results">
+
+                        <div id="gridview-listed-item">
+                            <div id="container">
+                                <div id="container-inner">
+                                    <div id="title">
+                                        <a href="s3-04.html" title="Biology 101">Biology 101</a>
+                                        <div id="type-add-share">Course</div>
+                                    </div>
+                                </div>
+                                <a href="s3-04.html" title="Biology 101"> 
+                                    <img src="images/s3-images/profile-picture-biology101.png" title="Biology 101" />
+                                </a>
+                                </div>
+                                <a href="#" title="Slide open for more details">
+                                    <div id="gridview-content-details">
+                                        <div id="grabber"></div>
+                                    </div>
+                                </a>
+                            <div>
+                                <input type="checkbox" id="research-results-1"/>
+                            </div>
+                        </div>
+
+                        <div id="gridview-listed-item">
+                            <div id="container">
+                                <div id="container-inner">
+                                    <div id="title">
+                                        <a href="#" title="Research lab group 1">Calculus 111</a>
+                                        <div id="type-add-share">Course</div>
+                                    </div>
+                                </div>
+                                <a href="#" title="Research lab group 1"> 
+                                    <img src="images/s3-images/profile-picture-chemistry452.png" title="Data visualization on US pathogenesis" />
+                                </a>
+                                </div>
+                                <a href="#" title="Slide open for more details">
+                                    <div id="gridview-content-details">
+                                        <div id="grabber"></div>
+                                    </div>
+                                </a>
+                            <div>
+                                <input type="checkbox" id="research-results-1"/>
+                            </div>
+                        </div>
+
+                        <div id="gridview-listed-item">
+                            <div id="container">
+                                <div id="container-inner">
+                                    <div id="title">
+                                        <a href="#" title="Research lab group 1">Chemistry 452</a>
+                                        <div id="type-add-share">Course</div>
+                                    </div>
+                                </div>
+                                <a href="#" title="Research lab group 1"> 
+                                    <img src="images/s3-images/profile-picture-calculus.png" title="DNA samples needed for research in geographical genetic tracking of human evolution" />
+                                </a>
+                                </div>
+                                <a href="#" title="Slide open for more details">
+                                    <div id="gridview-content-details">
+                                        <div id="grabber"></div>
+                                    </div>
+                                </a>
+                            <div>
+                                <input type="checkbox" id="research-results-1"/>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
+
+                <div class="gt-content-column" id="gt-right-column">
+
+                    <h2>Tutorials</h2>
+                    <div id="accordion">
+                        <h3>Research skills</h3>
+                        <div>
+                            <ul>
+                                <li><a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
+                                <li id="with-divider"><a href="javascript:;" title="Developing a Search Strategy">Developing a Search Strategy</a></li>
+                            </ul>
+                        </div>
+                        <h3>Citations/bibliographies</h3>
+                        <div>
+                            <ul>
+                                <li><a href="javascript:;" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a></li>
+                                <li><a href="javascript:;" title="Creating an Annotated Bibliography with EndNote">Creating an Annotated Bibliography with EndNote</a></li>
+                            </ul>
+                        </div>
+                        <h3>Papers</h3>
+                        <div>
+                            <ul>
+                                <li><a href="javascript:;" title="Avoiding Plagiarism - Citing Sources">Avoiding Plagiarism - Citing Sources</a></li>
+                                <li><a href="javascript:;" title="Writing a paper">Writing a paper</a></li>
+                            </ul>
+                        </div>
+                        <h3>Video</h3>
+                        <div>
+                            <ul>
+                                <li><a href="javascript:;" title="Video editing">Video editing</a></li>
+                                <li><a href="javascript:;" title="Resources &amp; equipment for Creating a Video">Resources &amp; equipment for Creating a Video</a></li>
+                            </ul>
+                        </div>
+                        <h3>Further skills</h3>
+                        <div>
+                            <ul>
+                                <li><a href="javascript:;" title="Using Wordpress to Create a Project Website">Using Wordpress to Create a Project Website</a></li>
+                                <li><a href="javascript:;" title="Presentation skills">Presentation skills</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
              </div>
         </div>

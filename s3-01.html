@@ -9,9 +9,29 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,greek-ext' rel='stylesheet' type='text/css'>
         <script src="lib/jquery-1.8.2.js"></script>
         <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
+        <script src="lib/jquery-ui.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $(function() {
+                $( "#accordion" ).accordion({
+                    heightStyle: "content"
+                });
+            });
+            $(function() {
+                $( "#accordion" ).accordion({
+                    collapsible: true
+                });
+            });
+        </script>
     </head>
     <body>
+        <div class="overlay_window" id="gt_video_overlay" style="display: none;"></div>
+        <div class="overlay_container" style="display: none;">
+            <div class="gt-popup-close" id="gt_video_overlay_close"></div>
+            <a href="http://www.gatech.edu/">
+                <img src="images/s1-images/dummy-gt-video-databases.png" class="overlay1_dummy"/>
+            </a>
+        </div>
         <div id="gt-page-container">
             <div id="gt-topnavigation-container">
                 <div id="gt-topnavigation-left">
@@ -177,15 +197,14 @@
                     </div>
                 </a>
                
-
                 <div id="gt-lhnav-container-maxi">
                     <ul id="maxi-left-nav">
                         <li><a href="#" title="Sarah's Discussions" id="discussions">Discussions</a><div class="gt-counts-container ">28</div></li>
                         <li><a href="#" title="Sarah's Collections" id="collections">Collections</a><div class="gt-counts-container">12</div></li>
                         <li><a href="#" title="Sarah's Tasks" id="tasks">Tasks</a><div class="gt-counts-container ">5</div></li>
-                        <li><a href="#" title="Sarah's Courses" id="courses">Courses</a><div class="gt-counts-container ">3</div></li>
+                        <li><a href="s3-03.html" title="Sarah's Courses" id="courses">Courses</a><div class="gt-counts-container ">3</div></li>
                         <li><a href="#" title="Sarah's Groups" id="groups">Groups</a><div class="gt-counts-container ">1</div></li>
-                        <li><a href="#" title="Sarah's Projects" id="projects">Projects</a><div class="gt-counts-container ">8</div></li>
+                        <li><a href="s3-02.html" title="Sarah's Projects" id="projects">Projects</a><div class="gt-counts-container ">8</div></li>
                         <li><a href="#" title="Sarah's Network" id="network">Network</a><div class="gt-counts-container ">32</div></li>
                         <li><a href="#" title="Sarah's Archive" id="archive">Archive</a><div class="gt-counts-container ">55</div></li>
                     </ul>
@@ -193,37 +212,71 @@
 
                 <div class="gt-content-column" id="gt-center-column">
 
-                    <div id="gridview-listed-item" class="new-item">
-                        <div id="container">
-                            <button class="gt-button" id="new-item-btn" label="New Project">New project</button>
-                            <div id="gridview-project"></div>
-                        </div>
-                    </div>
-
-                    <div id="gridview-listed-item">
-                        <div id="container">
-                            <div id="container-inner">
-                                <div id="title">
-                                    <a href="#" title="Research lab group 1">Research lab group 1</a>
-                                    <div id="type-add-share">Research project</div>
+                    <div class="center_panel">
+                        <div class="center-panel-inner">
+                            <div style="display: none; margin-bottom: 0;">
+                                <div class="gt-force-right action_button">
+                                    <input type="text" placeholder="Narrow by keyword" class="refine_search"/>
+                                    <div class="gt-force-right" id="display-toggle">
+                                        <ul>
+                                            <li id="list"><a href="#" class="list-off"></a></li>
+                                            <li id="thumb"><a href="#" class="thumb-off"></a></li>
+                                            <li id="grid"><a href="#" class="grid-on"></a></li>
+                                        </ul>
+                                    </div>
+                                    <span class="gt-force-right" id="panel_sort_by">Sort by</span>
+                                </div>
+                                <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
+                                <div id="select-all"><input type="checkbox"/></div>
+                                <div class="action_button share fixed_width">
+                                    <div class="share-black-icon gt-force-left"></div>
+                                    <span>Share + add</span>
                                 </div>
                             </div>
-                            <a href="#" title="Research lab group 1"> 
-                                <div id="no-profile-image-project"></div>
-                            </a>
-                            </div>
-                            <a href="#" title="Slide open for more details">
-                                <div id="gridview-content-details">
-                                    <div id="grabber"></div>
-                                </div>
-                            </a>
-                        <div>
-                            <input type="checkbox" id="research-results-1"/>
+                            <img src="images/list-options-shadow-search.png"/>
+                            <a href="" title="Close list options" id="research-results-1"><div id="grabber-list-options"></div></a>
                         </div>
+                    </div>    
+                    <div class="activity">
+                        <ul>
+                            <li><img src="images/s3-images/dummy-activity1-sarah-dash.png" alt="Sarah's activity feed" /></li>
+                            <li><img src="images/ajax-loader.gif" id="loading-ani-gif" alt="Loading more..." /></li>
+                        </ul>
                     </div>
-
-
                 </div>
+
+                <div class="gt-content-column" id="gt-right-column">
+
+                    <div class="tasks">
+
+                        <div>
+                            <h2>Today</h2>
+                            <ul id="parent-task">
+                                <li><a href="#" title="Chemistry 452 Literature">Chemistry 452 Literature </a><span>Assignment | by <a href="#" title="Don Douglas">Don Douglas</a></span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>Tomorrow</h2>
+                            <ul>
+                                <li><a href="#" title="Calculus III Problem Set 2">Calculus III Problem Set 2 </a><span>Assignment | by <a href="#" title="Don Howard">Don Howard</a></span></li>
+                            </ul>
+                        </div>
+                         <div>
+                            <h2>Mar 14 (Apr 09), 2013</h2>
+                            <ul>
+                                <li id="with-sub-tasks">
+                                    <a href="#" title="Lab Research Project">Lab Research Project </a><span>Assignment | by <a href="#" title="Don Herbert">Don Herbert</a></span>
+                                    <h2>Sub-tasks:</h2>
+                                    <ul id="sub-tasks">
+                                        <li><span>Mar 14, 2013</span><a href="#" title="Annotated Bibliography">Annotated Bibliography</a><div class="gt-counts-container">2 days</div></li>
+                                        <li><span>Apr 01, 2013</span><a href="#" title="Research report">Research report</a><div class="gt-counts-container">17 days</div></li>
+                                        <li><span>Apr 09, 2013</span><a href="#" title="Research presentation">Research presentation</a><div class="gt-counts-container">25 days</div></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                         
+                    </div>
 
              </div>
         </div>
