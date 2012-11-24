@@ -185,6 +185,14 @@
                 $('.center-panel-closed').attr('style', 'display: none !important');
             }
         });
+
+        setTimeout(function() {
+            $('.center_panel #added-items-to').fadeOut(300);
+        }, 10000);
+
+        $('.center_panel #added-items-to .gt-popup-close').on('click', function() {
+            $('.center_panel #added-items-to').fadeOut(300);
+        })
     };
 
     var initOverlays = function() {
