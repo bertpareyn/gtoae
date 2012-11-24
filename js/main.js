@@ -192,7 +192,7 @@
         // Set action on all links with no href
         $("a").each(function(index, el){
             var $anchor = $(el);
-            if ($anchor.attr("href") && ($anchor.attr("href") === "#" || $anchor.attr("href") === "javascript:;")) {
+            if ($anchor.attr("href") === "javascript:;") {
                 $anchor.on("click", function(){
                     alert("Ooops, not your fault, it's ours, try again...");
                     return false;
