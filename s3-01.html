@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Georgia Tech + Open Academic Environment</title>
+        <link rel="stylesheet" type="text/css" href="lib/jquery.autosuggest/autoSuggest.css">
+        <link rel="stylesheet" type="text/css" href="css/screen.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,greek-ext' rel='stylesheet' type='text/css'>
+        <script src="lib/jquery-1.8.2.js"></script>
+        <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
+        <script src="lib/jquery-ui.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            $(function() {
+                $( "#accordion" ).accordion({
+                    heightStyle: "content",
+                    active: 2,
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="overlay_window" id="gt_video_overlay" style="display: none;"></div>
+        <div class="overlay_container" style="display: none;">
+            <div class="gt-popup-close" id="gt_video_overlay_close"></div>
+            <a href="http://www.gatech.edu/">
+                <img src="images/s1-images/dummy-gt-video-databases.png" class="overlay1_dummy"/>
+            </a>
+        </div>
+        <div id="gt-page-container">
+            <div id="gt-topnavigation-container">
+                <div id="gt-topnavigation-left">
+                    <ul>
+                        <li>
+                            <a href="javascript:;" title="Dashboard" id="topnavigation_home">
+                                <div class="gt-home-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Messages" id="topnavigation_inbox">
+                                <div class="gt-inbox-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Tasks" id="topnavigation_task">
+                                <div class="gt-task-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Collections" id="topnavigation_library">
+                                <div class="gt-library-icon"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="gt-topnavigation-right">
+                    <a href="javascript:;" title="Account settings" id="topnavigation_settings" class="gt-force-right">
+                    	<div class="gt-cogwheel-icon"></div>
+                    </a>
+                    <form id="topnavigation_search_form" class="gt-force-right">
+                        <input type="text" id="topnavigation_search_input" class="gt-force-right"/>
+                    </form>
+
+                    <div id="topnavigation_search_results_container" style="display: none;">
+                        <div id="topnavigation_search_results_top">
+                            <div class="gt-force-right">
+                                <img src="images/switch-off.png" class="gt-force-right research_assistance_switch"/>
+                                <img src="images/switch-on.png" class="gt-force-right research_assistance_switch" style="display: none;"/>
+                                <div class="gt-force-left">Research assistance</div>
+                            </div>
+                            <img src="images/gt-search-icon.png" class="gt-force-left"/>
+                        </div>
+                        <div id="topnavigation_search_results_results">
+                            <div id="research-assistance-off">
+                                <h2>Documents, files and links</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item1.png" class="gt-force-left"/>
+                                        <div>Detection of pathogenic ... body fluids</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item2.png" class="gt-force-left"/>
+                                        <div>Development of a DNA ... water</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item3.png" class="gt-force-left"/>
+                                        <div>Waterborne Pathogens: Bacteria</div>
+                                    </li>
+                                </ul>
+
+                                <h2>Collections</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item1.png" class="gt-force-left"/>
+                                        <div>Research on water testing</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item4.png" class="gt-force-left"/>
+                                        <div>Labs that test water ... analysis</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item5.png" class="gt-force-left"/>
+                                        <div>Luminescent Bacteria</div>
+                                    </li>
+                                </ul>
+
+                                <h2>People</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/dummy_users/profile-pic-john.png" class="gt-force-left"/>
+                                        <div>John Librarian</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_users/profile-pic-mark.png" class="gt-force-left"/>
+                                        <div>Don Herbert</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_users/profile-pic-stanley.png" class="gt-force-left"/>
+                                        <div>Don Reach</div>
+                                    </li>
+                                </ul>
+
+                                <h2>Projects</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item2.png" class="gt-force-left"/>
+                                        <div>Water Testing</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_content/grid-view-profile-pic-cell-reproduction.png" class="gt-force-left"/>
+                                        <div>Unique Bioterror Screening</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item5.png" class="gt-force-left"/>
+                                        <div>1000 Genomes</div>
+                                    </li>
+                                </ul>
+
+                                <h2>Courses</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item2.png" class="gt-force-left"/>
+                                        <div>BIOL 4620 Aquatic Chemical Ecology</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_content/grid-view-profile-pic-cell-reproduction.png" class="gt-force-left"/>
+                                        <div>BIOL 3451 Cell and Molecular Biology</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/dummy_content/activity-item5-collection-item5.png" class="gt-force-left"/>
+                                        <div>CHEM 4512 Biochemistry II</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Research Assistance starts -->
+                            <div id="search_wt_step_one" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Research criteria</h1>
+                                    <p>Are you looking for materials based on the syllabus or research project recommendations?</p>
+                                    <div>
+                                        <input type="checkbox" id="search_peer_reviewed">
+                                        <label for="search_peer_reviewed">Peer-reviewed articles</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_videos">
+                                        <label for="search_videos">Books</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Conference materials</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Other</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">No, I'll start by researching everything</label>
+                                    </div>
+                                </div>
+                                <button type="button" id="start_second_sa_step" class="gt-button gt-black-button centered">Next</button>
+                            </div>
+                            <div id="search_wt_step_two" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Requirements</h1>
+                                    <p>Are you looking to find resources and tutorials on project deliverables?</p>
+                                    <div>
+                                        <input type="checkbox" id="search_peer_reviewed">
+                                        <label for="search_peer_reviewed">Writing papers</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_videos">
+                                        <label for="search_videos">Annotated bibliographies</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Creating webpages</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Giving oral presentations</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">No, I'm good at all these</label>
+                                    </div>
+                                </div>
+                                <button type="button" id="start_third_sa_step" class="gt-button gt-black-button centered">Next</button>
+                            </div>
+                            <div id="search_wt_step_three" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Terminology</h1>
+                                    <p>Consider alternative terms</p>
+                                    <div id="suggested-terms">
+                                        <ul class="as-selections">
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Virus</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Microbe</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Microorganism</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Stream</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">River</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Creek</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Germ</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Harmful</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Contamination</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Quantitative analysis</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button type="button" id="close_sa" class="gt-button gt-black-button centered">Done</button>
+                            </div>
+                        </div>
+                        <div id="topnavigation_search_results_bottom" class="search_footer main_search_footer">
+                            <button type="button" class="gt-button gt-overlay-button gt-force-right">See all</button>
+                            <div class="gt-force-left">16 of 134 search results</div>
+                        </div>
+                        <div id="topnavigation_search_results_bottom" class="search_footer" style="display: none;">
+                            <button type="button" id="start_search_assistance_walkthrough" class="gt-button gt-black-button gt-force-right">Done</button>
+                            <a href="javascript:;" class="gt-force-left">Clear</a>
+                        </div>
+                    </div>
+                    <!-- Research Assistance ends -->
+
+                    <a href="javascript:;" id="topnavigation-explore-link" class="gt-force-right">Explore</a>
+                </div>
+                <div id="gt-topnavigation-center"></div>
+            </div>
+
+                </div>
+                <div id="gt-topnavigation-center"></div>
+            </div>
+             
+             <div id="gt-content-container">
+
+                <div id="user-box" class="gt-title-clip">
+                    <div class="gt-title-clip-right"></div>
+                    <div class="gt-title-clip-left"></div>
+                    <a href="#" title="Sarah's dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
+                    <a href="#" title="More of my stuff"><h1>Sarah First</h1><div id="my-dropdown"></div></a>
+                </div>
+
+                
+                <a title="Create" class="create" href="#">
+                    <div class="gt-action-clip-primary">
+                        <div class="action-clip-right"></div>
+                        <div class="action-clip-left"></div>
+                        <div class="action-icon" id="create">Create<span id="clip-down-arrow"></span></div>
+                    </div>
+                </a>
+
+                <a title="Upload" class="upload" href="#">
+                    <div class="gt-action-clip-secondary">
+                        <div class="action-clip-right"></div>
+                        <div class="action-clip-left"></div>
+                        <div class="action-icon" id="upload">Upload</div>
+                    </div>
+                </a>
+               
+                <div id="gt-lhnav-container-maxi">
+                    <ul id="maxi-left-nav">
+                        <li><a href="#" title="Sarah's Discussions" id="discussions">Discussions</a><div class="gt-counts-container ">28</div></li>
+                        <li><a href="#" title="Sarah's Collections" id="collections">Collections</a><div class="gt-counts-container">12</div></li>
+                        <li><a href="#" title="Sarah's Tasks" id="tasks">Tasks</a><div class="gt-counts-container ">5</div></li>
+                        <li><a href="s3-03.html" title="Sarah's Courses" id="courses">Courses</a><div class="gt-counts-container ">3</div></li>
+                        <li><a href="#" title="Sarah's Groups" id="groups">Groups</a><div class="gt-counts-container ">1</div></li>
+                        <li><a href="s3-02.html" title="Sarah's Projects" id="projects">Projects</a><div class="gt-counts-container ">8</div></li>
+                        <li><a href="#" title="Sarah's Network" id="network">Network</a><div class="gt-counts-container ">32</div></li>
+                        <li><a href="#" title="Sarah's Archive" id="archive">Archive</a><div class="gt-counts-container ">55</div></li>
+                    </ul>
+                </div>
+
+                <div class="gt-content-column" id="gt-center-column">
+
+                    <div class="center_panel">
+                        <div class="center-panel-inner">
+                            <div style="display: none; margin-bottom: 0;">
+                                <div class="gt-force-right action_button">
+                                    <input type="text" placeholder="Narrow by keyword" class="refine_search"/>
+                                    <div class="gt-force-right" id="display-toggle">
+                                        <ul>
+                                            <li id="list"><a href="#" class="list-off"></a></li>
+                                            <li id="thumb"><a href="#" class="thumb-off"></a></li>
+                                            <li id="grid"><a href="#" class="grid-on"></a></li>
+                                        </ul>
+                                    </div>
+                                    <span class="gt-force-right" id="panel_sort_by">Sort by</span>
+                                </div>
+                                <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
+                                <div id="select-all"><input type="checkbox"/></div>
+                                <div class="action_button share fixed_width">
+                                    <div class="share-black-icon gt-force-left"></div>
+                                    <span>Share + add</span>
+                                </div>
+                            </div>
+                            <img src="images/list-options-shadow-search.png"/>
+                            <a href="" title="Close list options" id="research-results-1"><div id="grabber-list-options"></div></a>
+                        </div>
+                    </div>    
+                    <div class="activity">
+                        <ul>
+                            <li><img src="images/s3-images/dummy-activity1-sarah-dash.png" alt="Sarah's activity feed" /></li>
+                            <li><img src="images/ajax-loader.gif" id="loading-ani-gif" alt="Loading more..." /></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gt-content-column" id="gt-right-column">
+
+                    <div class="tasks">
+
+                        <div>
+                            <h2>Today</h2>
+                            <ul id="parent-task">
+                                <li><a href="#" title="Chemistry 452 Literature">Chemistry 452 Literature </a><span>Assignment | by <a href="#" title="Don Douglas">Don Douglas</a></span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>Tomorrow</h2>
+                            <ul>
+                                <li><a href="#" title="Calculus III Problem Set 2">Calculus III Problem Set 2 </a><span>Assignment | by <a href="#" title="Don Howard">Don Howard</a></span></li>
+                            </ul>
+                        </div>
+                         <div>
+                            <h2>Mar 14 (Apr 09), 2013</h2>
+                            <ul>
+                                <li id="with-sub-tasks">
+                                    <a href="#" title="Lab Research Project">Lab Research Project </a><span>Assignment | by <a href="#" title="Don Herbert">Don Herbert</a></span>
+                                    <h2>Sub-tasks:</h2>
+                                    <ul id="sub-tasks">
+                                        <li><span>Mar 14, 2013</span><a href="#" title="Annotated Bibliography">Annotated Bibliography</a><div class="gt-counts-container">2 days</div></li>
+                                        <li><span>Apr 01, 2013</span><a href="#" title="Research report">Research report</a><div class="gt-counts-container">17 days</div></li>
+                                        <li><span>Apr 09, 2013</span><a href="#" title="Research presentation">Research presentation</a><div class="gt-counts-container">25 days</div></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                         
+                    </div>
+
+             </div>
+        </div>
+
+        
+
+    </body>
+</html>
