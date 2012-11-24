@@ -186,6 +186,10 @@
             $('#gt_video_overlay').hide();
             $('#gt_video_overlay + div').hide();
         });
+
+        $('.gt-popup-close.guide-close').on('click', function() {
+            $(this).parents('.guide.gt-popover').hide();
+        });
     };
 
     var initSorryMessage = function() {
