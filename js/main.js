@@ -126,8 +126,10 @@
         // Bind buttons
         $('.action_button.share').on('click', function() {
             $('.gt-popup.share').toggle();
-            $('.gt-popup.share').css('top', $('.action_button.share').position().top - 95);
-            $('.gt-popup.share').css('left', $('.action_button.share').position().left - 100);
+            $('.gt-popup.share').css('z-index', 10000);
+            $('.gt-popup.share').css('top', $(this).offset().top - 95);
+            $('.gt-popup.share').css('left', $(this).offset().left - 100);
+
         });
 
         $('#share_new_collection').on('click', function() {
