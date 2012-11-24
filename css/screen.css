@@ -446,12 +446,12 @@ a {
 
 #topnavigation_search_results_results h2 {
     font-style: normal;
-    padding: 5px 0 5px 2px;
+    padding-left: 2px;
     color: #666666;
     letter-spacing: 0.02em;
     font-weight: 300;
     font-size: 12px;
-    margin: 0;
+    margin: 10px 0 5px 0;
 }
 
 #topnavigation_search_results_results ul li img {
@@ -463,7 +463,7 @@ a {
     display: inline-block;
 }
 
-#topnavigation_search_results_results ul li {
+#topnavigation_search_results_results  #research-assistance-off ul li {
     font-size: 12px;
     line-height: 18px;
     margin: 0;
@@ -493,7 +493,12 @@ a {
     padding: 8px 12px 12px;
 }
 
- /** TOP NAV / RESEARCH ASSISTANCE **/
+#topnavigation_search_results_middle {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+ /** TOP NAV / RESEARCH ASSISTANCE ON **/
 
 #research-assistance-label {
     font-style: italic;
@@ -510,6 +515,20 @@ a {
     height: 35px;
     margin-left: -12px;
     margin-right: -12px;
+}
+
+#research-assistance-on div input {
+    padding: 0;
+    margin: 6px 9px 0 0;
+}
+
+#research-assistance-on a {
+    display: inline-block;
+    margin: 9px 0 0 0;
+}
+
+#research-assistance-on a:hover {
+    text-decoration: underline;
 }
 
 #search_wt_step_one,
@@ -2411,6 +2430,7 @@ img.overlay2_dummy {
 #suggested-terms ul.as-selections, #search-keywords ul.as-selections {
     border: none;
     box-shadow: none;
+    background: transparent;
 }
 
 #suggested-terms ul.as-selections,
