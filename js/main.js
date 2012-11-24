@@ -8,6 +8,14 @@
             $('#topnavigation_search_results_container').show();
         });
 
+        $(document).on('click', function(ev) {
+            if ($('#topnavigation_search_results_container').is(':visible') &&
+                $(ev.target).attr('id') !== 'topnavigation_search_input' &&
+                !$(ev.target).parents('#topnavigation_search_results_container').length) {
+                $('#topnavigation_search_results_container').hide();
+            }
+        });
+
         $('.research_assistance_switch').click(function() {
             $('.research_assistance_switch').toggle();
             $('#research-assistance-off').toggle();
