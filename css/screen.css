@@ -115,6 +115,7 @@ label {
 
 a {
     text-decoration: none;
+    color: #333;
 }
 
 /***********
@@ -498,11 +499,11 @@ a {
     font-style: italic;
     color: #666666;
     letter-spacing: 0.02em;
+    margin-right: 7px;
 }
 
 .research_assistance_switch {
     cursor: pointer;
-    margin-left: 7px;
 }
 
 #research-assistance-on #topnavigation_search_results_bottom {
