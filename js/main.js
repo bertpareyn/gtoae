@@ -88,6 +88,12 @@
         $('#autosuggest_example').autoSuggest(data.items, {
             selectedItemProp: "name",
             searchObjProps: "name",
+            startText: 'Enter other names, courses, research projects to ask...',
+            preFill: [{
+                value: "jlibrarion53",
+                name: "John Librarian",
+                img: 'images/dummy_users/profile-pic-john.png'
+            }],
             formatList: function(data, elem){
                 var my_image = data.image;
                 var new_elem = elem.html('<img src="' + data.img + '" class="gt-force-left" /><div class="autosuggest_name">' + data.name + '</div>');
