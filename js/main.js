@@ -8,6 +8,14 @@
             $('#topnavigation_search_results_container').show();
         });
 
+        $(document).on('click', function(ev) {
+            if ($('#topnavigation_search_results_container').is(':visible') &&
+                $(ev.target).attr('id') !== 'topnavigation_search_input' &&
+                !$(ev.target).parents('#topnavigation_search_results_container').length) {
+                $('#topnavigation_search_results_container').hide();
+            }
+        });
+
         $('.research_assistance_switch').click(function() {
             $('.research_assistance_switch').toggle();
             $('#research-assistance-off').toggle();
@@ -80,6 +88,12 @@
         $('#autosuggest_example').autoSuggest(data.items, {
             selectedItemProp: "name",
             searchObjProps: "name",
+            startText: 'Enter other names, courses, research projects to ask...',
+            preFill: [{
+                value: "jlibrarion53",
+                name: "John Librarian",
+                img: 'images/dummy_users/profile-pic-john.png'
+            }],
             formatList: function(data, elem){
                 var my_image = data.image;
                 var new_elem = elem.html('<img src="' + data.img + '" class="gt-force-left" /><div class="autosuggest_name">' + data.name + '</div>');
@@ -125,9 +139,11 @@
     var initSharePopup = function() {
         // Bind buttons
         $('.action_button.share').on('click', function() {
-            $('.gt-popup.share').toggle();
-            $('.gt-popup.share').css('top', $('.action_button.share').position().top - 95);
-            $('.gt-popup.share').css('left', $('.action_button.share').position().left - 100);
+            $('.gt-popup.share').show();
+            $('.gt-popup.share').css('z-index', 10000);
+            $('.gt-popup.share').css('top', $(this).offset().top - 95);
+            $('.gt-popup.share').css('left', $(this).offset().left - 100);
+
         });
 
         $('#share_new_collection').on('click', function() {
@@ -174,6 +190,25 @@
                 $('.center-panel-closed').attr('style', 'display: block');
             }
         });
+
+        $('#research-results-1').on('click', function(ev) {
+            ev.preventDefault();
+            if ($('.center-panel-inner').hasClass('center_panel_shown')) {
+                $('.center-panel-inner').removeClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: block');
+            } else {
+                $('.center-panel-inner').addClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: none !important');
+            }
+        });
+
+        setTimeout(function() {
+            $('.center_panel #added-items-to').fadeOut(300);
+        }, 10000);
+
+        $('.center_panel #added-items-to .gt-popup-close').on('click', function() {
+            $('.center_panel #added-items-to').fadeOut(300);
+        })
     };
 
     var initOverlays = function() {
@@ -196,7 +231,7 @@
         // Set action on all links with no href
         $("a").each(function(index, el){
             var $anchor = $(el);
-            if ($anchor.attr("href") === "javascript:;") {
+            if ($anchor.attr("href") === "#") {
                 $anchor.on("click", function(){
                     alert("Ooops, not your fault, it's ours, try again...");
                     return false;
