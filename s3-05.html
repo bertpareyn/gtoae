@@ -14,12 +14,8 @@
         <script>
             $(function() {
                 $( "#accordion" ).accordion({
-                    heightStyle: "content"
-                });
-            });
-            $(function() {
-                $( "#accordion" ).accordion({
-                    collapsible: true
+                    heightStyle: "content",
+                    active: 2,
                 });
             });
         </script>
@@ -68,9 +64,9 @@
 
                     <div id="topnavigation_search_results_container" style="display: none;">
                         <div id="topnavigation_search_results_top">
-                            <div class="gt-force-right" style="display: none;">
-                                <img src="images/switch-off.png" class="gt-force-right research_assistance_switch" style="display: none;"/>
-                                <img src="images/switch-on.png" class="gt-force-right research_assistance_switch"/>
+                            <div class="gt-force-right">
+                                <img src="images/switch-off.png" class="gt-force-right research_assistance_switch"/>
+                                <img src="images/switch-on.png" class="gt-force-right research_assistance_switch" style="display: none;"/>
                                 <div class="gt-force-left">Research assistance</div>
                             </div>
                             <img src="images/gt-search-icon.png" class="gt-force-left"/>
@@ -157,50 +153,136 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div id="research-assistance-on" style="display: none;">
-                                <h2>Research materials</h2>
-                                <div>
-                                    <input type="checkbox" id="search_journal_articles">
-                                    <label for="search_journal_articles">Journal articles</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="search_peer_reviewed">
-                                    <label for="search_peer_reviewed">Peer-reviewed articles</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="search_videos">
-                                    <label for="search_videos">Videos</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="search_websites">
-                                    <label for="search_websites">Websites</label>
-                                </div>
-                                <a href="javascript:;" title="More research materials">More</a>
 
-                                <h2>Tutorials</h2>
-                                <div>
-                                    <input type="checkbox" id="search_journal_articles">
-                                    <label for="search_journal_articles">Journal articles</label>
+                            <!-- Research Assistance starts -->
+                            <div id="search_wt_step_one" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Research criteria</h1>
+                                    <p>Are you looking for materials based on the syllabus or research project recommendations?</p>
+                                    <div>
+                                        <input type="checkbox" id="search_peer_reviewed">
+                                        <label for="search_peer_reviewed">Peer-reviewed articles</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_videos">
+                                        <label for="search_videos">Books</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Conference materials</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Other</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">No, I'll start by researching everything</label>
+                                    </div>
                                 </div>
-                                <div>
-                                    <input type="checkbox" id="search_peer_reviewed">
-                                    <label for="search_peer_reviewed">Peer-reviewed articles</label>
+                                <button type="button" id="start_second_sa_step" class="gt-button gt-black-button centered">Next</button>
+                            </div>
+                            <div id="search_wt_step_two" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Requirements</h1>
+                                    <p>Are you looking to find resources and tutorials on project deliverables?</p>
+                                    <div>
+                                        <input type="checkbox" id="search_peer_reviewed">
+                                        <label for="search_peer_reviewed">Writing papers</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_videos">
+                                        <label for="search_videos">Annotated bibliographies</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Creating webpages</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">Giving oral presentations</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="search_websites">
+                                        <label for="search_websites">No, I'm good at all these</label>
+                                    </div>
                                 </div>
-                                <div>
-                                    <input type="checkbox" id="search_videos">
-                                    <label for="search_videos">Videos</label>
+                                <button type="button" id="start_third_sa_step" class="gt-button gt-black-button centered">Next</button>
+                            </div>
+                            <div id="search_wt_step_three" style="display: none;">
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option>Water testing</option>
+                                </select>
+                                <div class="search_wt_content_box">
+                                    <h1>Terminology</h1>
+                                    <p>Consider alternative terms</p>
+                                    <div id="suggested-terms">
+                                        <ul class="as-selections">
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Virus</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Microbe</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Microorganism</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Stream</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">River</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Creek</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Germ</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Harmful</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Contamination</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Quantitative analysis</div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div>
-                                    <input type="checkbox" id="search_websites">
-                                    <label for="search_websites">Websites</label>
-                                </div>
+                                <button type="button" id="close_sa" class="gt-button gt-black-button centered">Done</button>
                             </div>
                         </div>
-                        <div id="topnavigation_search_results_bottom">
+                        <div id="topnavigation_search_results_bottom" class="search_footer main_search_footer">
                             <button type="button" class="gt-button gt-overlay-button gt-force-right">See all</button>
                             <div class="gt-force-left">16 of 134 search results</div>
                         </div>
+                        <div id="topnavigation_search_results_bottom" class="search_footer" style="display: none;">
+                            <button type="button" id="start_search_assistance_walkthrough" class="gt-button gt-black-button gt-force-right">Done</button>
+                            <a href="javascript:;" class="gt-force-left">Clear</a>
+                        </div>
                     </div>
+                    <!-- Research Assistance ends -->
 
                     <a href="javascript:;" id="topnavigation-explore-link" class="gt-force-right">Explore</a>
                 </div>
