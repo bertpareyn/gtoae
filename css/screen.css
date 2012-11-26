@@ -2261,6 +2261,7 @@ a.upload {
 .center_panel .action_button {
     display: inline-block;
     margin-left: 30px;
+    cursor: pointer;
 }
 
 .center_panel.absolute_panel {
