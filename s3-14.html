@@ -33,51 +33,54 @@
                 <div id="gt-topnavigation-left">
                     <ul>
                         <li>
-                            <a href="#" title="Dashboard" id="topnavigation_home">
+                            <a href="javascript:;" title="Dashboard" id="topnavigation_home">
                                 <div class="gt-home-icon"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="Messages" id="topnavigation_inbox">
+                            <a href="javascript:;" title="Messages" id="topnavigation_inbox">
                                 <div class="gt-inbox-icon"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="Tasks" id="topnavigation_task">
+                            <a href="javascript:;" title="Tasks" id="topnavigation_task">
                                 <div class="gt-task-icon"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="Collections" id="topnavigation_library">
+                            <a href="javascript:;" title="Collections" id="topnavigation_library">
                                 <div class="gt-library-icon"></div>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div id="gt-topnavigation-right">
-                    <a href="#" title="Account settings" id="topnavigation_settings" class="gt-force-right">
-                    	<div class="gt-cogwheel-icon"></div>
+
+            <div id="gt-topnavigation-right">
+                    <a href="javascript:;" title="Account settings" id="topnavigation_settings" class="gt-force-right">
+                        <div class="gt-cogwheel-icon"></div>
                     </a>
                     <form id="topnavigation_search_form" class="gt-force-right">
-                        <input type="text" id="topnavigation_search_input" class="gt-force-right"/>
-                    </form>
+                        <a href="s3-08.html"><input type="text" id="topnavigation_search_input" class="gt-force-right"/></a>
+                    </form>    
 
-                    <a href="#" id="topnavigation-explore-link" class="gt-force-right">Explore</a>
+                    <a href="javascript:;" id="topnavigation-explore-link" class="gt-force-right">Explore</a>
                 </div>
                 <div id="gt-topnavigation-center"></div>
             </div>
 
+
              <div id="gt-lhnav-container">
-                <a href="#" title="Sarah's Dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
+                <a href="javascript:history.back()" title="Go back to previous level"><img id="go-back-level" src="images/back_arrow_icon.png" alt="Go back to previous level"/></a>
+             </div>
+             <div id="gt-lhnav-container">
+                <a href="s3-06" title="Water Testings's Dashboard"><img id="profile-image" src="images/s3-images/profile-pic-water-testing.png" alt="Water Testing"/></a>
                 <ul id="mini-left-nav">
-                    <li><a href="1column.html" title="Sarah's Discussions" id="discussions"></a></li>
-                    <li><a href="#" title="Sarah's Collections" id="collections"></a></li>
-                    <li><a href="#" title="Sarah's Tasks" id="tasks"></a></li>
-                    <li><a href="#" title="Sarah's Courses" id="courses"></a></li>
-                    <li><a href="#" title="Sarah's Groups" id="groups"></a></li>
-                    <li><a href="#" title="Sarah's Projects" id="projects"></a></li>
-                    <li><a href="#" title="Sarah's Network" id="network"></a></li>
-                    <li><a href="#" title="Sarah's Archive" id="archive"></a></li>
+                    <li><a href="#" title="Water Testing's Discussions" id="discussions"></a></li>
+                    <li><a href="#" title="Water Testing's Tasks" id="tasks"></a></li>
+                    <li><a href="#" title="Water Testing's Search History" id="search"></a></li>
+                    <li><a href="#" title="Water Testing's Collections" id="collections"></a></li>
+                    <li><a href="#" title="Water Testing's Archive" id="archive"></a></li>
+                    <li><a href="#" title="Water Testing's Participants" id="participants"></a></li>
                 </ul>
              </div>
 
@@ -92,7 +95,7 @@
                             <ul class="as-selections">
                                 <li class="as-selection-item">
                                     <a><div id="delete-tag"></div></a>
-                                    <div class="autosuggest_term">Pathogen</div>
+                                    <div class="autosuggest_term">Creek</div>
                                 </li>
                             </ul>
                         </div>        
@@ -114,8 +117,8 @@
                         <label for="rm_everything">Everything</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="rm_journalarticles"/>
-                        <label for="rm_journalarticles">Journal articles</label>
+                        <input type="checkbox" id="rm_journalarticles" checked="checked"/>
+                        <label for="rm_journalarticles">Peer-reviewed articles</label>
                     </div>
                     <div>
                         <input type="checkbox" id="rm_books"/>
@@ -193,7 +196,7 @@
                                     </div>
                                     <span class="gt-force-right" id="panel_sort_by">Sort by</span>
                                 </div>
-                                <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
+                                <h2 class="panel_header">Peer-reviewed articles <span class="gt-counts-container">37</span></h2>
                                 <div id="select-all"><input type="checkbox"/></div>
                                 <div class="action_button share fixed_width">
                                     <div class="share-black-icon gt-force-left"></div>
@@ -203,12 +206,11 @@
                             <img src="images/list-options-shadow-search.png"/>
                             <a href="" title="Close list options" id="research-results-1"><div id="grabber-list-options"></div></a>
                             <div class="center-panel-closed">
-                                <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
-                                <a href="s1-08.html" title="Sort this list by where it's all been found from"><img src="images/switch-off.png" alt="Sort this list by where it's all been found from" /></a>
+                                <h2 class="panel_header">Peer-reviewed articles <span class="gt-counts-container">37</span></h2>
+                                <a href="#" title="Sort this list by where it's all been found from"><img src="images/switch-off.png" alt="Sort this list by where it's all been found from" /></a>
                                 <h3>Sort by source</h3>
                             </div>
                         </div>
-                        <div class="system-notification" id="added-items-to"><strong>Saved 3</strong> to collection “<a href="#" title="Research on water testing">Research on water testing</a>”<div class="gt-popup-close"></div></div>
                     </div>    
 
                     <div id="gt-search-results">
@@ -232,7 +234,6 @@
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <div id="collected">1</div>  
                             </div>
                         </div>
 
@@ -255,7 +256,6 @@
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <div id="collected">1</div>  
                             </div>
                         </div>
 
@@ -278,7 +278,6 @@
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <div id="collected">1</div>  
                             </div>
                         </div>
 
@@ -648,11 +647,11 @@
                                 </div>
                                 <a href="#" title="Slide open for more details">
                                     <div id="gridview-content-details">
+                                        <div id="grabber"></div>
                                     </div>
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <div id="collected">1</div>  
                             </div>
                         </div>
 
@@ -670,11 +669,11 @@
                                 </div>
                                 <a href="#" title="Slide open for more details">
                                     <div id="gridview-content-details">
+                                        <div id="grabber"></div>
                                     </div>
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <div id="collected">1</div>  
                             </div>
                         </div>
 
@@ -692,11 +691,11 @@
                                 </div>
                                 <a href="#" title="Slide open for more details">
                                     <div id="gridview-content-details">
+                                        <div id="grabber"></div>
                                     </div>
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <div id="collected">1</div>  
                             </div>
                         </div>
 
@@ -850,7 +849,7 @@
                 <div class="gt-force-left collection-icon"></div>
                 <div>Photos</div>
             </div>
-            <button type="button" class="gt-button gt-overlay-button" id="add-collection-btn">Add</button>
+            <a href="s1-07.html"><button type="button" class="gt-button gt-overlay-button" id="add-collection-btn">Add</button></a>
         </div>
 
         <div class="question gt-popup" style="float:left; margin-left: 40px;">
@@ -864,7 +863,7 @@
                     <textarea placeholder="Your question"></textarea>
                 </div>
                 <button type="submit" class="btn-cancel questions-close">Cancel</button>
-                <button type="submit" id="question-send" class="gt-button gt-overlay-button gt-force-right">Send</button>
+                <button type="button" id="question-send" class="gt-button gt-overlay-button gt-force-right">Send</button>
             </div>
         </div>
 
