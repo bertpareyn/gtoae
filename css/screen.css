@@ -254,7 +254,7 @@ a {
 
 .gt-content-column {
     float: left;
-    margin: 36px 20px 0 0;
+    margin: 36px 0 0 20px;
     width: 17%;
 }
 
@@ -1086,6 +1086,20 @@ a {
     background: url("../images/context-icon-discussions-clicked.png") no-repeat 0 0 transparent;
 }
 
+#gt-lhnav-container ul li #questions,
+#gt-lhnav-container-maxi ul li #questions {
+    background: url("../images/context-icon-questions.png") no-repeat 0 0 transparent;
+}
+
+#gt-lhnav-container ul li #questions:hover,
+#gt-lhnav-container-maxi ul li #questions:hover {
+    background: url("../images/context-icon-questions-hover.png") no-repeat 0 0 transparent;
+}
+
+#gt-lhnav-container ul li #questions:active, 
+#gt-lhnav-container-maxi ul li #questions:active {
+    background: url("../images/context-icon-questions-clicked.png") no-repeat 0 0 transparent;
+}
 #gt-lhnav-container ul {
     margin: 12px;
     display: block;
@@ -1439,7 +1453,9 @@ a.upload {
     margin: 0 2% 20px 0;
 }
 
-#gridview-listed-item #container, #gridview-listed-item #container-open {
+#gridview-listed-item #container, 
+#gridview-listed-item #container-open,
+.activity-content-preview #container {
     float: left;
     display: block;
     height: 158px;
@@ -1461,7 +1477,8 @@ a.upload {
     border-right: 1px solid #bbbab7;
 }
 
-#gridview-listed-item #container-inner {
+#gridview-listed-item #container-inner,
+.activity-content-preview #container-inner {
     bottom: 0;
     position: absolute;
     width: 142px;
@@ -1643,7 +1660,7 @@ a.upload {
     -webkit-border-radius:  3px 3px 0 !important;
  }
 
- #gt-gridview-content-item-open {
+#gt-gridview-content-item-open {
     background: url("../images/list-item-grid-view-details-shadow.png") no-repeat left center transparent;
     background-position: 0px 0px;
     height: 158px;
@@ -1734,6 +1751,37 @@ a.upload {
     background: url("../images/grid-view-icon-project-clicked.png") no-repeat center 35px transparent;
     height: 158px;
     width: 148px;
+}
+
+#gridview-listed-item #container div.collection ul {
+    height: 158px;
+    width: 157px;
+}
+
+#gridview-listed-item #container div.collection ul li {
+    float: left;
+    padding: 0;
+}
+
+#gridview-listed-item #container div.collection ul li#count-thumb{
+    text-align: center;
+    background: -moz-linear-gradient(top, #cfcdcd 100%, #efefef 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#e8e7e1));
+    background: -webkit-linear-gradient(top, #cfcdcd 100%,#efefef 100%);
+    background: -o-linear-gradient(top, #cfcdcd 100%,#efefef 100%);
+    background: -ms-linear-gradient(top, #cfcdcd 100%,#efefef 100%);
+    background: linear-gradient(to bottom, #cfcdcd 100%,#efefef 100%);
+    width: 48px;
+    height: 48px;
+    border-top: 1px solid #bbbab7;
+    border-right: 1px solid #bbbab7;
+}
+
+#gridview-listed-item #container div.collection ul li#count-thumb .gt-counts-container{
+    width: 20px;
+    height: 15px;
+    margin: 25% auto;
+
 }
 
  /** THUMB VIEW CLOSED **/
@@ -2000,12 +2048,12 @@ a.upload {
 }
 
 .gt-counts-container {
-    background: -moz-linear-gradient(top, #ffffff 0%, #e8e7e1 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e8e7e1));
-    background: -webkit-linear-gradient(top, #ffffff 0%,#e9e8e2 100%);
-    background: -o-linear-gradient(top, #ffffff 0%,#e9e8e2 100%);
-    background: -ms-linear-gradient(top, #ffffff 0%,#e9e8e2 100%);
-    background: linear-gradient(to bottom, #ffffff 0%,#e9e8e2 100%);
+    background: -moz-linear-gradient(top, #ffffff 50%, #e8e7e1 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#ffffff), color-stop(100%,#e8e7e1));
+    background: -webkit-linear-gradient(top, #ffffff 50%,#e9e8e2 100%);
+    background: -o-linear-gradient(top, #ffffff 50%,#e9e8e2 100%);
+    background: -ms-linear-gradient(top, #ffffff 50%,#e9e8e2 100%);
+    background: linear-gradient(to bottom, #ffffff 50%,#e9e8e2 100%);
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -2015,12 +2063,12 @@ a.upload {
     letter-spacing: 0.05em;
     line-height: 16px;
     text-align: center;
-    padding: 1px 2px 0 4px;
+    padding: 1px 3px 0 4px;
     text-align: center;
     text-shadow: 0px 1px 0px #fff;
-    box-shadow: 1px 0 1px #AAAAAA;
-    -moz-box-shadow: 1px 0 1px #AAAAAA;
-    -webkit-box-shadow: 1px 0 1px #AAAAAA;
+    box-shadow: inset 0px 1px 1px #999;
+    -moz-box-shadow: inset 0px 1px 1px #999;
+    -webkit-box-shadow: inset 0px 1px 1px #999;
 }
 
 .gt-popup .gt-pop-up-list.highlighted .gt-counts-container {
@@ -2408,15 +2456,256 @@ input.refine_search {
  * ACTIVITY FEED *
  *****************/
 
-.activity {
-    text-align: center;
+.activity-item {
+    max-width: 90%;
+    display: block;
+    background-color: #f7f5ed;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow:  0 0px 5px #999;
+    -moz-box-shadow:  0 0px 5px #999;
+    -webkit-box-shadow:  0 0px 5px #999;
+    padding: 10px;
+    overflow: hidden;
+    margin-top: 14px;
+}
+
+.activity-item #activity-summary li {
+    float: left;
+    margin-right: 5px;
+}
+
+.activity-item #summary-title {
+    color: #666;
+    display: block;
     width: 100%;
- }
+}
+
+.activity-item #summary-title a {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.activity-item #summary-title a:hover {
+    text-decoration: underline;
+}
+
+.activity-item #summary-title span {
+    display: inline-block;
+    color: #444;
+    font-style: italic;
+}
+
+.activity-item #gridview-listed-item {
+    margin: 20px 0 10px 0;
+}
 
  #loading-ani-gif {
-    margin-top: 20px;
- }
+    margin: 20px 50% 0 50%;
 
+}
+
+.discussion-item {
+    float: left;
+    width: 30px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.discussion-bubble {
+    float: left !important;   
+    top: 0;
+    max-width: 85%;
+    min-width: 85%;
+    padding: 5px 10px 5px 10px;
+    background-color: #fff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f5f5f5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f5f5f5));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#f5f5f5 100%);    color: #666;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-box-shadow: 0px 0px 3px #888;
+    -webkit-box-shadow: 0px 0px 3px #888;
+    box-shadow: 0px 0px 3px #888;
+    z-index: 1000;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.discussion-bubble .tertiary-arrow-left {
+    float: left;
+    background: url('../images/discussion-bubble-arrow-left.png') no-repeat left center transparent;
+    width: 17px;
+    height: 21px;
+    margin: 10px 0 0 -25px;
+    position: relative;
+}
+
+.discussion-bubble span {
+    font-style: italic;
+}
+
+.discussion-bubble a {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.discussion-bubble a:hover {
+    text-decoration: underline;
+}
+
+
+.discussion-bubble p {
+    margin: 0;
+}
+
+.research-summary {
+    float: right;
+    background: url('../images/clip-research-summary-bg.png') no-repeat left top transparent;
+    width: 102px;
+    height: 37px;
+    z-index: 2000;
+    margin-right: -16px;
+}
+
+.research-summary ul {
+    margin: 13px 0 0 10px;
+}
+
+.research-summary #searches {
+    float: left;
+    background: url('../images/research-summary-icon-magnifier.png') no-repeat left center transparent;
+    padding: 0 0 0 20px;
+    margin-right: 10px;
+}
+
+.research-summary #saves {
+    float: left;
+    background: url('../images/research-summary-icon-paperclip.png') no-repeat left center transparent;
+    padding: 0 0 0 20px;
+}
+
+.research-summary .gt-counts-container {
+    margin: 0;
+}
+
+.discussion-reply {
+    display: block;
+    clear: both;
+    margin-left: 34px;
+}
+
+.discussion-reply input {
+    margin: 0 0 10px 35px;
+    max-width: 86%;
+    background: transparent;
+}
+
+.discussion-reply input:focus {
+    background: #fff;
+}
+
+.activity-item .discussion-comments-count {
+    float: left;
+    width: 100%;
+    display: block;
+    margin: 10px 0 15px 0;
+    overflow: hidden;
+}
+
+.activity-item .discussion-comments-count a {
+    font-weight: 600;
+}
+
+.activity-item .discussion-comments-count a:hover {
+    text-decoration: underline;
+}
+
+.activity-item .discussion-comments-count .gt-counts-container {
+    float: left;
+    display: block;
+    margin-right: 5px;
+}
+
+.activity-content-preview #activity-preview {
+    width: 100%;
+
+}
+
+.activity-content-preview #container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    margin-top: 10px;
+}
+
+.activity-content-preview #title {
+    max-height: 100%;
+    min-height: 2%;
+    width: 95%;
+    padding: 2% 2% 0 2%;
+    margin: 0;
+}
+
+.activity-content-preview #title a{
+    text-shadow: 0px 1px 0px #000;
+    color: #fff;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.activity-content-preview #title a:hover {
+    text-decoration: underline;
+}
+
+.activity-content-preview #title a:hover {
+    text-decoration: underline;
+}
+
+.activity-content-preview #title a:active {
+    text-decoration: none;
+    color: #999;
+}
+
+.activity-content-preview #title #type-add-share {
+    margin: 10px 0 10px 0;
+    padding-bottom: 10px;    
+}
+
+.activity-content-preview #title #type-add-share span {
+    float: right;
+    height: 29px;
+    width: 26px;
+    background: url("../images/icon-add+share-white.png") no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.activity-content-preview #title #type-add-share span:hover {
+    background: url("../images/icon-add+share-white-hover.png") no-repeat;
+}
+
+.activity-content-preview #title #type-add-share span:active {
+    background: url("../images/icon-add+share-white-clicked.png") no-repeat;
+}
+
+.activity-content-preview #container-inner {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    margin: 0;
+    padding: 0;
+}
 
 /************
  * OVERLAYS *

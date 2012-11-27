@@ -21,13 +21,6 @@
         </script>
     </head>
     <body>
-        <div class="overlay_window" id="gt_video_overlay" style="display: none;"></div>
-        <div class="overlay_container" style="display: none;">
-            <div class="gt-popup-close" id="gt_video_overlay_close"></div>
-            <a href="http://www.gatech.edu/">
-                <img src="images/s1-images/dummy-gt-video-databases.png" class="overlay1_dummy"/>
-            </a>
-        </div>
         <div id="gt-page-container">
             <div id="gt-topnavigation-container">
                 <div id="gt-topnavigation-left">
@@ -76,8 +69,8 @@
                 <div id="user-box" class="gt-title-clip">
                     <div class="gt-title-clip-right"></div>
                     <div class="gt-title-clip-left"></div>
-                    <a href="#" title="Sarah's dashboard"><img id="profile-image" src="images/profile-pic-sarah.png" alt="Sarah First"/></a>
-                    <a href="#" title="More of my stuff"><h1>Sarah First</h1><div id="my-dropdown"></div></a>
+                    <a href="#" title="John's dashboard"><img id="profile-image" src="images/s2-images/profile-pic-john.png" alt="John Librarian"/></a>
+                    <a href="#" title="More of my stuff"><h1>John Librarian</h1><div id="my-dropdown"></div></a>
                 </div>
 
                 
@@ -99,14 +92,14 @@
                
                 <div id="gt-lhnav-container-maxi">
                     <ul id="maxi-left-nav">
-                        <li><a href="#" title="Sarah's Discussions" id="discussions">Discussions</a><div class="gt-counts-container ">28</div></li>
+                        <li><a href="#" title="Sarah's Discussions" id="discussions">Discussions</a><div class="gt-counts-container">5</div></li>
                         <li><a href="#" title="Sarah's Collections" id="collections">Collections</a><div class="gt-counts-container">12</div></li>
-                        <li><a href="#" title="Sarah's Tasks" id="tasks">Tasks</a><div class="gt-counts-container ">5</div></li>
-                        <li><a href="s3-03.html" title="Sarah's Courses" id="courses">Courses</a><div class="gt-counts-container ">3</div></li>
-                        <li><a href="#" title="Sarah's Groups" id="groups">Groups</a><div class="gt-counts-container ">1</div></li>
-                        <li><a href="s3-02.html" title="Sarah's Projects" id="projects">Projects</a><div class="gt-counts-container ">8</div></li>
-                        <li><a href="#" title="Sarah's Network" id="network">Network</a><div class="gt-counts-container ">32</div></li>
-                        <li><a href="#" title="Sarah's Archive" id="archive">Archive</a><div class="gt-counts-container ">55</div></li>
+                        <li><a href="#" title="Sarah's Tasks" id="tasks">Tasks</a><div class="gt-counts-container">2</div></li>
+                        <li><a href="s3-03.html" title="Sarah's Courses" id="courses">Courses</a><div class="gt-counts-container">1</div></li>
+                        <li><a href="#" title="Sarah's Groups" id="groups">Groups</a><div class="gt-counts-container">3</div></li>
+                        <li><a href="#" title="Sarah's Network" id="network">Network</a><div class="gt-counts-container">14</div></li>
+                        <li><a href="#" title="Sarah's Archive" id="archive">Archive</a><div class="gt-counts-container">44</div></li>
+                        <li><a href="#" title="Sarah's Archive" id="questions">Research questions</a><div class="gt-counts-container">6</div></li>
                     </ul>
                 </div>
 
@@ -136,13 +129,114 @@
                             <img src="images/list-options-shadow-search.png"/>
                             <a href="" title="Close list options" id="research-results-1"><div id="grabber-list-options"></div></a>
                         </div>
-                    </div>    
-                    <div class="activity">
-                        <ul>
-                            <li><img src="images/s3-images/dummy-activity1-sarah-dash.png" alt="Sarah's activity feed" /></li>
-                            <li><img src="images/ajax-loader.gif" id="loading-ani-gif" alt="Loading more..." /></li>
-                        </ul>
                     </div>
+
+                    <div class="activity-item">
+                        <ul id="activity-summary">
+                            <li><img src="images/s2-images/profile-pic-samantha.png" alt="Samantha Li" /></li>
+                            <li><img src="images/s2-images/preview-pic-buildingblocks.png" alt="The Building Block of Life"/></li>
+                        </ul>
+                        <div id="summary-title">
+                            <a href="#" title="Samantha Li">Samantha Li</a> <strong>added</strong> a collection to <a href="#" title="The Building Block of Life Collection">The Building Block of Life</a> <strong>Collection</strong> <span>1 min ago</span>
+                            <div class="activity-arrow-down"></div>
+                        </div>
+                         <div id="gridview-listed-item">
+                            <div id="container">
+                                <div id="container-inner">
+                                    <div id="title">
+                                        <a href="#">Subcellular components</a>
+                                        <div id="type-add-share">Collection<a href="javascript:;" title="Add+Share" class="action_button share"><span></span></a></div>
+                                    </div>
+                                </div>
+                                <a href="#" title="Subcellular components (Collection contains 17 items)">
+                                    <div class="collection">
+                                        <ul>
+                                            <li><img src="images/s2-images/activity-item1-collection-item1.png"></li>
+                                            <li><img src="images/s2-images/activity-item1-collection-item2.png"></li>
+                                            <li><img src="images/s2-images/activity-item1-collection-item3.png"></li>
+                                            <li><img src="images/s2-images/activity-item1-collection-item4.png"></li>
+                                            <li><img src="images/s2-images/activity-item1-collection-item5.png"></li>
+                                            <li id="count-thumb"><div class="gt-counts-container">17</div></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="#" title="Slide open for more details">
+                                <div id="gridview-content-details">
+                                    <div id="grabber"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="discussion-item">
+                            <img src="images/s2-images/profile-pic-sarah.png" alt="Sarah First"/>
+                        </div>
+                        <div class="discussion-bubble">
+                            <div class="tertiary-arrow-left"></div>
+                            <div class="research-summary">
+                                <ul>
+                                    <li id="searches"><div class="gt-counts-container">2</div></li>
+                                    <li id="saves"><div class="gt-counts-container">1</div></li>
+                                </ul>
+                            </div>
+                            <a href="#" title="Sarah First">Sarah First</a> <span>1 min ago</span>
+                            <p>Does anyone know the best way to test for bacteria in water?</p>
+                        </div>
+                        
+                        <div class="discussion-reply">
+                            <div class="discussion-comments-count">
+                                <a href="#" title="6 Comments have been made on this discussion"><div class="gt-counts-container">6</div> Comments...</a>
+                            </div>
+                            <div class="discussion-item">
+                                <img src="images/s2-images/profile-pic-john.png" alt="John Librarian"/>
+                            </div>
+                            <div class="discussion-bubble">
+                                <div class="tertiary-arrow-left"></div>
+                                <a href="#" title="John Librarian">John Librarian</a> <span>10 mins ago</span>
+                                <p>It seems you are going to need to find out how many bacteria are in the water. What words would you – or scientists – use when they are talking about this idea?</p>
+                            </div>
+                            <input type="text" placeholder="Comment"></input>
+                        </div>
+                        <div class="discussion-reply">
+                            <div class="discussion-item">
+                                <img src="images/s2-images/profile-pic-sarah.png" alt="Sarah First"/>
+                            </div>
+                            <div class="discussion-bubble">
+                                <div class="tertiary-arrow-left"></div>
+                                <a href="#" title="Sarah First">Sarah First</a> <span>15 mins ago</span>
+                                <p>Maybe “number” or “count” would help.  Thanks, I’ll give it a try.</p>
+                            </div>
+                            <input type="text" placeholder="Comment"></input>
+                        </div>
+                    </div> 
+
+                    <div class="activity-item">
+                        <ul id="activity-summary">
+                            <li><img src="images/s2-images/profile-pic-marion.png" alt="Marion Tyler" /></li>
+                            <li><img src="images/s2-images/profile-pic-john.png" alt="John Librarian"/></li>
+                        </ul>
+                        <div id="summary-title">
+                            <a href="#" title="Marion Tyler">Marion Tyler</a> <strong>shared</strong> a link with <a href="#" title="John Librarian">John Librarian</a> <span>30 mins ago</span>
+                            <div class="activity-arrow-down"></div>
+                        </div>
+                        <div class="activity-content-preview">
+                            <div id="container">
+                                <div id="container-inner">
+                                    <div id="title">
+                                        <a href="#">Scarborough library takes to the cloud for e-book lending</a>
+                                        <div id="type-add-share">Link<a href="javascript:;" title="Add+Share" class="action_button share"><span></span></a></div>
+                                    </div>
+                                </div>
+                                <a href="#" title="Scarborough library takes to the cloud for e-book lending">
+                                    <img id="activity-preview" src="images/s2-images/activity-item3-content-preview.png" alt="Detection of pathogenic organisms in food, water, and body fluids" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="images/ajax-loader.gif" id="loading-ani-gif" alt="Loading more..." />
                 </div>
 
                 <div class="gt-content-column" id="gt-right-column">
@@ -150,29 +244,22 @@
                     <div class="tasks">
 
                         <div>
-                            <h2>Today</h2>
+                            <h2>Tomorrow</h2>
                             <ul id="parent-task">
-                                <li><a href="#" title="Chemistry 452 Literature">Chemistry 452 Literature </a><span>Assignment | by <a href="#" title="Don Douglas">Don Douglas</a></span></li>
+                                <li><a href="#" title="EndNote tutorial">EndNote tutorial </a><span>To-do | by <a href="#" title="Don Douglas">Don Douglas</a></span></li>
                             </ul>
                         </div>
                         <div>
-                            <h2>Tomorrow</h2>
+                            <h2>21 May, 2013</h2>
                             <ul>
-                                <li><a href="#" title="Calculus III Problem Set 2">Calculus III Problem Set 2 </a><span>Assignment | by <a href="#" title="Don Howard">Don Howard</a></span></li>
+                                <li><a href="#" title="Microsoft Research Faculty Summit 2013">Microsoft Research Faculty Summit 2013 </a><span>Event | by <a href="#" title="John Librarian">You</a></span></li>
                             </ul>
                         </div>
                          <div>
-                            <h2>Mar 14 (Apr 09), 2013</h2>
+                            <h2>To-do's added recently</h2>
                             <ul>
-                                <li id="with-sub-tasks">
-                                    <a href="#" title="Lab Research Project">Lab Research Project </a><span>Assignment | by <a href="#" title="Don Herbert">Don Herbert</a></span>
-                                    <h2>Sub-tasks:</h2>
-                                    <ul id="sub-tasks">
-                                        <li><span>Mar 14, 2013</span><a href="#" title="Annotated Bibliography">Annotated Bibliography</a><div class="gt-counts-container">2 days</div></li>
-                                        <li><span>Apr 01, 2013</span><a href="#" title="Research report">Research report</a><div class="gt-counts-container">17 days</div></li>
-                                        <li><span>Apr 09, 2013</span><a href="#" title="Research presentation">Research presentation</a><div class="gt-counts-container">25 days</div></li>
-                                    </ul>
-                                </li>
+                                <li><a href="#" title="Locate articles on NGOs and water purification projects">Locate articles on NGOs and water purification projects </a><span>To-do | by <a href="#" title="John Librarian">John Librarian</a></span></li>
+                                <li><a href="#" title="Develop class activity on using SciFinder Scholar">Develop class activity on using SciFinder Scholar </a><span>To-do | by <a href="#" title="John Librarian">John Librarian</a></span></li>
                             </ul>
                         </div>
                          
