@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Georgia Tech + Open Academic Environment</title>
+        <link rel="stylesheet" type="text/css" href="lib/jquery.autosuggest/autoSuggest.css">
+        <link rel="stylesheet" type="text/css" href="css/screen.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,greek-ext' rel='stylesheet' type='text/css'>
+        <script src="lib/jquery-1.8.2.js"></script>
+        <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
+        <script src="lib/jquery-ui.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            $(function() {
+                $( "#accordion" ).accordion({
+                    heightStyle: "content",
+                    active: 2,
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="gt-page-container">
+            <div id="gt-topnavigation-container">
+                <div id="gt-topnavigation-left">
+                    <ul>
+                        <li>
+                            <a href="s2-01.html" title="Dashboard" id="topnavigation_home">
+                                <div class="gt-home-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Messages" id="topnavigation_inbox">
+                                <div class="gt-inbox-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Tasks" id="topnavigation_task">
+                                <div class="gt-task-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Collections" id="topnavigation_library">
+                                <div class="gt-library-icon"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="gt-topnavigation-right">
+                    <a href="#" title="Account settings" id="topnavigation_settings" class="gt-force-right">
+                    	<div class="gt-cogwheel-icon"></div>
+                    </a>
+                    <form id="topnavigation_search_form" class="gt-force-right">
+                        <input type="text" id="topnavigation_search_input" class="gt-force-right"/>
+                    </form>
+
+                    <a href="#" id="topnavigation-explore-link" class="gt-force-right">Explore</a>
+                </div>
+                <div id="gt-topnavigation-center"></div>
+            </div>
+                </div>
+                <div id="gt-topnavigation-center"></div>
+            </div>
+            <div id="gt-content-container">
+                <div id="user-box" class="gt-title-clip">
+                    <div class="gt-title-clip-right"></div>
+                    <div class="gt-title-clip-left"></div>
+                    <a href="s2-01.html" title="John's dashboard"><img id="profile-image" src="images/s2-images/profile-pic-john.png" alt="John Librarian"/></a>
+                    <a href="#" title="More related to me (My profile, messages, account)"><h1>John Librarian</h1><div id="my-dropdown"></div></a>
+                </div>
+                <a title="Create anything (Document, To-do, Collection, Group)" class="create" href="#">
+                    <div class="gt-action-clip-primary">
+                        <div class="action-clip-right"></div>
+                        <div class="action-clip-left"></div>
+                        <div class="action-icon" id="create">Create<span id="clip-down-arrow"></span></div>
+                    </div>
+                </a>
+                <a title="Upload video, files, documents and links" class="upload" href="#">
+                    <div class="gt-action-clip-secondary">
+                        <div class="action-clip-right"></div>
+                        <div class="action-clip-left"></div>
+                        <div class="action-icon" id="upload">Upload</div>
+                    </div>
+                </a>
+                <div id="gt-lhnav-container-maxi">
+                    <ul class="selected">
+                        <li><a href="#" title="John's Discussions" id="discussions">Discussions</a><div class="gt-counts-container">5</div></li>
+                        <li><a href="#" title="John's Collections" id="collections">Collections</a><div class="gt-counts-container">12</div></li>
+                        <li><a href="#" title="John's Tasks" id="tasks">Tasks</a><div class="gt-counts-container">2</div></li>
+                        <li><a href="s3-03.html" title="John's Courses" id="courses">Courses</a><div class="gt-counts-container">1</div></li>
+                        <li><a href="#" title="John's Groups" id="groups">Groups</a><div class="gt-counts-container">3</div></li>
+                        <li><a href="#" title="John's Network" id="network">Network</a><div class="gt-counts-container">14</div></li>
+                        <li><a href="#" title="John's Archive" id="archive">Archive</a><div class="gt-counts-container">44</div></li>
+                        <li id="lhnav-arrow"><span title="Research questions for John" id="questions">Research questions</span><div class="gt-counts-container">6</div></li>
+                    </ul>
+                </div>
+                <div class="gt-content-column" id="gt-center-column">
+                    <div class="center_panel">
+                        <div class="center-panel-inner">
+                            <div style="display: none; margin-bottom: 0;">
+                                <div class="gt-force-right action_button">
+                                    <input type="text" placeholder="Narrow by keyword" class="refine_search"/>
+                                    <div class="gt-force-right" id="display-toggle">
+                                        <ul>
+                                            <li id="list"><a href="#" class="list-off"></a></li>
+                                            <li id="thumb"><a href="#" class="thumb-off"></a></li>
+                                            <li id="grid"><a href="#" class="grid-on"></a></li>
+                                        </ul>
+                                    </div>
+                                    <span class="gt-force-right" id="panel_sort_by">Sort by</span>
+                                </div>
+                                <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
+                                <div id="select-all"><input type="checkbox"/></div>
+                                <div class="action_button share fixed_width">
+                                    <a href="#">
+                                        <div class="share-black-icon gt-force-left"></div>
+                                        <span>Share + add</span>
+                                    </a>
+                                </div>
+                                <div class="action_button archive fixed_width">
+                                    <a href="#">
+                                        <div class="archive-black-icon gt-force-left"></div>
+                                        <span>Archive</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="images/list-options-shadow-search.png"/>
+                            <a href="" title="Close list options" id="research-results-1"><div id="grabber-list-options"></div></a>
+                        </div>
+                    </div>
+
+                    <div class="question-item">
+                        <div class="discussion-item">
+                            <img src="images/s2-images/profile-pic-sarah.png" alt="Sarah First"/>
+                            <input type="checkbox" id="research-results-1"/>
+                        </div>
+                        <div class="question-right">
+                            <div class="discussion-bubble" id="question-bubble">
+                                <div class="tertiary-arrow-left"></div>
+                                <div class="research-summary">
+                                    <ul>
+                                        <li id="searches"><div class="gt-counts-container">2</div></li>
+                                        <li id="saves"><div class="gt-counts-container">1</div></li>
+                                    </ul>
+                                </div>
+                                <a href="#" title="Sarah First">Sarah First</a> <span>1 min ago</span>
+                                <p>Does anyone know the best way to test for bacteria in water?</p>
+                            </div>
+                            <div class="question-comment">
+                                <input type="text" placeholder="Comment"></input>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="question-item">
+                        <div class="discussion-item">
+                            <img src="images/s2-images/profile-pic-casey.png" alt="Casey Johnson"/>
+                            <input type="checkbox" id="research-results-1"/>
+                        </div>
+                        <div class="question-right">
+                            <div class="discussion-bubble" id="question-bubble">
+                                <div class="tertiary-arrow-left"></div>
+                                <div class="research-summary">
+                                    <ul>
+                                        <li id="searches"><div class="gt-counts-container">1</div></li>
+                                    </ul>
+                                </div>
+                                <a href="#" title="Casey Johnson">Casey Johnson</a> <span>15 mins ago</span>
+                                <p>I tried to get a 2012 article from the journal “Applied ecology and environmental research” but every time I tried to download the PDF it would ask for a log-in, but it was not the GT log-in. Can you help?</p>
+                            </div>
+                            <div class="question-comment">
+                                <div class="discussion-reply">
+                                    <div class="discussion-item">
+                                        <img src="images/s2-images/profile-pic-samantha.png" alt="Sarah First"/>
+                                    </div>
+                                    <div class="discussion-bubble">
+                                        <div class="tertiary-arrow-left"></div>
+                                        <a href="#" title="Sarah First">Samantha Li</a> <span>30 mins ago</span>
+                                        <p>Hey Casey, you can find articles from that journal <a href="#">here</a></p>
+                                    </div>
+                                    <input type="text" placeholder="Reply"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="question-item">
+                        <div class="discussion-item">
+                            <img src="images/s2-images/profile-pic-jeanette.png" alt="Jeanette Fielding"/>
+                            <input type="checkbox" id="research-results-1"/>
+                        </div>
+                        <div class="question-right">
+                            <div class="discussion-bubble" id="question-bubble">
+                                <div class="tertiary-arrow-left"></div>
+                                <div class="research-summary">
+                                    <ul>
+                                        <li id="searches"><div class="gt-counts-container">8</div></li>
+                                    </ul>
+                                </div>
+                                <a href="#" title="Jeanette Fielding">Jeanette Fielding</a> <span>1 min ago</span>
+                                <p>I need to know the length of the average human arm. I can’t find it on Google. Where would I look for this?</p>
+                            </div>
+                            <div class="question-comment">
+                                <a href="s2-03.html"><input type="text" placeholder="Comment"></input></a>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="question-item">
+                        <div class="discussion-item">
+                            <img src="images/s2-images/profile-pic-mark.png" alt="Mark Stringer"/>
+                            <input type="checkbox" id="research-results-1"/>
+                        </div>
+                        <div class="question-right">
+                            <div class="discussion-bubble" id="question-bubble">
+                                <div class="tertiary-arrow-left"></div>
+                                <div class="research-summary">
+                                    <ul>
+                                        <li id="searches"><div class="gt-counts-container">5</div></li>
+                                        <li id="saves"><div class="gt-counts-container">11</div></li>
+                                    </ul>
+                                </div>
+                                <a href="#" title="Mark Stringer">Mark Stringer</a> <span>1 hour ago</span>
+                                <p>EndNote won’t let me connect to the Web of Science. What am I doing wrong?</p>
+                            </div>
+                            <div class="question-comment">
+                                <div class="discussion-comments-count">
+                                    <a href="#" title="5 Comments have been made on this discussion"><div class="gt-counts-container">5</div> Comments...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-item">
+                        <div class="discussion-item">
+                            <img src="images/s2-images/profile-pic-arthur.png" alt="Arthur Larois"/>
+                            <input type="checkbox" id="research-results-1"/>
+                        </div>
+                        <div class="question-right">
+                            <div class="discussion-bubble" id="question-bubble">
+                                <div class="tertiary-arrow-left"></div>
+                                <div class="research-summary">
+                                    <ul>
+                                        <li id="searches"><div class="gt-counts-container">14</div></li>
+                                        <li id="saves"><div class="gt-counts-container">7</div></li>
+                                    </ul>
+                                </div>
+                                <a href="#" title="Arthur Larois">Arthur Larois</a> <span>Yesterday</span>
+                                <p>I’m looking for research that backs up thatMicroparticles (nanospheres) Microclusters surround nutrient particles with an electrically charged mineral coating that protects the nutrients until they are absorbed into the cells.</p>
+                            </div>
+                            <div class="question-comment">
+                                <input type="text" placeholder="Comment"></input>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="question-item">
+                        <div class="discussion-item">
+                            <img src="images/s2-images/profile-pic-vivienne.png" alt="Vivienne Ching"/>
+                            <input type="checkbox" id="research-results-1"/>
+                        </div>
+                        <div class="question-right">
+                            <div class="discussion-bubble" id="question-bubble">
+                                <div class="tertiary-arrow-left"></div>
+                                <div class="research-summary">
+                                    <ul>
+                                        <li id="searches"><div class="gt-counts-container">2</div></li>
+                                        <li id="saves"><div class="gt-counts-container">3</div></li>
+                                    </ul>
+                                </div>
+                                <a href="#" title="Vivienne Ching">Vivienne Ching</a> <span>Mar 10, 2013</span>
+                                <p>Is there a current research that shows how to gain data on the rate at which photosynthesis absorbs light and the emissions in the transfer of energy? </p>
+                            </div>
+                            <div class="question-comment">
+                                <div class="discussion-comments-count">
+                                    <a href="#" title="1 Comment has been made on this discussion"><div class="gt-counts-container">1</div> Comment...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <img src="images/ajax-loader.gif" id="loading-ani-gif" alt="Loading more..." />
+
+                </div>
+        </div>
+    </body>
+</html>

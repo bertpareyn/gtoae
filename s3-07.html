@@ -1,0 +1,577 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Georgia Tech + Open Academic Environment</title>
+        <link rel="stylesheet" type="text/css" href="lib/jquery.autosuggest/autoSuggest.css">
+        <link rel="stylesheet" type="text/css" href="css/screen.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic-ext,greek-ext' rel='stylesheet' type='text/css'>
+        <script src="lib/jquery-1.8.2.js"></script>
+        <script src="lib/jquery.autosuggest/jquery.autoSuggest.js"></script>
+        <script src="lib/jquery-ui.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="overlay_window" id="gt_video_overlay" style="display: none;"></div>
+        <div class="overlay_container" style="display: none;">
+            <div class="gt-popup-close" id="gt_video_overlay_close"></div>
+            <a href="http://www.gatech.edu/">
+                <img src="images/s1-images/dummy-gt-video-databases.png" class="overlay1_dummy"/>
+            </a>
+        </div>
+        <div id="gt-page-container">
+            <div id="gt-topnavigation-container">
+                <div id="gt-topnavigation-left">
+                    <ul>
+                        <li>
+                            <a href="javascript:;" title="Dashboard" id="topnavigation_home">
+                                <div class="gt-home-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Messages" id="topnavigation_inbox">
+                                <div class="gt-inbox-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Tasks" id="topnavigation_task">
+                                <div class="gt-task-icon"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="Collections" id="topnavigation_library">
+                                <div class="gt-library-icon"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- SEARCH AND RESEARCH ASSISTANCE STARTS HERE -->
+                <div id="gt-topnavigation-right">
+                    <a href="javascript:;" title="Account settings" id="topnavigation_settings" class="gt-force-right">
+                        <div class="gt-cogwheel-icon"></div>
+                    </a>
+                    <form id="topnavigation_search_form" class="gt-force-right">
+                        <a href="s3-07.html"><input type="text" value="ing bacteria pathogens in water" id="topnavigation_search_input" class="gt-force-right"/></a>
+                    </form>
+
+                    <div id="topnavigation_search_form" class="gt-force-right" style="display: none;">
+                        <form id="search-keywords">
+                            <div id="search-bar">
+                                <input type="text" value="ing bacteria pathogens in water"></input>
+                                <ul class="as-selections">
+                                    <li class="as-selection-item">
+                                        <a><div id="delete-tag"></div></a>
+                                        <div class="autosuggest_term">Creek</div>
+                                    </li>
+                                </ul>
+                            </div>        
+                        </form>
+                    </div>
+
+                    <div id="topnavigation_search_results_container">
+                        <div id="topnavigation_search_results_top">
+                            <div class="gt-force-right">
+                                <a href="s3-08.html"><img src="images/switch-off.png" class="gt-force-right"/></a>
+                                <a href="s3-07.html"><img src="images/switch-on.png" class="gt-force-right" style="display: none;"/></a>
+                                <div class="gt-force-left" id="research-assistance-label">Research assistance</div>
+                            </div>
+                            <img src="images/gt-search-icon.png" class="gt-force-left"/>
+                        </div>
+                        <div id="topnavigation_search_results_results">
+                            <!-- RESEARCH ASSISTANCE OFF -->
+                            <div id="research-assistance-off">
+                                <h2>Documents, files and links</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-item1+4.png" class="gt-force-left"/>
+                                        <div>Detection of pathogenic ... body fluids</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-item2.png" class="gt-force-left"/>
+                                        <div>Development of a DNA ... water</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-item3.png" class="gt-force-left"/>
+                                        <div>Waterborne Pathogens: Bacteria</div>
+                                    </li>
+                                </ul>
+
+                                <h2>Collections</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-item1+4.png" class="gt-force-left"/>
+                                        <div>Research on water testing</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-item5.png" class="gt-force-left"/>
+                                        <div>Labs that test water ... analysis</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-item6.png" class="gt-force-left"/>
+                                        <div>Luminescent Bacteria</div>
+                                    </li>
+                                </ul>
+
+                                <h2>People</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-person1.png" class="gt-force-left"/>
+                                        <div>John Librarian</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-person2.png" class="gt-force-left"/>
+                                        <div>Don Herbert</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-person3.png" class="gt-force-left"/>
+                                        <div>Don Reach</div>
+                                    </li>
+                                </ul>
+
+                                <h2>Projects</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-project1.png" class="gt-force-left"/>
+                                        <div>Water Testing</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-project2.png" class="gt-force-left"/>
+                                        <div>Unique Bioterror Screening</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-project3.png" class="gt-force-left"/>
+                                        <div>1000 Genomes</div>
+                                    </li>
+                                </ul>
+
+                                <h2>Courses</h2>
+                                <ul>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-course1.png" class="gt-force-left"/>
+                                        <div>BIOL 4620 Aquatic Chemical Ecology</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-course2.png" class="gt-force-left"/>
+                                        <div>BIOL 3451 Cell and Molecular Biology</div>
+                                    </li>
+                                    <li>
+                                        <img src="images/s3-images/live-search-results-preview-course3.png" class="gt-force-left"/>
+                                        <div>CHEM 4512 Biochemistry II</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- RESEARCH ASSISTANCE ON -->
+                            <div id="research-assistance-on" style="display: none;">
+                                <h2>Research materials</h2>
+                                <div>
+                                    <input type="checkbox" id="search_journal_articles">
+                                    <label for="search_journal_articles">Journal articles</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="search_peer_reviewed">
+                                    <label for="search_peer_reviewed">Peer-reviewed articles</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="search_videos">
+                                    <label for="search_videos">Videos</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="search_websites">
+                                    <label for="search_websites">Websites</label>
+                                </div>
+                                <a href="javascript:;" title="More research materials">More</a>
+
+                                <h2>Tutorials</h2>
+                                <div>
+                                    <input type="checkbox" id="search_journal_articles">
+                                    <label for="search_writing_papers">Writing papers</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="search_peer_reviewed">
+                                    <label for="search_bibliographies">Bibliographies</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="search_videos">
+                                    <label for="search_lab_methodologies">Lab methodologies</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="search_websites">
+                                    <label for="search_endnote_citations">EndNote citations</label>
+                                </div>
+
+                                <h2>Terminology</h2>
+                                <div id="suggested-terms">
+                                    <ul class="as-selections">
+                                        <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Virus</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Microbe</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Microorganism</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Stream</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">River</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Creek</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Germ</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Harmful</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Contamination</div>
+                                            </li>
+                                            <li class="as-selection-item">
+                                                <a><div id="add-tag"></div></a>
+                                                <div class="autosuggest_term">Quantitative analysis</div>
+                                            </li>
+                                    </ul>
+                                </div>
+                                <div id="topnavigation_search_results_middle">
+                                    <h2>Save this search in the Search History for:</h2>
+                                    <select style="display: none">
+                                        <option selected="selected" value="water_testing" id="water_testing">Water testing</option>
+                                        <option id="item1">Biochemistry statistical research sources</option>
+                                        <option id="item2">The comparison of Biochemistry industry</option>
+                                        <option id="item3">Fractional Calculus modelling of non-Gaussian noisy signals and 1/f noise</option>
+                                        <option id="item4">Data visualization on US pathogenesis</option>
+                                        <option id="item5">DNA samples needed for research in geographical genetic tracking of human evolution</option>
+                                        <option id="item6">Ecology survey on your local parklands</option>
+                                        <option id="item7">Study of luminescent nanomaterials</option>
+                                    </select>
+                                        <a href="s3-07.html">
+                                            <input type="checkbox" id="dont_save_search">
+                                            <label for="dont_save_search_history">Private search</label>
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- RESEARCH ASSISTANCE ON – STEP 1 -->
+                            <div id="search_wt_step_one" style="display: none;">
+                                <div class="next-arrow"><a href="#" title="Next research options"><img src="images/next_arrow_icon.png" /></a></div>
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option selected="selected" value="water_testing" id="water_testing">Water testing</option>
+                                    <option id="item1">Biochemistry statistical research sources</option>
+                                    <option id="item1">The comparison of Biochemistry industry</option>
+                                    <option id="item3">Fractional Calculus modelling of non-Gaussian noisy signals and 1/f noise</option>
+                                    <option id="item4">Data visualization on US pathogenesis</option>
+                                    <option id="item5">DNA samples needed for research in geographical genetic tracking of human evolution</option>
+                                    <option id="item6">Ecology survey on your local parklands</option>
+                                    <option id="item7">Study of luminescent nanomaterials</option>
+                                </select>
+                                <div class="search_wt_content_box_wrapper">
+                                    <div class="search_wt_content_box">
+                                        <h1>Research criteria</h1>
+                                        <p>Are you looking for materials based on the syllabus or research project recommendations?</p>
+                                        <div>
+                                            <input type="checkbox" id="search_peer_reviewed">
+                                            <label for="search_peer_reviewed">Peer-reviewed articles</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="search_videos">
+                                            <label for="search_videos">Books</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="search_websites">
+                                            <label for="search_websites">Conference materials</label>
+                                        </div>
+                                        <div class="indented">
+                                            <input type="checkbox" id="search_websites">
+                                            <select>
+                                                <option>Other</option>
+                                                <option>Everything</option>
+                                                <option>Video</option>
+                                                <option>Statistical information</option>
+                                                <option>Websites</option>
+                                            </select>
+                                        </div>
+                                        <div class="indented">
+                                            <input type="checkbox" id="search_websites">
+                                            <label for="search_websites">No, I'll start by researching everything</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="dot_indicators">
+                                    <li id="selected"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <button type="button" id="start_second_sa_step" class="gt-button gt-black-button centered">Next</button>
+                            </div>
+                            <!-- RESEARCH ASSISTANCE ON – STEP 2 -->
+                            <div id="search_wt_step_two" style="display: none;">
+                                <div class="back-arrow"><a href="#" title="Previous research options"><img src="images/back_arrow_icon.png" /></a></div>
+                                <div class="next-arrow"><a href="#" title="Next research options"><img src="images/next_arrow_icon.png" /></a></div>
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option selected="selected" value="water_testing" id="water_testing">Water testing</option>
+                                    <option id="item1">Biochemistry statistical research sources</option>
+                                    <option id="item1">The comparison of Biochemistry industry</option>
+                                    <option id="item3">Fractional Calculus modelling of non-Gaussian noisy signals and 1/f noise</option>
+                                    <option id="item4">Data visualization on US pathogenesis</option>
+                                    <option id="item5">DNA samples needed for research in geographical genetic tracking of human evolution</option>
+                                    <option id="item6">Ecology survey on your local parklands</option>
+                                    <option id="item7">Study of luminescent nanomaterials</option>
+                                </select>
+                                <div class="search_wt_content_box_wrapper">
+                                    <div class="search_wt_content_box">
+                                        <h1>Terminology</h1>
+                                        <p>Consider alternative terms</p>
+                                        <div id="suggested-terms">
+                                            <ul class="as-selections">
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">Virus</div>
+                                                </li>
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">Microbe</div>
+                                                </li>
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">Microorganism</div>
+                                                </li>
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">Stream</div>
+                                                </li>
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">River</div>
+                                                </li>
+                                                <li class="as-selection-item" style="display: none;">
+                                                    <a href="s3-08.html">
+                                                        <div id="add-tag"></div>
+                                                        <div class="autosuggest_term">Creek</div>
+                                                    </a>
+                                                </li>
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">Germ</div>
+                                                </li>
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">Harmful</div>
+                                                </li>
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">Contamination</div>
+                                                </li>
+                                                <li class="as-selection-item">
+                                                    <a><div id="add-tag"></div></a>
+                                                    <div class="autosuggest_term">Quantitative analysis</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="dot_indicators">
+                                    <li></li>
+                                    <li id="selected"></li>
+                                    <li></li>
+                                </ul>
+                                <button type="button" id="close_sa" class="gt-button gt-black-button centered">Done</button>
+                            </div>
+                            <!-- RESEARCH ASSISTANCE ON – STEP 3 -->
+                            <div id="search_wt_step_three" style="display: none;">
+                                <div class="back-arrow"><a href="#" title="Previous research options"><img src="images/back_arrow_icon.png" /></a></div>
+                                <h2>Save this search in (Search history):</h2>
+                                <select>
+                                    <option selected="selected" value="water_testing" id="water_testing">Water testing</option>
+                                    <option id="item1">Biochemistry statistical research sources</option>
+                                    <option id="item2">The comparison of Biochemistry industry</option>
+                                    <option id="item3">Fractional Calculus modelling of non-Gaussian noisy signals and 1/f noise</option>
+                                    <option id="item4">Data visualization on US pathogenesis</option>
+                                    <option id="item5">DNA samples needed for research in geographical genetic tracking of human evolution</option>
+                                    <option id="item6">Ecology survey on your local parklands</option>
+                                    <option id="item7">Study of luminescent nanomaterials</option>
+                                </select>
+                                <div class="search_wt_content_box_wrapper">
+                                    <div class="search_wt_content_box">
+                                        <h1>Requirements</h1>
+                                        <p>Are you looking to find resources and tutorials on project deliverables?</p>
+                                        <div>
+                                            <input type="checkbox" id="search_peer_reviewed">
+                                            <label for="search_peer_reviewed">Writing papers</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="search_videos">
+                                            <label for="search_videos">Annotated bibliographies</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="search_websites">
+                                            <label for="search_websites">Creating webpages</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="search_websites">
+                                            <label for="search_websites">Giving oral presentations</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="search_websites">
+                                            <label for="search_websites">No, I'm good at all these</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="dot_indicators">
+                                    <li></li>
+                                    <li></li>
+                                    <li id="selected"></li>
+                                </ul>
+                                <button type="button" id="start_third_sa_step" class="gt-button gt-black-button centered">Next</button>
+                            </div>
+                        </div>
+                        <!-- SEARCH AND ASSISTANCE FOOTERS -->
+                        <div id="topnavigation_search_results_bottom" class="search_footer main_search_footer">
+                            <a href="#"><button type="button" class="gt-button gt-overlay-button gt-force-right">See all</button></a>
+                            <div class="gt-force-left">16 of 134 search results</div>
+                        </div>
+                        <div id="topnavigation_search_results_bottom" class="search_footer" style="display: none;">
+                            <a href="s3-10.html"><button type="button" class="gt-button gt-black-button gt-force-right">Done</button></a>
+                            <a href="javascript:;" class="gt-force-left" title="Clear your choices, and start again">Clear</a>
+                        </div>
+                    </div>
+                    <!-- SEARCH AND RESEARCH ASSISTANCE FINISHED -->
+
+                    <a href="javascript:;" id="topnavigation-explore-link" class="gt-force-right">Explore</a>
+                </div>
+                <div id="gt-topnavigation-center"></div>
+            </div>
+
+             <div id="gt-lhnav-container">
+                <a href="javascript:history.back()" title="Go back to previous level"><img id="go-back-level" src="images/back_arrow_icon.png" alt="Go back to previous level"/></a>
+             </div>
+             <div id="gt-lhnav-container" class="second-level-nav">
+                <a href="s3-04.html" title="Biology 101"><img id="profile-image" src="images/s3-images/profile-pic-biology101.png" alt="Biology 101"/></a>
+                <ul id="maxi-left-nav">
+                    <li><a href="#" title="Biology 101's Collections" id="collections"></a></li>
+                    <li><a href="#" title="Biology 101's Tasks" id="tasks"></a></li>
+                    <li><a href="#" title="Biology 101's Groups" id="groups"></a></li>
+                    <li><a href="#" title="Biology 101's Archive" id="archive"></a></li>
+                    <li id="lhnav-arrow"><a href="s3-05.html" title="Biology 101's Projects" id="projects"></a></li>
+                    <li><a href="#" title="Biology 101's Discusssions" id="discussions"></a></li>
+                </ul>
+             </div>
+
+             <div id="gt-content-container">
+                <div id="user-box" class="gt-title-clip">
+                    <div class="gt-title-clip-right"></div>
+                    <div class="gt-title-clip-left"></div>
+                    <a href="s3-06.html" title="Water Testing"><img id="profile-image" src="images/s3-images/profile-pic-water-testing.png" alt="Water Testing – Research project"/></a>
+                    <div class="gt-force-left user-box-multiline-arrow">
+                        <a href="#" title="More about Water Testing"><h1 class="gt-force-left">Water Testing</h1></a>
+                        <span>Project</span>
+                    </div>
+                </div>
+
+                <a title="Create" class="create" href="#">
+                    <div class="gt-action-clip-primary">
+                        <div class="action-clip-right"></div>
+                        <div class="action-clip-left"></div>
+                        <div class="action-icon" id="create">Create<span id="clip-down-arrow"></span></div>
+                    </div>
+                </a>
+
+                <a title="Upload" class="upload" href="#">
+                    <div class="gt-action-clip-secondary">
+                        <div class="action-clip-right"></div>
+                        <div class="action-clip-left"></div>
+                        <div class="action-icon" id="upload">Upload</div>
+                    </div>
+                </a>
+
+                <div id="gt-lhnav-container-maxi">
+                    <ul id="maxi-left-nav">
+                        <li><a href="#" title="Water Testing's Discussions" id="discussions">Discussions</a><div class="gt-counts-container ">6</div></li>
+                        <li><a href="#" title="Water Testing's Tasks" id="tasks">Tasks</a><div class="gt-counts-container ">4</div></li>
+                        <li><a href="#" title="Water Testing's Search History" id="search">Search history</a><div class="gt-counts-container ">19</div></li>
+                        <li><a href="#" title="Water Testing's Collections" id="collections">Collections</a><div class="gt-counts-container ">3</div></li>
+                        <li><a href="#" title="Water Testing's Archive" id="archive">Archive</a><div class="gt-counts-container ">26</div></li>
+                        <li><a href="#" title="Water Testing's Participants" id="participants">Participants</a><div class="gt-counts-container ">5</div></li>
+                    </ul>
+                </div>
+                <div class="gt-content-column" id="gt-center-column">
+
+                    <div class="center_panel">
+                        <div class="center-panel-inner">
+                            <div style="display: none; margin-bottom: 0;">
+                                <div class="gt-force-right action_button">
+                                    <input type="text" placeholder="Narrow by keyword" class="refine_search"/>
+                                    <div class="gt-force-right" id="display-toggle">
+                                        <ul>
+                                            <li id="list"><a href="#" class="list-off"></a></li>
+                                            <li id="thumb"><a href="#" class="thumb-off"></a></li>
+                                            <li id="grid"><a href="#" class="grid-on"></a></li>
+                                        </ul>
+                                    </div>
+                                    <span class="gt-force-right" id="panel_sort_by">Sort by</span>
+                                </div>
+                                    <h2 class="panel_header">Results <span class="gt-counts-container">86</span></h2>
+                                    <div id="select-all"><input type="checkbox"/></div>
+                                    <div class="action_button share fixed_width">
+                                        <div class="share-black-icon gt-force-left"></div>
+                                        <span>Share + add</span>
+                                    </div>
+                            </div>
+                                <img src="images/list-options-shadow-search.png"/>
+                                <a href="" title="Close list options" id="research-results-1"><div id="grabber-list-options"></div></a>
+                        </div>
+                    </div>    
+                    <div class="activity">
+                        <ul>
+                            <li><img src="images/s3-images/dummy-activity3-watertesting-dash.png" alt="Water Testings's activity feed" /></li>
+                            <li><img src="images/ajax-loader.gif" id="loading-ani-gif" alt="Loading more..." /></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gt-content-column">
+
+                    <div class="tasks">
+
+                        <div>
+                            <h2>Mar 14 (Apr 09), 2013</h2>
+                            <ul>
+                                <li id="with-sub-tasks">
+                                    <a href="#" title="Lab Research Project">Lab research project </a><span>Assignment | by <a href="#" title="Don Herbert">Don Herbert</a></span>
+                                    <h2>Sub-tasks:</h2>
+                                    <ul id="sub-tasks">
+                                        <li><span>Mar 14, 2013</span><a href="#" title="Annotated Bibliography">Annotated Bibliography</a><div class="gt-counts-container">2 days</div></li>
+                                        <li><span>Apr 01, 2013</span><a href="#" title="Research report">Research report</a><div class="gt-counts-container">17 days</div></li>
+                                        <li><span>Apr 09, 2013</span><a href="#" title="Research presentation">Research presentation</a><div class="gt-counts-container">25 days</div></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>To-do’s</h2>
+                            <ul id="parent-task">
+                                <li><a href="#" title="Chemistry 452 Literature">Find out the methodology for testing for pathogens in water </a><span>To do | by <a href="#" title="Sarah First">Sarah First</a></span></li>
+                            </ul>
+                             <ul id="parent-task">
+                                <li><a href="#" title="Chemistry 452 Literature">Schedule a time for the group to learn FinalCutPro </a><span>To do | by <a href="#" title="Sarah First">Sarah First</a></span></li>
+                            </ul>
+                        </div>
+                         
+                    </div>
+
+    </body>
+</html>
