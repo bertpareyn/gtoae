@@ -268,6 +268,10 @@ a {
     width: 77%;
 }
 
+.gt-content-column#gt-center-column-wide.right-column-collapsed {
+    width: 92%;
+}
+
 .gt-content-column#gt-right-column {
     float: left;
     margin: 36px 0 0 0;
@@ -288,7 +292,7 @@ a {
     background: url("../images/close-column-icon.png") no-repeat center center transparent;
     width: 14px;
     height: 13px;
-    margin: 15px 0 0 20px;
+    margin: 15px 0 0 10px;
 }
 
 #gt-right-column-open #close-column-button:hover {
@@ -300,6 +304,21 @@ a {
     background: url("../images/close-column-icon-active.png") no-repeat center center transparent;
 }
 
+#gt-right-column-open #open-column-button {
+    background: url("../images/list-options-display-list-off.png") no-repeat scroll center center transparent;
+    height: 17px;
+    margin: 13px 0 0 7px;
+    width: 17px;
+}
+
+#gt-right-column-open #open-column-button:hover {
+    background: url("../images/list-options-display-list-hover.png") no-repeat center center transparent;
+    cursor: pointer;
+}
+
+#gt-right-column-open #open-column-button:active {
+    background: url("../images/list-options-display-list-active.png") no-repeat center center transparent;
+}
 
 /************************************************
  * STRUCTURAL EXTENSIONS FOR RIGHT COLUMN INLAY *
@@ -1517,7 +1536,7 @@ a.upload {
 
 a.share_add {
     float: right;
-    margin-right: 140px;
+    margin-right: 170px;
 }
 
 .action-icon#share_add {
@@ -1537,7 +1556,7 @@ a.share_add {
 
 a.archive {
     float: right;
-    margin-right: 85px;
+    margin-right: 115px;
 }
 
 .action-icon#archive {
@@ -1581,7 +1600,7 @@ a.archive {
 
 a.discussions {
     float: right;
-    margin-right: 85px;
+    margin-right: 115px;
 }
 
 .action-icon#discussions {
