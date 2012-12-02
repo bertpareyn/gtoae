@@ -453,16 +453,26 @@
             <button type="button" class="gt-button gt-overlay-button" id="add-collection-btn">Add</button>
         </div>
 
-        <div class="discussions gt-popup" style="display:none;">
+        <div id="research-path" style="display: none;" class="gt-popup discussions">
             <div class="secondary-arrow-up"></div>
             <div class="gt-popup-close discussions-close"></div>
-            <div id="discussion">
-                <img src="images/dummy_users/profile-pic-john.png" alt="John Librarian" class="gt-force-left"/>
-                <div id="text-box">
-                    <textarea placeholder="Your comment"></textarea>
+            <div style="display: none;" class="comment">
+                <img alt="John Librarian" src="images/s2-images/profile-pic-john.png">
+                <textarea id="comment-infocus" focus="focus"></textarea>
+                <button type="button" style="" class="gt-button gt-black-button gt-force-right" id="post">Post</button>
+            </div>
+            <div class="comment">
+                <div class="discussion-reply">
+                    <div class="discussion-item">
+                        <img alt="John Librarian" src="images/s2-images/profile-pic-john.png">
+                    </div>
+                    <div class="discussion-bubble">
+                        <div class="tertiary-arrow-left"></div>
+                        <a title="Sarah First" href="#">John Librarian</a> <span>30 mins ago</span>
+                        <p>Hi Guys I see your requirements outline peer review articles, if you keep in mind that there are many that look at lab experiments and pathogens in water in the Medical databases too.</p>
+                    </div>
                 </div>
-                <button class="btn-cancel discussions-close gt-force-left" type="submit">Cancel</button>
-                <button class="gt-button gt-overlay-button gt-force-right" id="discussions-send" type="button">Send</button>
+                <input type="text" placeholder="Comment">
             </div>
         </div>
 
