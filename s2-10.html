@@ -13,9 +13,14 @@
         <script src="js/main.js"></script>
         <script>
             $(function() {
-                $( "#accordion" ).accordion({
+                $("#accordion").accordion({
                     heightStyle: "content",
-                    active: 2,
+                    active: 0,
+                });
+
+                $("#accordion2").accordion({
+                    heightStyle: "content",
+                    active: 0,
                 });
             });
         </script>
@@ -127,7 +132,7 @@
                         </div>
                     </div>
 
-                    <div id="gridview-listed-item">
+                    <div class="gridview-listed-item">
                             <div id="container">
                                 <div id="container-inner">
                                     <div id="title">
@@ -150,7 +155,7 @@
                             </div>
                         </div>
 
-                        <div id="gridview-listed-item">
+                        <div class="gridview-listed-item">
                             <div id="container">
                                 <div id="container-inner">
                                     <div id="title">
@@ -173,7 +178,7 @@
                             </div>
                         </div>
 
-                        <div id="gridview-listed-item">
+                        <div class="gridview-listed-item">
                             <div id="container">
                                 <div id="container-inner">
                                     <div id="title">
@@ -196,7 +201,7 @@
                             </div>
                         </div>
 
-                        <div id="gridview-listed-item">
+                        <div class="gridview-listed-item">
                             <div id="container">
                                 <div id="container-inner">
                                     <div id="title">
@@ -264,42 +269,64 @@
                             </div>
                         </div>
                     </div>
-                    <h2 style="margin-left: 20px;">Tutorials</h2>
-                    <div id="accordion">
-                        <h3>Research skills</h3>
-                        <div>
-                            <ul>
-                                <li><a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a></li>
-                                <li id="with-divider"><a href="#" title="Developing a Search Strategy">Developing a Search Strategy</a></li>
-                            </ul>
-                        </div>
-                        <h3>Citations/bibliographies</h3>
-                        <div>
-                            <ul>
-                                <li><a href="#" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a></li>
-                                <li><a href="#" title="Creating an Annotated Bibliography with EndNote">Creating an Annotated Bibliography with EndNote</a></li>
-                            </ul>
-                        </div>
-                        <h3>Papers</h3>
-                        <div>
-                            <ul>
-                                <li><a href="#" title="Avoiding Plagiarism - Citing Sources">Avoiding Plagiarism - Citing Sources</a></li>
-                                <li><a href="#" title="Writing a paper">Writing a paper</a></li>
-                            </ul>
-                        </div>
-                        <h3>Video</h3>
-                        <div>
-                            <ul>
-                                <li><a href="#" title="Video editing">Video editing</a></li>
-                                <li><a href="#" title="Resources &amp; equipment for Creating a Video">Resources &amp; equipment for Creating a Video</a></li>
-                            </ul>
-                        </div>
-                        <h3>Further skills</h3>
-                        <div>
-                            <ul>
-                                <li><a href="#" title="Using Wordpress to Create a Project Website">Using Wordpress to Create a Project Website</a></li>
-                                <li><a href="#" title="Presentation skills">Presentation skills</a></li>
-                            </ul>
+                    <div class="details" id="content">
+                        <h2 style="margin-left: 20px;">Tutorials</h2>
+                        <div id="accordion2">
+                            <h3>Research skills</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="javascript:;" id="gt_video_overlay_link" title="Selecting the Appropriate Database for Research">Selecting the Appropriate Database for Research</a>
+                                            <a href="#" title="Developing a Search Strategy">Developing a Search Strategy</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3>Citations/bibliographies</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#" title="Creating an EndNote Library/Adding References to EndNote">Creating an EndNote Library/Adding References to EndNote</a>
+                                            <a href="#" title="Creating an Annotated Bibliography with EndNote">Creating an Annotated Bibliography with EndNote</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3>Papers</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#" title="Avoiding Plagiarism - Citing Sources">Avoiding Plagiarism - Citing Sources</a>
+                                            <a href="#" title="Writing a paper">Writing a paper</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3>Video</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#" title="Video editing">Video editing</a>
+                                            <a href="#" title="Resources &amp; equipment for Creating a Video">Resources &amp; equipment for Creating a Video</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3>Further skills</h3>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#" title="Using Wordpress to Create a Project Website">Using Wordpress to Create a Project Website</a>
+                                            <a href="#" title="Presentation skills">Presentation skills</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

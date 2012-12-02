@@ -45,7 +45,11 @@
             $('#search_wt_step_three').hide();
             $('.main_search_footer.search_footer').toggle();
             $('#research-assistance-off').toggle();
-        })
+        });
+
+        $('.searches-list .summary-panel h3').on('click', function(ev) {
+            $(this).siblings('div').toggle();
+        });
     };
 
     /**
@@ -142,7 +146,7 @@
             $('.gt-popup.share').show();
             $('.gt-popup.share').css('z-index', 10000);
             $('.gt-popup.share').css('top', $(this).offset().top - 95);
-            $('.gt-popup.share').css('left', $(this).offset().left - ($('.gt-popup.share').width() / 2) - 30);
+            $('.gt-popup.share').css('left', $(this).offset().left - ($('.gt-popup.share').width() / 2) - ($(this).width() / 2));
 
         });
 
@@ -182,6 +186,26 @@
         });
 
         $('#gt-search-results input[type=checkbox]').on('change', function() {
+            if ($('#gt-search-results input[type=checkbox]').is(':checked')) {
+                $('.center-panel-inner').addClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: none !important');
+            } else {
+                $('.center-panel-inner').removeClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: block');
+            }
+        });
+
+        $('.question-item input[type=checkbox]').on('change', function() {
+            if ($('.question-item input[type=checkbox]').is(':checked')) {
+                $('.center-panel-inner').addClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: none !important');
+            } else {
+                $('.center-panel-inner').removeClass('center_panel_shown');
+                $('.center-panel-closed').attr('style', 'display: block');
+            }
+        });
+
+        $('.gridview-listed-item input[type=checkbox]').on('change', function() {
             if ($('#gt-search-results input[type=checkbox]').is(':checked')) {
                 $('.center-panel-inner').addClass('center_panel_shown');
                 $('.center-panel-closed').attr('style', 'display: none !important');

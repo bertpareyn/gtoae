@@ -1614,14 +1614,14 @@ a.discussions {
     padding: 0;
 }
 
-#gridview-listed-item {
+.gridview-listed-item {
     float: left;
     display: block;
     margin: 0 2% 20px 0;
 }
 
-#gridview-listed-item #container, 
-#gridview-listed-item #container-open,
+.gridview-listed-item #container, 
+.gridview-listed-item #container-open,
 .activity-content-preview #container {
     float: left;
     display: block;
@@ -1644,7 +1644,7 @@ a.discussions {
     border-right: 1px solid #bbbab7;
 }
 
-#gridview-listed-item #container-inner,
+.gridview-listed-item #container-inner,
 .activity-content-preview #container-inner {
     bottom: 0;
     position: absolute;
@@ -1667,7 +1667,7 @@ a.discussions {
     font-style: italic;
 }
 
-#gridview-listed-item #title {
+.gridview-listed-item #title {
     max-height: 100%;
     min-height: 2%;
     width: 95%;
@@ -1675,14 +1675,14 @@ a.discussions {
     margin: 2% 2% 0 2%;
 }
 
-#gridview-listed-item #title a {
+.gridview-listed-item #title a {
     text-shadow: 0px 1px 0px #000;
     color: #fff;
     text-decoration: none;
     font-style: normal;
 }
 
-#gridview-listed-item #title a:hover {
+.gridview-listed-item #title a:hover {
     text-decoration: underline;
 }
 
@@ -1695,11 +1695,11 @@ a.discussions {
     color: #999;
 }
 
-#gridview-listed-item #title #type-add-share {
+.gridview-listed-item #title #type-add-share {
     margin: 10px 0 0 0;
 }
 
-#gridview-listed-item #title #type-add-share span {
+.gridview-listed-item #title #type-add-share span {
     float: right;
     height: 29px;
     width: 26px;
@@ -1708,11 +1708,11 @@ a.discussions {
     cursor: pointer;
 }
 
-#gridview-listed-item #title #type-add-share span:hover {
+.gridview-listed-item #title #type-add-share span:hover {
     background: url("../images/icon-add+share-white-hover.png") no-repeat;
 }
 
-#gridview-listed-item #title #type-add-share span:active {
+.gridview-listed-item #title #type-add-share span:active {
     background: url("../images/icon-add+share-white-clicked.png") no-repeat;
 }
 
@@ -1756,7 +1756,7 @@ a.discussions {
     -webkit-border-radius: 0 3px 3px 0;
 }   
 
-#gridview-listed-item input {
+.gridview-listed-item input {
     margin: 10px 0 0 0;
     padding: 0;
 }
@@ -1775,11 +1775,11 @@ a.discussions {
     font-style: italic;
 }
 
-#gridview-listed-item #gridview-content-details-closed {
+.gridview-listed-item #gridview-content-details-closed {
     float: left;
 }
 
-#gridview-listed-item #gridview-content-details-closed #grabber-closed {
+.gridview-listed-item #gridview-content-details-closed #grabber-closed {
     background-position: 2px 65px; 
     width: 12px;
     height: 158px;
@@ -1818,7 +1818,7 @@ a.discussions {
 
  /** GRID VIEW OPEN **/
 
-#gridview-listed-item #container-open {
+.gridview-listed-item #container-open {
     border-bottom: 1px solid #bbbab7;
     float: right !important;
     border-radius: 0 3px 3px 0 !important;
@@ -1872,7 +1872,7 @@ a.discussions {
     text-decoration: underline;
 }
 
-#gridview-listed-item.new-item #container, #gridview-listed-item.no-profile-pic #container {
+.gridview-listed-item.new-item #container, .gridview-listed-item.no-profile-pic #container {
     border: none;
     -moz-box-shadow: inset 0 0 5px #999;
     -webkit-box-shadow: inset 0 0 5px #999;
@@ -1886,13 +1886,13 @@ a.discussions {
     width: 158px;
 } 
 
-#gridview-listed-item.new-item #container #gridview-project {
+.gridview-listed-item.new-item #container #gridview-project {
     background: url("../images/grid-view-icon-project-disabled.png") no-repeat center 35px transparent;
     height: 158px;
     width: 158px;
 }
 
-#gridview-listed-item.new-item #container #new-item-btn {
+.gridview-listed-item.new-item #container #new-item-btn {
     bottom: 0;
     position: absolute;
     border: 0 none;
@@ -1901,35 +1901,35 @@ a.discussions {
     width: 70%;
 }
 
-#gridview-listed-item #no-profile-image-project {
+.gridview-listed-item #no-profile-image-project {
     background: url("../images/grid-view-icon-project-disabled.png") no-repeat center 35px transparent;
     height: 158px;
     width: 148px;
 }
 
-#gridview-listed-item #no-profile-image-project:hover {
+.gridview-listed-item #no-profile-image-project:hover {
     background: url("../images/grid-view-icon-project-hover.png") no-repeat center 35px transparent;
     height: 158px;
     width: 148px;
 }
 
-#gridview-listed-item #no-profile-image-project:active {
+.gridview-listed-item #no-profile-image-project:active {
     background: url("../images/grid-view-icon-project-clicked.png") no-repeat center 35px transparent;
     height: 158px;
     width: 148px;
 }
 
-#gridview-listed-item #container div.collection ul {
+.gridview-listed-item #container div.collection ul {
     height: 158px;
     width: 157px;
 }
 
-#gridview-listed-item #container div.collection ul li {
+.gridview-listed-item #container div.collection ul li {
     float: left;
     padding: 0;
 }
 
-#gridview-listed-item #container div.collection ul li#count-thumb{
+.gridview-listed-item #container div.collection ul li#count-thumb{
     text-align: center;
     background: -moz-linear-gradient(top, #cfcdcd 100%, #efefef 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#e8e7e1));
@@ -1943,7 +1943,7 @@ a.discussions {
     border-right: 1px solid #bbbab7;
 }
 
-#gridview-listed-item #container div.collection ul li#count-thumb .gt-counts-container{
+.gridview-listed-item #container div.collection ul li#count-thumb .gt-counts-container{
     width: 20px;
     height: 15px;
     margin: 25% auto;
@@ -2764,7 +2764,7 @@ input.refine_search {
     font-style: italic;
 }
 
-.activity-item #gridview-listed-item {
+.activity-item .gridview-listed-item {
     margin: 20px 0 10px 0;
 }
 
@@ -2944,7 +2944,7 @@ input.refine_search {
 }
 
 .activity-content-preview #title a.action_button.share,
-#gridview-listed-item #title a.action_button.share {
+.gridview-listed-item #title a.action_button.share {
     clear: both;
     display: inline-block;
     float: right;
