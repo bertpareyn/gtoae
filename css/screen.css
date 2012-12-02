@@ -254,6 +254,7 @@ a {
 
 .gt-content-column {
     float: left;
+    min-height: 400px;
     margin: 40px 0 0 20px;
     width: 17%;
 }
@@ -285,7 +286,7 @@ a {
     overflow: hidden;
     display: block;
     background: url("../images/right-column-fade.png") no-repeat left top #efefef;
-    height: 734px;
+    min-height: 452px;
 }
 
 #gt-right-column-open #close-column-button {

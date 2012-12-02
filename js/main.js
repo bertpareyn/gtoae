@@ -264,14 +264,7 @@
         });
     }
 
-    var init = function() {
-        initAutoSuggestExample();
-        initSearchField();
-        initQuestionsPopup();
-        initSharePopup();
-        initCenterPanel();
-        initOverlays();
-        initSorryMessage();
+    var initRightHandSideColumn = function() {
         $('#close-column-button').on('click', function() {
             $('#gt-right-column-open').animate({'width': 30}, 500);
             $('#gt-right-column-open > div:last-child').animate({'opacity': 'toggle'}, 250, function() {
@@ -290,6 +283,28 @@
             $('#close-column-button').show();
             $('#gt-right-column-open > div:last-child').animate({'opacity': 'toggle'}, 500);
         });
+
+
+        var adjustRHColumnSize = function() {
+            $('#gt-right-column-open').css('height', $('#gt-content-container').height() + 12);
+        };
+
+        adjustRHColumnSize();
+
+        $(document).scroll(function() {
+            adjustRHColumnSize();
+        });
+    }
+
+    var init = function() {
+        initAutoSuggestExample();
+        initSearchField();
+        initQuestionsPopup();
+        initSharePopup();
+        initCenterPanel();
+        initOverlays();
+        initSorryMessage();
+        initRightHandSideColumn();
     };
 
 $(document).ready(init);
