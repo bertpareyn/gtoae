@@ -423,36 +423,48 @@
             </div>
         </div>
 
-        <div class="gt-popup share" style="display: none;" id="research-path">
+        <div class="gt-popup share" style="float:left; margin-left: 40px;">
             <div class="secondary-arrow-up"></div>
             <div class="gt-popup-close share"></div>
-            <div class="sourced-from">Sourced from <a href="#" title="Complete environment">Complete environment</a></div>
-            <div class="searches">
-                <ol>
-                    <li>“Counting bacteria pathogens in water”</li>
-                </ol>
+            <h1><div class="share-white-icon"></div>Share with</h1>
+            <div class="alternate input-container">
+                <input type="text" placeholder="Type who to share this with" id="share_autosuggest"/>
             </div>
-            <div class="comment" style="display: none;">
-                <input type="text" placeholder="Comment"></input>
+            <h1><div class="addto-white-icon"></div>Add to</h1>
+            <div class="alternate gt-pop-up-list">
+                <div class="gt-force-right gt-counts-container">96</div>
+                <div class="gt-force-left archive-icon"></div>
+                <div>My archive</div>
             </div>
-            <div class="comment" style="display: none;">
-                <img src="images/s2-images/profile-pic-john.png" alt="John Librarian"/>
-                <textarea focus="focus" id="comment-infocus"></textarea>
-                <button id="post" class="gt-button gt-black-button gt-force-right" style="" type="button">Post</button>
-            </div>
-            <div class="comment">
-                <div class="discussion-reply">
-                    <div class="discussion-item">
-                        <img src="images/s2-images/profile-pic-john.png" alt="John Librarian"/>
-                    </div>
-                    <div class="discussion-bubble">
-                        <div class="tertiary-arrow-left"></div>
-                        <a href="#" title="Sarah First">John Librarian</a> <span>30 mins ago</span>
-                        <p>Careful with the accuracy on this one as there has been recent studies disproving these theories, although interesting ideas </p>
-                    </div>
+            <div class="gt-pop-up-list">
+                <div class="gt-force-left new-collection-icon"></div>
+                <div>
+                    <a href="javascript:;" id="share_new_collection">New collection</a>
+                    <input type="text" id="share_new_collection_input" style="display:none;"/>
+                    <button type="button" class="gt-button gt-black-button gt-force-right" id="share_new_collection_create" style="display: none;">Create</button>
                 </div>
-                <input type="text" placeholder="Comment"></input>
             </div>
+            <div class="gt-pop-up-list alternate white highlighted" style="display: none;" id="water_testing_listitem">
+                <div class="gt-force-right gt-counts-container">0</div>
+                <div class="gt-force-left collection-icon"></div>
+                <div>Research on water testing</div>
+            </div>
+            <div class="gt-pop-up-list alternate white">
+                <div class="gt-force-right gt-counts-container">6</div>
+                <div class="gt-force-left collection-icon"></div>
+                <div>Data analysis</div>
+            </div>
+            <div class="gt-pop-up-list alternate white">
+                <div class="gt-force-right gt-counts-container">2</div>
+                <div class="gt-force-left collection-icon"></div>
+                <div>Videos</div>
+            </div>
+            <div class="gt-pop-up-list alternate white">    
+                <div class="gt-force-right gt-counts-container">27</div>
+                <div class="gt-force-left collection-icon"></div>
+                <div>Photos</div>
+            </div>
+            <button type="button" class="gt-button gt-overlay-button" id="add-collection-btn">Add</button>
         </div>
     </body>
 </html>
