@@ -142,7 +142,7 @@
             $('.gt-popup.share').show();
             $('.gt-popup.share').css('z-index', 10000);
             $('.gt-popup.share').css('top', $(this).offset().top - 95);
-            $('.gt-popup.share').css('left', $(this).offset().left - 100);
+            $('.gt-popup.share').css('left', $(this).offset().left - ($('.gt-popup.share').width() / 2) - 30);
 
         });
 

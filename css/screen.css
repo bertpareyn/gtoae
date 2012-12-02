@@ -2943,6 +2943,13 @@ input.refine_search {
     font-style: normal;
 }
 
+.activity-content-preview #title a.action_button.share,
+#gridview-listed-item #title a.action_button.share {
+    clear: both;
+    display: inline-block;
+    float: right;
+}
+
 .activity-content-preview #title a:hover {
     text-decoration: underline;
 }
