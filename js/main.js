@@ -48,6 +48,7 @@
         });
 
         $('.searches-list .summary-panel h3').on('click', function(ev) {
+            $(this).toggleClass('summary_collapsed');
             $(this).siblings('div').toggle();
         });
     };

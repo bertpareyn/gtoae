@@ -3244,6 +3244,10 @@ h5.empty-notification {
     padding-left: 20px;
 }
 
+.summary-panel h3.summary_collapsed {
+    background: url('../images/s2-images/icon-right-arrow.png') no-repeat 2px center transparent !important;
+}
+
 .summary-panel h3:hover {
     background: url('../images/s2-images/icon-down-arrow-hover.png') no-repeat 2px center transparent;
     padding-left: 20px;
