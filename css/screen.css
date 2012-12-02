@@ -2142,6 +2142,10 @@ a.discussions {
     position: relative;
 }
 
+.gt-popup.discussions .secondary-arrow-up {
+    margin-left: 120px;
+}
+
 .gt-popup-close {
     background: url("../images/popup-icon-close.png") no-repeat center center transparent;
     cursor: pointer;
@@ -2303,10 +2307,12 @@ a:hover .archive-black-icon {
     color: #fff;
 }
 
+.gt-popup #discussion,
 .gt-popup #question {
     padding: 20px 0 0;
 }
 
+.gt-popup #discussion #text-box,
 .gt-popup #question #text-box {
     background-color: #FFFFFF;
     background-image: url("../images/forms/text-field-dragger.png");
@@ -2318,7 +2324,7 @@ a:hover .archive-black-icon {
     padding: 1px;
 }
 
-.gt-popup #question textarea {
+.gt-popup #question textarea, .gt-popup #discussion textarea {
     -moz-appearance: textfield-multiline;
     -moz-binding: url("chrome://global/content/platformHTMLBindings.xml#textAreas");
     -moz-user-select: text;
@@ -2347,7 +2353,11 @@ a:hover .archive-black-icon {
     resize: none;   
 }
 
-.gt-popup.question {
+.gt-popup #discussion #text-box {
+    margin-left: 35px;
+}
+
+.gt-popup.question, .gt-popup.discussions {
     position: absolute;
     right: 65px;
     top: -8px;

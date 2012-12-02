@@ -140,6 +140,44 @@
 
     };
 
+    var initCommentssPopup = function() {
+        // Bind buttons
+        $('a.discussions').on('click', function() {
+            $('.gt-popup.discussions').toggle();
+        });
+
+        $('.discussions-close').on('click', function() {
+            $('.gt-popup.discussions').hide();
+        });
+
+        $('#discussions-send').on('click', function() {
+            $('.gt-popup.discussions').hide();
+            $('.gt-popup.success').show();
+            setTimeout(function() {
+                $('.gt-popup.success').fadeOut(300);
+            }, 5000);
+        });
+
+        $('.success-close').on('click', function() {
+            $('.gt-popup.success').hide();
+        });
+    };
+
+    var initSourcePopup = function() {
+        // Bind buttons
+        $('.action_button.source').on('click', function() {
+            $('.gt-popup.source').show();
+            $('.gt-popup.source').css('z-index', 10000);
+            $('.gt-popup.source').css('top', $(this).offset().top - 95);
+            $('.gt-popup.source').css('left', $(this).offset().left);
+
+        });
+
+        $('.gt-popup-close.source').on('click', function() {
+            $('.gt-popup.source').hide();
+        });
+    };
+
     var initSharePopup = function() {
         // Bind buttons
         $('.action_button.share').on('click', function() {
@@ -300,6 +338,8 @@
         initAutoSuggestExample();
         initSearchField();
         initQuestionsPopup();
+        initCommentssPopup();
+        initSourcePopup();
         initSharePopup();
         initCenterPanel();
         initOverlays();

@@ -97,7 +97,7 @@
                         <div class="action-icon" id="share_add"></div>
                     </div>
                 </a>
-                <a title="Discuss this collection" class="discussions" href="#">
+                <a title="Discuss this collection" class="discussions" href="javascript:;">
                     <div class="gt-action-clip-tertiary-bg-gradient">
                         <div class="gt-action-clip-tertiary-clip-top"></div>
                         <div class="action-icon" id="discussions"></div>
@@ -151,7 +151,7 @@
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <a href="javascript:;" class="action_button share" title="View the research path taken for this content"><div class="research-path"></div></a>
+                                <a href="javascript:;" class="action_button source" title="View the research path taken for this content"><div class="research-path"></div></a>
                             </div>
                         </div>
 
@@ -174,7 +174,7 @@
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <a href="javascript:;" class="action_button share" title="View the research path taken for this content"><div class="research-path"></div></a>
+                                <a href="javascript:;" class="action_button source" title="View the research path taken for this content"><div class="research-path"></div></a>
                             </div>
                         </div>
 
@@ -197,7 +197,7 @@
                                 </a>
                             <div>
                                 <input type="checkbox" class="share" id="research-results-1"/>
-                                <a href="javascript:;" class="action_button share" title="View the research path taken for this content"><div class="research-path"></div></a>
+                                <a href="javascript:;" class="action_button source" title="View the research path taken for this content"><div class="research-path"></div></a>
                             </div>
                         </div>
 
@@ -220,7 +220,7 @@
                                 </a>
                             <div>
                                 <input type="checkbox" id="research-results-1"/>
-                                <a href="javascript:;" class="action_button share" title="View the research path taken for this content"><div class="research-path"></div></a>
+                                <a href="javascript:;" class="action_button source" title="View the research path taken for this content"><div class="research-path"></div></a>
                             </div>
                         </div>
                     
@@ -378,9 +378,22 @@
                 </div>
             </div> 
 
-        <div class="gt-popup share" style="float:left; margin: 120px 0 0 100px;" id="research-path">
+        <div class="discussions gt-popup" style="display:none;">
             <div class="secondary-arrow-up"></div>
-            <div class="gt-popup-close share"></div>
+            <div class="gt-popup-close discussions-close"></div>
+            <div id="discussion">
+                <img src="images/dummy_users/profile-pic-john.png" alt="John Librarian" class="gt-force-left"/>
+                <div id="text-box">
+                    <textarea placeholder="Your comment"></textarea>
+                </div>
+                <button class="btn-cancel discussions-close gt-force-left" type="submit">Cancel</button>
+                <button class="gt-button gt-overlay-button gt-force-right" id="discussions-send" type="button">Send</button>
+            </div>
+        </div>
+
+        <div class="gt-popup source" style="display: none;" id="research-path">
+            <div class="secondary-arrow-up"></div>
+            <div class="gt-popup-close source"></div>
             <div class="sourced-from">Sourced from <a href="#" title="Complete environment">Complete environment</a></div>
             <div class="searches">
                 <ol>
@@ -408,6 +421,38 @@
                 </div>
                 <input type="text" placeholder="Comment"></input>
             </div>
-        </div>    
+        </div>
+
+        <div class="gt-popup share" style="display: none;" id="research-path">
+            <div class="secondary-arrow-up"></div>
+            <div class="gt-popup-close share"></div>
+            <div class="sourced-from">Sourced from <a href="#" title="Complete environment">Complete environment</a></div>
+            <div class="searches">
+                <ol>
+                    <li>“Counting bacteria pathogens in water”</li>
+                </ol>
+            </div>
+            <div class="comment" style="display: none;">
+                <input type="text" placeholder="Comment"></input>
+            </div>
+            <div class="comment" style="display: none;">
+                <img src="images/s2-images/profile-pic-john.png" alt="John Librarian"/>
+                <textarea focus="focus" id="comment-infocus"></textarea>
+                <button id="post" class="gt-button gt-black-button gt-force-right" style="" type="button">Post</button>
+            </div>
+            <div class="comment">
+                <div class="discussion-reply">
+                    <div class="discussion-item">
+                        <img src="images/s2-images/profile-pic-john.png" alt="John Librarian"/>
+                    </div>
+                    <div class="discussion-bubble">
+                        <div class="tertiary-arrow-left"></div>
+                        <a href="#" title="Sarah First">John Librarian</a> <span>30 mins ago</span>
+                        <p>Careful with the accuracy on this one as there has been recent studies disproving these theories, although interesting ideas </p>
+                    </div>
+                </div>
+                <input type="text" placeholder="Comment"></input>
+            </div>
+        </div>
     </body>
 </html>

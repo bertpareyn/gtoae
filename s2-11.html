@@ -96,7 +96,7 @@
                         <div class="action-icon" id="share_add"></div>
                     </div>
                 </a>
-                <a title="Discuss this collection" class="discussions" href="#">
+                <a title="Discuss this collection" class="discussions" href="javascript:;">
                     <div class="gt-action-clip-tertiary-bg-gradient">
                         <div class="gt-action-clip-tertiary-clip-top"></div>
                         <div class="action-icon" id="discussions"></div>
@@ -377,9 +377,9 @@
                 </div>
             </div> 
 
-        <div class="gt-popup share" style="float:left; margin: 120px 0 0 100px;" id="research-path">
+        <div class="gt-popup source" style="display: block; z-index: 10000; top: 258px; left: 237.15px;" id="research-path">
             <div class="secondary-arrow-up"></div>
-            <div class="gt-popup-close share"></div>
+            <div class="gt-popup-close source"></div>
             <div class="sourced-from">Sourced from <a href="#" title="Complete environment">Complete environment</a></div>
             <div class="searches">
                 <ol>
@@ -407,6 +407,19 @@
                 </div>
                 <input type="text" placeholder="Comment"></input>
             </div>
-        </div>    
+        </div>
+
+        <div class="discussions gt-popup" style="display:none;">
+            <div class="secondary-arrow-up"></div>
+            <div class="gt-popup-close discussions-close"></div>
+            <div id="discussion">
+                <img src="images/dummy_users/profile-pic-john.png" alt="John Librarian" class="gt-force-left"/>
+                <div id="text-box">
+                    <textarea placeholder="Your comment"></textarea>
+                </div>
+                <button class="btn-cancel discussions-close gt-force-left" type="submit">Cancel</button>
+                <button class="gt-button gt-overlay-button gt-force-right" id="discussions-send" type="button">Send</button>
+            </div>
+        </div>
     </body>
 </html>
